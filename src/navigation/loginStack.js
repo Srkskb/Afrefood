@@ -1,0 +1,171 @@
+import React from 'react';
+import { Text, View,Button,ImageBackground,Image,Dimensions,StyleSheet,picker,TouchableOpacity } from 'react-native'
+import Registration from '../screen/signup/Registration'
+import { createStackNavigator, TransitionPresets } from '@react-navigation/stack';
+import { DrawerContentScrollView,DrawerItemList,DrawerItem } from '@react-navigation/drawer';
+import { createDrawerNavigator } from '@react-navigation/drawer';
+import Login from '../screen/login/Login';
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+const { width, height } = Dimensions.get("window");
+import ResetPassword from '../screen/resetPassword/resetPassword';
+import ProfileUpdate from '../screen/updatescreen/ProfileUpdate';
+import Home from '../screen/home/Home';
+import Location from '../screen/location/Location';
+import Filter from '../screen/filterscreen/Filter';
+import MainScreen from '../screen/mainscreen/MainScreen';
+import Discover from '../screen/tabscreen/Discover';
+import Cart from '../screen/tabscreen/Cart';
+import Favorite from '../screen/tabscreen/Favorite';
+import Profile from '../screen/tabscreen/Profile';
+import style from 'react-native-datepicker/style';
+const Tab = createMaterialTopTabNavigator();
+const CustomTabBarButton=({children,onPress})=>(
+<TouchableOpacity style={{height:70,width:70,top:-30,justifyContent:"center",alignItems:"center",...styles.shadow}} onPress={onPress}>
+  <View style={{height:70,width:70,borderRadius:35,backgroundColor:"#e32f45"}}>
+{children}
+  </View>
+</TouchableOpacity>
+
+);
+function MyTabs() {
+  return (
+    <Tab.Navigator initialRouteName="MainScreen"
+    tabBarPosition='bottom'
+    tabBarOptions={{
+      showLabel:false,
+      style:{
+        position:"absolute",
+        bottom:25,
+        left:20,
+        right:20,
+        elevation:0,
+        backgroundColor:"#DCDCDC",
+        borderRadius:15,
+        height:70,
+        ...styles.shadow
+      }
+      }}
+    >
+      <Tab.Screen name="Attend Class" component={MainScreen}
+      options={{
+        tabBarIcon:({color,focused})=>
+        <View style={{alignItems:"center",justifyContent:"center",top:20}}>
+          <Image
+          source={require('../images/hc.png')}
+          resizeMode="contain"
+          style={{width:25,height:25,tintColor:focused ? "#e32f45" : "#748c94"}}
+          />
+          <Text style={{tintColor:focused ? "#e32f45" : "#748c94",fontSize:12}}>Home</Text>
+        </View>
+      }}
+      />
+      <Tab.Screen name="Attendence" component={Discover}
+         options={{
+          tabBarIcon:({color,focused})=>
+          <View style={{alignItems:"center",justifyContent:"center",top:20}}>
+            <Image
+            source={require('../images/lc.png')}
+            resizeMode="contain"
+            style={{width:25,height:25,tintColor:focused ? "#e32f45" : "#748c94"}}
+            />
+            <Text style={{tintColor:focused ? "#e32f45" : "#748c94",fontSize:12}}>Home</Text>
+          </View>
+        }}
+        />
+      <Tab.Screen name="Assignments" component={Cart} 
+        options={{
+          tabBarIcon:({color,focused})=>(
+        <Image
+        source={require('../images/cc.png')}
+        resizeMode="contain"
+        style={{height:50,width:50,backgroundColor:"#fff"}}
+        />
+          ),
+          tabBarButton: (props) =>(
+<CustomTabBarButton{...props} style={{width:200}}/>
+          )
+        }}
+        />
+      <Tab.Screen name="Teacher Remarks" component={Favorite}
+         options={{
+          tabBarIcon:({color,focused})=>
+          <View style={{alignItems:"center",justifyContent:"center",top:20}}>
+            <Image
+            source={require('../images/sc.png')}
+            resizeMode="contain"
+            style={{width:25,height:25,tintColor:focused ? "#e32f45" : "#748c94"}}
+            />
+            <Text style={{tintColor:focused ? "#e32f45" : "#748c94",fontSize:12}}>Home</Text>
+          </View>
+        }}
+        />
+      <Tab.Screen name="Next Class Prepration" component={Profile} 
+         options={{
+          tabBarIcon:({color,focused})=>
+          <View style={{alignItems:"center",justifyContent:"center",top:20}}>
+            <Image
+            source={require('../images/pc.png')}
+            resizeMode="contain"
+            style={{width:25,height:25,tintColor:focused ? "#e32f45" : "#748c94"}}
+            />
+            <Text style={{tintColor:focused ? "#e32f45" : "#748c94",fontSize:12}}>Home</Text>
+          </View>
+        }}
+        />
+    </Tab.Navigator>
+  );
+}
+
+const Stack = createStackNavigator();
+function LoginStackNavigator() {
+  return (
+    <Stack.Navigator initialRouteName="Login" screenOptions={{ ...(Platform.OS === "android" && TransitionPresets.SlideFromRightIOS) }}>
+      <Stack.Screen name="Login" component={Login} options={{ headerShown: false }} />
+      <Stack.Screen name="ResetPassword" component={ResetPassword} options={{ headerShown: false}} />
+      <Stack.Screen name="Registration" component={Registration} options={{ headerShown: false}} />
+      <Stack.Screen name="ProfileUpdate" component={ProfileUpdate} options={{ headerShown: false}} />
+      <Stack.Screen name="Home" component={Home} options={{ headerShown: false}} />
+      <Stack.Screen name="Location" component={Location} options={{ headerShown: false}} />
+      <Stack.Screen name="Filter" component={Filter} options={{ headerShown: false}} />
+      <Stack.Screen name="MainScreen" component={MyTabs} options={{ headerShown: false}} />
+      </Stack.Navigator>
+  );
+}
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  menuContainer: {
+    flex: 1,
+    justifyContent: 'space-evenly',
+  },
+  menuItemsCard: {
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 10,
+  },
+  circleContainer: {
+    width: 50,
+    height: 50,
+    borderRadius: 25,
+    padding: 10,
+
+  },
+
+  shadow:{
+shadowColor:"#7F5DF0",
+shadowOffset:{
+  width:0,
+  height:10
+},
+shadowOpacity:0.25,
+shadowRadius:3.5,
+elevation:5
+
+  },
+});
+export default LoginStackNavigator;
