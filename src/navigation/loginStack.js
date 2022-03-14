@@ -74,19 +74,18 @@ function MyTabs() {
         }}
         />
       <Tab.Screen name="Assignments" component={Cart} 
-        options={{
-          tabBarIcon:({color,focused})=>(
-        <Image
-        source={require('../images/cc.png')}
-        resizeMode="contain"
-        style={{height:50,width:50,backgroundColor:"#fff"}}
-        />
-          ),
-          tabBarButton: (props) =>(
-<CustomTabBarButton{...props} style={{width:200}}/>
-          )
-        }}
-        />
+       options={{
+        tabBarIcon:({color,focused})=>
+        <View style={{alignItems:"center",justifyContent:"center",top:20}}>
+          <Image
+          source={require('../images/cc.png')}
+          resizeMode="contain"
+          style={{width:25,height:25,tintColor:focused ? "#e32f45" : "#748c94"}}
+          />
+          <Text style={{tintColor:focused ? "#e32f45" : "#748c94",fontSize:12}}>Home</Text>
+        </View>
+      }}
+      />
       <Tab.Screen name="Teacher Remarks" component={Favorite}
          options={{
           tabBarIcon:({color,focused})=>
