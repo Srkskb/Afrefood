@@ -41,7 +41,7 @@ Browser
         />
         <TouchableOpacity onPress={()=>alert("Please Speak something...")}>
    <FIcon name="mic" size={width*0.06} color="#E42217"
-    style={{paddingHorizontal:width*0.05}}
+    style={{}}
     />
     </TouchableOpacity>
     </View>
