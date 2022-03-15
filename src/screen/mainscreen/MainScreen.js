@@ -317,11 +317,6 @@ View all
               style={styles.listViewHorizontal}
             >
               <Image
-                source={require('../../images/img3.jpg')}
-                resizeMode="contain"
-                style={{ paddingHorizontal: width * 0.05, marginLeft: width * 0.05 }}
-              />
-              <Image
                 source={require('../../images/img2.jpg')}
                 resizeMode="contain"
                 style={{ paddingHorizontal: width * 0.05, marginLeft: width * 0.05 }}
@@ -331,11 +326,70 @@ View all
                 resizeMode="contain"
                 style={{ paddingHorizontal: width * 0.05, marginLeft: width * 0.05 }}
               />
+              <Image
+                source={require('../../images/img3.jpg')}
+                resizeMode="contain"
+                style={{ paddingHorizontal: width * 0.05, marginLeft: width * 0.05 }}
+              />
+
 
             </ScrollView>
+            <View style={{paddingTop:width*0.05,paddingHorizontal:width*0.05}}>
+            <Text style={{fontSize:width*0.05,color:"#000000",fontWeight:"bold"}}>
+              Madhurima Veg Restaurent
+            </Text>
           </View>
-        </ScrollView>
+          <View style={{ paddingTop: width * 0.05 }}>
 
+<ScrollView ref={(snapScroll) => { this.snapScroll = snapScroll; }}
+  horizontal={true}
+  decelerationRate={0}
+  onResponderRelease={() => {
+
+    var interval = 300; // WIDTH OF 1 CHILD COMPONENT 
+
+    var snapTo = (this.scrollingRight) ? Math.ceil(this.lastx / interval) :
+      Math.floor(this.lastx / interval);
+    var scrollTo = snapTo * interval;
+    this.snapScroll.scrollTo(0, scrollTo);
+  }}
+  scrollEventThrottle={32}
+  onScroll={(event) => {
+    var nextx = event.nativeEvent.contentOffset.x;
+    this.scrollingRight = (nextx > this.lastx);
+    this.lastx = nextx;
+  }}
+  showsHorizontalScrollIndicator={false}
+  style={styles.listViewHorizontal}
+>
+  <Image
+    source={require('../../images/img3.jpg')}
+    resizeMode="contain"
+    style={{ paddingHorizontal: width * 0.05, marginLeft: width * 0.05 }}
+  />
+  <Image
+    source={require('../../images/img2.jpg')}
+    resizeMode="contain"
+    style={{ paddingHorizontal: width * 0.05, marginLeft: width * 0.05 }}
+  />
+  <Image
+    source={require('../../images/img1.jpg')}
+    resizeMode="contain"
+    style={{ paddingHorizontal: width * 0.05, marginLeft: width * 0.05 }}
+  />
+
+
+</ScrollView>
+</View>
+          </View>
+          <View style={{paddingTop:width*0.02}}>
+            <Text>
+
+            </Text>
+          </View>
+         
+        </ScrollView>
+      
 
 </SafeAreaView>
     )
