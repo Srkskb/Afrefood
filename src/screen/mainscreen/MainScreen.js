@@ -317,17 +317,17 @@ View all
               style={styles.listViewHorizontal}
             >
               <Image
-                source={require('../../images/55.jpg')}
-                resizeMode="contain"
-                style={{ paddingHorizontal: width * 0.05, marginLeft: width * 0.05 }}
-              />
-              <Image
-                source={require('../../images/download.jpg')}
+                source={require('../../images/img3.jpg')}
                 resizeMode="contain"
                 style={{ paddingHorizontal: width * 0.05, marginLeft: width * 0.05 }}
               />
               <Image
                 source={require('../../images/img2.jpg')}
+                resizeMode="contain"
+                style={{ paddingHorizontal: width * 0.05, marginLeft: width * 0.05 }}
+              />
+              <Image
+                source={require('../../images/img1.jpg')}
                 resizeMode="contain"
                 style={{ paddingHorizontal: width * 0.05, marginLeft: width * 0.05 }}
               />
