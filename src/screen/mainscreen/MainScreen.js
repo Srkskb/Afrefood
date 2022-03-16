@@ -13,9 +13,28 @@ import {
   BackButtonHeader
 } from '../../components/index';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
-
+import Carousel, { Pagination } from 'react-native-snap-carousel';
 export default class MainScreen extends Component {
+  state={
+    data:[{"id":"1"},{"id":"2"},{"id":"3"},{"id":"4"},{"id":"5"},{"id":"6"}],
+    activeSlide:0
+  }
+    renderItem = ({item, index}) => {
+    
+        return (
+            <View style={{paddingBottom: 4}}>
+                <Image source={require('../../images/banner.png')}
+    style={{height:height*0.24,width:width*0.92}} resizeMode={'contain'}
+                />
+            </View>
+        );
+    }
   render() {
+    const SLIDER_WIDTH = Dimensions.get('window').width;
+    const SLIDER_WIDTH2 = 166;
+  const ITEM_WIDTH = Math.round(SLIDER_WIDTH);
+  const ITEM_WIDTH2 = 166;
+  const ITEM_HEIGHT = Math.round(ITEM_WIDTH * 3 / 4);
     return (
 
   <SafeAreaView style={{width:width,height:height,backgroundColor:"#FFFFFF"}}>
@@ -73,11 +92,45 @@ Relevance
 </View>
 </View>
 <ScrollView showsVerticalScrollIndicator={false} style={{width:width,height:'81%'}}>
-  <View style={{paddingVertical:width*0.03,alignItems:"center",marginHorizontal:width*0.04}}>
-  <Image
-  source={require('../../images/banner.png')}
-  style={{height:height*0.24,width:width*0.92}} resizeMode={'contain'}
-  />
+  <View style={{paddingVertical:width*0.03,alignItems:"center",marginHorizontal:width*0.04,
+justifyContent:'center'}}>
+  <Carousel
+          layout={"default"}
+              ref={ref => this.carousel = ref}
+              data={this.state.data}
+              renderItem={this.renderItem}
+              sliderWidth={SLIDER_WIDTH-width*0.08}
+              itemWidth={ITEM_WIDTH}
+              loop={true}
+              autoplay={true}
+              autoplayInterval={5000}
+              onSnapToItem={(index) => this.setState({ activeSlide: index }) }
+            />
+            <Pagination
+              dotsLength={this.state.data.length}
+              activeDotIndex={this.state.activeSlide}
+              containerStyle={{ backgroundColor: '#d6d6d6',position: 'absolute',
+              bottom:20,borderRadius: 10,paddingVertical:2,paddingHorizontal:4}}
+              dotContainerStyle={{marginHorizontal:1}}
+              dotStyle={{
+                  width: 14,
+                  height: 8,
+                  borderRadius: 5,
+                  backgroundColor: 'rgba(255, 255, 255, 0.92)'
+              }}
+              inactiveDotStyle={{
+                  width: 8,
+                  height: 8,
+                  borderRadius: 5,
+                  backgroundColor: 'rgba(255, 255, 255, 0.92)'
+              }}
+              inactiveDotOpacity={0.4}
+              inactiveDotScale={0.8}
+            />
+            {/*<Image
+    source={require('../../images/banner.png')}
+    style={{height:height*0.24,width:width*0.92}} resizeMode={'contain'}
+    />*/}
 </View>
 
 <View style={{paddingHorizontal:width*0.05}}>
