@@ -32,19 +32,25 @@ function MyTabs() {
   return (
     <Tab.Navigator initialRouteName="MainScreen"
     tabBarPosition='bottom'
-    tabBarOptions={{
-      showLabel:false,
-      style:{
-        position:"absolute",
-        bottom:25,
-        left:20,
-        right:20,
-        elevation:0,
-        backgroundColor:"#DCDCDC",
-        borderRadius:15,
-        height:70,
-        ...styles.shadow
-      }
+    screenOptions={{
+      tabBarShowLabel:false,
+      tabBarStyle: {
+    position: "absolute",
+    bottom: 25,
+    left: 20,
+    right: 20,
+    elevation: 5,
+    backgroundColor: "#DCDCDC",
+    borderRadius: 15,
+    height: 70,
+    shadowColor: "#7F5DF0",
+    shadowOffset: {
+      width: 0,
+      height: 0
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.5
+  }
       }}
     >
       <Tab.Screen name="Attend Class" component={MainScreen}
@@ -56,7 +62,7 @@ function MyTabs() {
           resizeMode="contain"
           style={{width:25,height:25,tintColor:focused ? "#e32f45" : "#748c94"}}
           />
-          <Text style={{tintColor:focused ? "#e32f45" : "#748c94",fontSize:12}}>Home</Text>
+          <Text style={{color:focused ? "#e32f45" : "#748c94",fontSize:12}}>Home</Text>
         </View>
       }}
       />
@@ -69,7 +75,7 @@ function MyTabs() {
             resizeMode="contain"
             style={{width:25,height:25,tintColor:focused ? "#e32f45" : "#748c94"}}
             />
-            <Text style={{tintColor:focused ? "#e32f45" : "#748c94",fontSize:12}}>Home</Text>
+            <Text style={{color:focused ? "#e32f45" : "#748c94",fontSize:12}}>Home</Text>
           </View>
         }}
         />
@@ -82,7 +88,7 @@ function MyTabs() {
           resizeMode="contain"
           style={{width:25,height:25,tintColor:focused ? "#e32f45" : "#748c94"}}
           />
-          <Text style={{tintColor:focused ? "#e32f45" : "#748c94",fontSize:12}}>Home</Text>
+          <Text style={{color:focused ? "#e32f45" : "#748c94",fontSize:12}}>Home</Text>
         </View>
       }}
       />
@@ -95,7 +101,7 @@ function MyTabs() {
             resizeMode="contain"
             style={{width:25,height:25,tintColor:focused ? "#e32f45" : "#748c94"}}
             />
-            <Text style={{tintColor:focused ? "#e32f45" : "#748c94",fontSize:12}}>Home</Text>
+            <Text style={{color:focused ? "#e32f45" : "#748c94",fontSize:12}}>Home</Text>
           </View>
         }}
         />
@@ -108,7 +114,7 @@ function MyTabs() {
             resizeMode="contain"
             style={{width:25,height:25,tintColor:focused ? "#e32f45" : "#748c94"}}
             />
-            <Text style={{tintColor:focused ? "#e32f45" : "#748c94",fontSize:12}}>Home</Text>
+            <Text style={{color:focused ? "#e32f45" : "#748c94",fontSize:12}}>Home</Text>
           </View>
         }}
         />
