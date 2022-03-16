@@ -317,17 +317,17 @@ View all
               style={styles.listViewHorizontal}
             >
               <Image
-                source={require('../../images/img2.jpg')}
+                source={require('../../images/vag1.jpg')}
                 resizeMode="contain"
                 style={{ paddingHorizontal: width * 0.05, marginLeft: width * 0.05 }}
               />
               <Image
-                source={require('../../images/img1.jpg')}
+                source={require('../../images/vag2.jpg')}
                 resizeMode="contain"
                 style={{ paddingHorizontal: width * 0.05, marginLeft: width * 0.05 }}
               />
               <Image
-                source={require('../../images/img3.jpg')}
+                source={require('../../images/vag3.jpg')}
                 resizeMode="contain"
                 style={{ paddingHorizontal: width * 0.05, marginLeft: width * 0.05 }}
               />
@@ -363,17 +363,17 @@ View all
   style={styles.listViewHorizontal}
 >
   <Image
-    source={require('../../images/img3.jpg')}
+    source={require('../../images/vag3.jpg')}
     resizeMode="contain"
     style={{ paddingHorizontal: width * 0.05, marginLeft: width * 0.05 }}
   />
   <Image
-    source={require('../../images/img2.jpg')}
+    source={require('../../images/vag2.jpg')}
     resizeMode="contain"
     style={{ paddingHorizontal: width * 0.05, marginLeft: width * 0.05 }}
   />
   <Image
-    source={require('../../images/img1.jpg')}
+    source={require('../../images/vag1.jpg')}
     resizeMode="contain"
     style={{ paddingHorizontal: width * 0.05, marginLeft: width * 0.05 }}
   />
