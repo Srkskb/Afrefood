@@ -92,8 +92,8 @@ Relevance
 </View>
 </View>
 <ScrollView showsVerticalScrollIndicator={false} style={{width:width,height:'81%'}}>
-  <View style={{paddingVertical:width*0.03,alignItems:"center",marginHorizontal:width*0.04,
-justifyContent:'center'}}>
+  <View style={{paddingTop:width*0.03,alignItems:"center",marginHorizontal:width*0.04,
+justifyContent:'center',paddingBottom:width*0.05}}>
   <Carousel
           layout={"default"}
               ref={ref => this.carousel = ref}
@@ -110,19 +110,19 @@ justifyContent:'center'}}>
               dotsLength={this.state.data.length}
               activeDotIndex={this.state.activeSlide}
               containerStyle={{ backgroundColor: 'transparent',position: 'absolute',
-              bottom:10,borderRadius: 10,paddingVertical:2,paddingHorizontal:4}}
+              bottom:4,borderRadius: 10,paddingVertical:2,paddingHorizontal:4}}
               dotContainerStyle={{marginHorizontal:1}}
               dotStyle={{
                   width: 14,
                   height: 8,
                   borderRadius: 5,
-                  backgroundColor: 'rgba(255, 255, 255, 0.92)'
+                  backgroundColor: '#F7B614'
               }}
               inactiveDotStyle={{
                   width: 8,
                   height: 8,
                   borderRadius: 5,
-                  backgroundColor: 'rgba(255, 255, 255, 0.92)'
+                  backgroundColor: '#F7B614'
               }}
               inactiveDotOpacity={0.4}
               inactiveDotScale={0.8}
