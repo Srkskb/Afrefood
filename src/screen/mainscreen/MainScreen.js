@@ -109,8 +109,8 @@ justifyContent:'center'}}>
             <Pagination
               dotsLength={this.state.data.length}
               activeDotIndex={this.state.activeSlide}
-              containerStyle={{ backgroundColor: '#d6d6d6',position: 'absolute',
-              bottom:20,borderRadius: 10,paddingVertical:2,paddingHorizontal:4}}
+              containerStyle={{ backgroundColor: 'transparent',position: 'absolute',
+              bottom:10,borderRadius: 10,paddingVertical:2,paddingHorizontal:4}}
               dotContainerStyle={{marginHorizontal:1}}
               dotStyle={{
                   width: 14,
