@@ -5,6 +5,7 @@ import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import * as Animatable from 'react-native-animatable';
 import FIcon from 'react-native-vector-icons/Feather';
 import AntDesign from 'react-native-vector-icons/AntDesign'
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
 import { Images } from "../../theme/index";
 import { TabView, SceneMap } from 'react-native-tab-view';
 import {
@@ -50,7 +51,7 @@ style={{paddingHorizontal:width*0.02}}
 </Text>
 </View>
 <View style={{paddingHorizontal:width*0.05,paddingTop:width*0.05,flexDirection:"row",alignItems:"center",justifyContent:"space-between"}}>
-<Text style={{fontSize:width*0.05,fontWeight:"bold",color:"#000000"}}>
+<Text style={{fontSize:width*0.05,fontWeight:"bold"}}>
   Recommended (30)
 </Text>
 <TouchableOpacity>
@@ -59,14 +60,170 @@ name='caretup' size={width*0.04} color="#000000"
 />
 </TouchableOpacity>
 </View>
-<View style={{paddingHorizontal:width*0.05,paddingTop:width*0.05,width:width}}>
-<View style={{width:'64%',backgroundColor: '#ccc'}}>
+<View style={{paddingHorizontal:width*0.05,paddingTop:width*0.05,width:width,flexDirection:"row"}}>
+<View style={{width:'64%',backgroundColor: '#FFFFFF'}}>
+  <View style={{flexDirection:'row'}}>
+<Image
+source={require('../../images/arrow.png')}
+style={{height:25,width:25,paddingTop:width*0.02}}
+resizeMode="contain"
+/>
+<Text style={{borderWidth:1,borderRadius:5,borderColor:"#F15267",backgroundColor:"#F15267",paddingHorizontal:width*0.01,marginHorizontal:width*0.01,textAlign:"center",color:"#ffffff",}}>
+  Bestseller
+</Text>
+  </View>
 <Text style={{fontSize:width*0.05,fontWeight:"bold",color:"#000000"}}>
-Mouuton Kuruma
+Mutton Korma
+</Text>
+<Text>
+  In Main Course
+</Text>
+<Text style={{color:"#000000",fontWeight:"bold"}}>
+  340
+</Text>
+<Text style={{paddingTop:width*0.01}}>
+ {' Mutton stirred in with curd water\n and a meiange of s....read more'}
+</Text>
+<View style={{paddingTop:width*0.02}}>
+<View style={{flexDirection:"row",borderWidth:1,borderRadius:5,borderColor:"#EAC117",width:width*0.2}}>
+<AntDesign
+name='star' size={width*0.03} color="#EAC117"
+/>
+<AntDesign
+name='star' size={width*0.03} color="#EAC117"
+/>
+<AntDesign
+name='star' size={width*0.03} color="#EAC117"
+/>
+<AntDesign
+name='star' size={width*0.03} color="#EAC117"
+/>
+<AntDesign
+name='staro' size={width*0.03} color="#EAC117"
+/>
+<Text style={{fontSize:width*0.03,fontWeight:"bold"}}>
+  14
 </Text>
 </View>
-<View style={{width:'36%',backgroundColor: '#ccc'}}>
 </View>
+<View style={{paddingTop:width*0.02}}>
+<TouchableOpacity>
+<Image
+source={require('../../images/LIKE.png')}
+style={{height:45,width:45,paddingTop:width*0.02}}
+resizeMode="contain"
+/>
+</TouchableOpacity>
+</View>
+</View>
+<View style={{width:'36%',backgroundColor: '#FFFFFF'}}>
+  <Image
+  source={require('../../images/diish1.png')}
+  style={{height:height*0.12,width:width*0.42}}
+  resizeMode="contain"
+  />
+  <TouchableOpacity onPress={()=>alert('Adding...')}>
+  <View style={{paddingTop:width*0.01,paddingHorizontal:width*0.06}}>
+  <View style={{borderRadius:10,borderWidth:1,width:width*0.3,backgroundColor:"#FFF6F5",borderColor:"#E75162"}}>
+<Text style={{textAlign:'center',fontWeight:"bold",padding:10,color:"#E75162",fontSize:width*0.04}}>
+  ADD +
+</Text>
+
+  </View>
+  </View>
+  </TouchableOpacity>
+</View>
+</View>
+<View style={{borderBottomWidth:1,paddingTop:width*0.05,borderBottomColor:"#DCDCDC"}}>
+
+</View>
+<View style={{paddingHorizontal:width*0.05,paddingTop:width*0.05,width:width,flexDirection:"row"}}>
+<View style={{width:'64%',backgroundColor: '#FFFFFF'}}>
+  <View style={{flexDirection:'row'}}>
+<Image
+source={require('../../images/arrow.png')}
+style={{height:25,width:25,paddingTop:width*0.02}}
+resizeMode="contain"
+/>
+<Text style={{borderWidth:1,borderRadius:5,borderColor:"#F15267",backgroundColor:"#F15267",paddingHorizontal:width*0.01,marginHorizontal:width*0.01,textAlign:"center",color:"#ffffff",}}>
+  Bestseller
+</Text>
+  </View>
+<Text style={{fontSize:width*0.05,fontWeight:"bold",color:"#000000"}}>
+  Butter Chicken Boneless
+</Text>
+<Text>
+  In Main Course
+</Text>
+<Text style={{color:"#000000",fontWeight:"bold"}}>
+  340
+</Text>
+<Text style={{paddingTop:width*0.01}}>
+ {' Charcoal grilled boneless chicken\n cooked in creame....read more'}
+</Text>
+<View style={{paddingTop:width*0.02}}>
+<View style={{flexDirection:"row",borderWidth:1,borderRadius:5,borderColor:"#EAC117",width:width*0.2}}>
+<AntDesign
+name='star' size={width*0.03} color="#EAC117"
+/>
+<AntDesign
+name='star' size={width*0.03} color="#EAC117"
+/>
+<AntDesign
+name='star' size={width*0.03} color="#EAC117"
+/>
+<AntDesign
+name='star' size={width*0.03} color="#EAC117"
+/>
+<AntDesign
+name='star' size={width*0.03} color="#EAC117"
+/>
+<Text style={{fontSize:width*0.03,fontWeight:"bold"}}>
+  38
+</Text>
+</View>
+</View>
+<View style={{paddingTop:width*0.02}}>
+<TouchableOpacity>
+<Image
+source={require('../../images/LIKE.png')}
+style={{height:45,width:45,paddingTop:width*0.02}}
+resizeMode="contain"
+/>
+</TouchableOpacity>
+</View>
+</View>
+<View style={{width:'36%',backgroundColor: '#FFFFFF'}}>
+  <Image
+  source={require('../../images/dish2.png')}
+  style={{height:height*0.12,width:width*0.42}}
+  resizeMode="contain"
+  />
+  <TouchableOpacity onPress={()=>alert('Adding...')}>
+  <View style={{paddingTop:width*0.01,paddingHorizontal:width*0.06}}>
+  <View style={{borderRadius:10,borderWidth:1,width:width*0.3,backgroundColor:"#FFF6F5",borderColor:"#E75162"}}>
+<Text style={{textAlign:'center',fontWeight:"bold",padding:10,color:"#E75162",fontSize:width*0.04}}>
+  ADD +
+</Text>
+
+  </View>
+  </View>
+  </TouchableOpacity>
+  <View style={{paddingTop:width*0.03,paddingHorizontal:width*0.06}}>
+  <View style={{borderRadius:30,borderWidth:1,width:width*0.3,backgroundColor:"#000000",borderColor:"#000000",flexDirection:'row',padding:10,justifyContent:"space-evenly"}}>
+    <MaterialCommunityIcons
+    name='silverware-fork-knife' size={width*0.025} color={"#ffffff"}
+    />
+<Text style={{textAlign:'center',fontWeight:"bold",color:"#ffffff",fontSize:width*0.025}}>
+Browser Menu
+</Text>
+</View>
+</View>
+
+</View>
+</View>
+<View style={{borderBottomWidth:1,paddingTop:width*0.05,borderBottomColor:"#DCDCDC"}}>
+
 </View>
 </View>
   
@@ -126,7 +283,7 @@ export default class Cart extends Component {
 
   render() { 
     return (
-     <View style={{flex:1}}>
+     <View style={{flex:1,backgroundColor:"#ffffff"}}>
 <ScrollView contentContainerStyle={{flexGrow: 1}}>
  <BackButtonHeader1
     backPressed={() => { this.props.navigation.goBack() }}
