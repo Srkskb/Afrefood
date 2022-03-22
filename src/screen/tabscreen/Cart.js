@@ -59,6 +59,15 @@ name='caretup' size={width*0.04} color="#000000"
 />
 </TouchableOpacity>
 </View>
+<View style={{paddingHorizontal:width*0.05,paddingTop:width*0.05,width:width}}>
+<View style={{width:'64%',backgroundColor: '#ccc'}}>
+<Text style={{fontSize:width*0.05,fontWeight:"bold",color:"#000000"}}>
+Mouuton Kuruma
+</Text>
+</View>
+<View style={{width:'36%',backgroundColor: '#ccc'}}>
+</View>
+</View>
 </View>
   
 );
