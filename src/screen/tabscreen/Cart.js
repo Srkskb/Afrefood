@@ -64,34 +64,36 @@ export default class Cart extends Component {
   };
 
   _renderScene = SceneMap({
-    first: FirstRoute,
-    second: SecondRoute,
+    first:FirstRoute,
+    second:SecondRoute,
     third:ThirdRoute,
-  }); 
+  });
+
   render() { 
     return (
      <View style={{flex:1}}>
+<ScrollView contentContainerStyle={{flexGrow: 1}}>
  <BackButtonHeader1
     backPressed={() => { this.props.navigation.goBack() }}
      />
-<ScrollView>
-     <View style={{paddingHorizontal:width*0.05}}>
+     <View style={{paddingHorizontal:width*0.05,height:height*0.24}}>
        <Image
        source={require('../../images/banner1.png')}
        style={{height:height*0.24,width:width*0.92,alignSelf:"center"}} resizeMode={'contain'}
        />
      </View>
-     <View style={{paddingHorizontal:width*0.05,paddingTop:width*0.01}}>
+     <View style={{paddingHorizontal:width*0.05,height:height*0.06}}>
        <Text style={{fontSize:width*0.06,fontWeight:'bold',color:"#000000",fontFamily: "Poppins-Medium"}}>
          Nazeer Foods
        </Text>
      </View>
-     <View style={{paddingHorizontal:width*0.05,paddingTop:width*0.01}}>
+     <View style={{paddingHorizontal:width*0.05,height:height*0.04}}>
        <Text style={{fontSize:width*0.04,fontWeight:'bold',color:"#000000"}}>
 North Indian, Mughlai,Fast Food
        </Text>
      </View>
-     <View style={{flexDirection:"row",alignItems:"center",paddingHorizontal:width*0.05,paddingTop:width*0.01}}>
+     <View style={{flexDirection:"row",alignItems:"center",paddingHorizontal:width*0.05,
+     height:height*0.04}}>
        <Text>
 M-42 Connaught Place,New Delhi.
        </Text>
@@ -99,14 +101,14 @@ M-42 Connaught Place,New Delhi.
 
 2KM       </Text>
      </View>
-     <View style={{flexDirection:"row",alignItems:"center",paddingTop:width*0.02,paddingHorizontal:width*0.05}}>
+     <View style={{flexDirection:"row",alignItems:"center",height:height*0.04,paddingHorizontal:width*0.05}}>
        <Text style={{color:"#000000",fontWeight:"bold",fontFamily: "Poppins-Medium"}}>
 Delivery
        </Text>
        <Text style={{color:"#000000",fontWeight:"bold",fontFamily: "Poppins-Medium",paddingHorizontal:width*0.2}}>
 Open time</Text>
      </View>
-     <View style={{flexDirection:"row",alignItems:"center",paddingHorizontal:width*0.05}}>
+     <View style={{flexDirection:"row",alignItems:"center",paddingHorizontal:width*0.05,height:height*0.04}}>
        <Text style={{fontWeight:"bold",fontFamily: "Poppins-Medium"}}>
 Free
        </Text>
@@ -115,7 +117,8 @@ Free
 8:00AM
 </Text>
      </View>
-     <View style={{flexDirection:"row",alignItems:"center",justifyContent:"space-evenly",paddingTop:width*0.05}}>
+     <View style={{flexDirection:"row",alignItems:"center",justifyContent:"space-evenly",
+     height:height*0.1}}>
        <TouchableOpacity onPress={()=>alert("Will add soon")}>
    <View style={styles.tabBarStyle}>
     
@@ -143,12 +146,14 @@ Free
    </View>
    </TouchableOpacity>
      </View>
+     <View style={{width:width,height:height,backgroundColor: '#ccc'}}>
      <TabView
         navigationState={this.state}
         renderScene={this._renderScene}
         renderTabBar={this._renderTabBar}
         onIndexChange={this._handleIndexChange}
       />
+      </View>
      
      </ScrollView>
      </View>
@@ -173,7 +178,8 @@ const styles = StyleSheet.create({
     shadowRadius: 3.5
   },
   container: {
-    flex:1
+    width:width,
+    height:'100%'
   },
   tabBar: {
     flexDirection: 'row',

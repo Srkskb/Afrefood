@@ -40,7 +40,7 @@ export default class Library extends Component {
     return (
       <ScrollView>
       <View style={{width: '100%',height: '100%'}}>
-      <View style={{width: '100%',height: '10%', backgroundColor: '#fdfdfk',paddingHorizontal:width*0.06,
+      <View style={{width: '100%',height: '10%', backgroundColor: '#fdfdfd',paddingHorizontal:width*0.06,
       alignItems:'center',justifyContent:'flex-start',flexDirection:'row'}}>
      <Text style={{paddingHorizontal:12,fontSize:width*0.06,fontWeight:'bold'}}>Library</Text>
    </View>
