@@ -1,9 +1,10 @@
-import { Animated,Text, View,ImageBackground,Dimensions ,TouchableOpacity,Image,TextInput,ScrollView,StyleSheet} from 'react-native'
+import { Switch,Animated,Text, View,ImageBackground,Dimensions ,TouchableOpacity,Image,TextInput,ScrollView,StyleSheet} from 'react-native'
 import React, { Component } from 'react'
 const { width, height } = Dimensions.get("window");
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import * as Animatable from 'react-native-animatable';
 import FIcon from 'react-native-vector-icons/Feather';
+import AntDesign from 'react-native-vector-icons/AntDesign'
 import { Images } from "../../theme/index";
 import { TabView, SceneMap } from 'react-native-tab-view';
 import {
@@ -13,12 +14,53 @@ import {
   BackButtonHeader,
   BackButtonHeader1
 } from '../../components/index';
+
 const FirstRoute = () => (
-  <View style={[styles.container, { backgroundColor: '#ff4081' }]} >
-<Text>
-  Hello world
+  <View style={[styles.container, { backgroundColor: '#ffffff' }]} >
+<View style={{alignItems:"center",borderRadius:5,borderWidth:1,marginHorizontal:width*0.05,flexDirection:"row",borderColor:"#E42217",justifyContent:"space-between"}}>
+<FIcon name="search" size={width*0.06} color="#DCDCDC"
+style={{paddingHorizontal:width*0.02}}
+    />
+     <TextInput
+         style={{fontSize:20}}
+         placeholder={'Restaurant name or dish name..'}
+         placeholderTextColor={"#DCDCDC"}
+        />
+         <TouchableOpacity
+    onPress={()=>alert("Please Speak something...")}>
+   <FIcon name="mic" size={width*0.06} color="#E42217"
+   
+    />
+    </TouchableOpacity>
+</View>
+<View style={{flexDirection:'row',alignItems:"center",paddingHorizontal:width*0.05,paddingTop:width*0.03,}}>
+<Switch
+            
+    
+/>
+<Text style={{paddingHorizontal:width*0.02}}>
+  Veg
 </Text>
-    </View>
+<Switch
+              
+      
+/>
+<Text style={{paddingHorizontal:width*0.02}}>
+  Non-Veg
+</Text>
+</View>
+<View style={{paddingHorizontal:width*0.05,paddingTop:width*0.05,flexDirection:"row",alignItems:"center",justifyContent:"space-between"}}>
+<Text style={{fontSize:width*0.05,fontWeight:"bold",color:"#000000"}}>
+  Recommended (30)
+</Text>
+<TouchableOpacity>
+<AntDesign
+name='caretup' size={width*0.04} color="#000000"
+/>
+</TouchableOpacity>
+</View>
+</View>
+  
 );
 const SecondRoute = () => (
   <View style={[styles.container, { backgroundColor: '#673ab7' }]} />
@@ -34,6 +76,7 @@ export default class Cart extends Component {
       { key: 'second', title: 'Most Love Combos' },
       { key: 'third', title: 'Meal' },
     ],
+    
   };
 
   _handleIndexChange = (index) => this.setState({ index });
@@ -55,7 +98,10 @@ export default class Cart extends Component {
             <TouchableOpacity
               style={styles.tabItem}
               onPress={() => this.setState({ index: i })}>
-              <Animated.Text style={{ opacity }}>{route.title}</Animated.Text>
+              <Animated.Text style={{color:"#E42217",opacity,fontWeight:"bold",borderBottomWidth:1,borderBottomColor:"#E42217",fontSize:15 }}>{route.title}</Animated.Text>
+              <Text>
+
+              </Text>
             </TouchableOpacity>
           );
         })}
@@ -146,7 +192,7 @@ Free
    </View>
    </TouchableOpacity>
      </View>
-     <View style={{width:width,height:height,backgroundColor: '#ccc'}}>
+     <View style={{width:width,height:height,backgroundColor: '#FFFFFF'}}>
      <TabView
         navigationState={this.state}
         renderScene={this._renderScene}
@@ -184,6 +230,8 @@ const styles = StyleSheet.create({
   tabBar: {
     flexDirection: 'row',
     paddingTop: 10,
+    justifyContent:"space-evenly"
+    
   },
   tabItem: {
     flex:1,
