@@ -64,12 +64,12 @@ export default class SplashScreen extends React.Component {
 
     render() {
         return (
-            <Animatable.View animation="slideInDown" style={{flex:1, backgroundColor: '#F7B614', justifyContent: 'center', alignItems: 'center'}}>
+            <View animation="slideInDown" style={{flex:1, backgroundColor: '#F7B614', justifyContent: 'center', alignItems: 'center'}}>
                 <Image style={{ height:'70%', width:'70%', resizeMode:'contain' }}
                     source={require('../images/Af.png')}
                 />
                  <Flow size={60} color="#FFFFFF"/>
-            </Animatable.View>
+            </View>
         );
     }
 }

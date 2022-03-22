@@ -1,8 +1,9 @@
-import { Text, View,ImageBackground,Dimensions ,TouchableOpacity,Image,TextInput,ScrollView,StyleSheet} from 'react-native'
+import { Animated,Text, View,ImageBackground,Dimensions ,TouchableOpacity,Image,TextInput,ScrollView,StyleSheet} from 'react-native'
 import React, { Component } from 'react'
 const { width, height } = Dimensions.get("window");
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import * as Animatable from 'react-native-animatable';
+import FIcon from 'react-native-vector-icons/Feather';
 import { Images } from "../../theme/index";
 import { TabView, SceneMap } from 'react-native-tab-view';
 import {
@@ -12,35 +13,62 @@ import {
   BackButtonHeader,
   BackButtonHeader1
 } from '../../components/index';
- const initialLayout={ width: Dimensions.get('window').width }
+const FirstRoute = () => (
+  <View style={[styles.container, { backgroundColor: '#ff4081' }]} >
+<Text>
+  Hello world
+</Text>
+    </View>
+);
+const SecondRoute = () => (
+  <View style={[styles.container, { backgroundColor: '#673ab7' }]} />
+);
+const ThirdRoute = () => (
+  <View style={[styles.container, { backgroundColor: '#FFFFFF' }]} />
+);
 export default class Cart extends Component {
-  constructor(props) {
-    super(props)
-  
-    this.state = {
-      index:0,
-      routes:[
-        { key: 'first', title: 'First' },
-    { key: 'second', title: 'Second' },
-      ]
-    }
-  }
-   renderScene = ({ route }) => {
-    switch (route.key) {
-      case "first":
-        return
-        <View style={{flex:1,backgroundColor:"red"}}>
+  state = {
+    index: 0,
+    routes: [
+      { key: 'first', title: 'Recommended' },
+      { key: 'second', title: 'Most Love Combos' },
+      { key: 'third', title: 'Meal' },
+    ],
+  };
 
-        </View>
-        case "second":
-          return
-          <View style={{flex:1,backgroundColor:"#FFFFFF"}}>
-  
-          </View>
-    }
-   };
-  render() {
-    const {index,routes}=this.State
+  _handleIndexChange = (index) => this.setState({ index });
+
+  _renderTabBar = (props) => {
+    const inputRange = props.navigationState.routes.map((x, i) => i);
+
+    return (
+      <View style={styles.tabBar}>
+        {props.navigationState.routes.map((route, i) => {
+          const opacity = props.position.interpolate({
+            inputRange,
+            outputRange: inputRange.map((inputIndex) =>
+              inputIndex === i ? 1 : 0.5
+            ),
+          });
+
+          return (
+            <TouchableOpacity
+              style={styles.tabItem}
+              onPress={() => this.setState({ index: i })}>
+              <Animated.Text style={{ opacity }}>{route.title}</Animated.Text>
+            </TouchableOpacity>
+          );
+        })}
+      </View>
+    );
+  };
+
+  _renderScene = SceneMap({
+    first: FirstRoute,
+    second: SecondRoute,
+    third:ThirdRoute,
+  }); 
+  render() { 
     return (
      <View style={{flex:1}}>
  <BackButtonHeader1
@@ -116,11 +144,12 @@ Free
    </TouchableOpacity>
      </View>
      <TabView
-      navigationState={{ index, routes }}
-      renderScene={this.renderScene}
-      onIndexChange={index=>this.setState({index})}
-      initialLayout={initialLayout}
-    />
+        navigationState={this.state}
+        renderScene={this._renderScene}
+        renderTabBar={this._renderTabBar}
+        onIndexChange={this._handleIndexChange}
+      />
+     
      </ScrollView>
      </View>
     )
@@ -142,5 +171,20 @@ const styles = StyleSheet.create({
     },
     shadowOpacity: 0.25,
     shadowRadius: 3.5
-  }
+  },
+  container: {
+    flex:1
+  },
+  tabBar: {
+    flexDirection: 'row',
+    paddingTop: 10,
+  },
+  tabItem: {
+    flex:1,
+    alignItems: 'center',
+    padding: 16,
+  
+
+    
+  },
 })
