@@ -3,6 +3,8 @@ import React, { Component } from 'react'
 const { width, height } = Dimensions.get("window");
 import Icon from 'react-native-vector-icons/Feather';
 import FIcon from 'react-native-vector-icons/Feather';
+import AntDesign from 'react-native-vector-icons/AntDesign'
+import Entypo from 'react-native-vector-icons/Entypo'
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import DropDownPicker from 'react-native-dropdown-picker';
 import { Images } from "../../theme/index";
@@ -39,17 +41,28 @@ export default class MainScreen extends Component {
 
   <SafeAreaView style={{width:width,height:height,backgroundColor:"#FFFFFF"}}>
   <View style={{flexDirection:'row',alignItems:"center",justifyContent:'space-between',
-  backgroundColor:"#F7B614",width:width,height:'6%',paddingHorizontal:width*0.05}}>
-<Text style={{fontSize:width*0.09,color:"#121212",fontWeight:"bold"}}>
-Browser
+  backgroundColor:"#F7B614",width:width,height:'6%',paddingHorizontal:width*0.05,paddingTop:width*0.02}}>
+    
+    <View style={{flexDirection:"row",alignItems:"center"}}>
+      <Entypo
+      name='location-pin' size={width*0.07} color={"#E42217"}
+      />
+<Text style={{fontSize:width*0.05,color:"#E42217",fontWeight:"bold"}}>
+Bazar Chitil Qabar
 </Text>
+<TouchableOpacity onPress={()=>alert("Please change your location")}>
+<Entypo
+      name='chevron-small-down' size={width*0.06} color={"#E42217"}
+      />
+      </TouchableOpacity>
+</View>
 <TouchableOpacity onPress={()=>this.props.navigation.navigate("Filter")}>
-<Text style={{fontSize:width*0.05,color:"#E42217"}}>Filter
+<Text style={{fontSize:width*0.05,color:"#FFFFFF",borderRadius:10,borderWidth:1,paddingHorizontal:width*0.05,backgroundColor:"#E42217",borderColor:"#E42217"}}>Filter
 </Text>
 </TouchableOpacity>
         </View>
   <View style={{justifyContent:'center',alignItems:'center',backgroundColor:'#F7B614',
-  width:width,height:'8%'}} >
+  width:width,height:'8%',paddingTop:width*0.01}} >
     <View style ={{borderRadius:10,backgroundColor:"#FFFFFF",width:"90%",
     borderColor:"#FFFFFF",height: '80%',}}>
         
@@ -416,12 +429,12 @@ View all
   style={styles.listViewHorizontal}
 >
   <Image
-    source={require('../../images/vag3.jpg')}
+    source={require('../../images/vag2.jpg')}
     resizeMode="contain"
     style={{ paddingHorizontal: width * 0.05, marginLeft: width * 0.05 }}
   />
   <Image
-    source={require('../../images/vag2.jpg')}
+    source={require('../../images/vag3.jpg')}
     resizeMode="contain"
     style={{ paddingHorizontal: width * 0.05, marginLeft: width * 0.05 }}
   />
