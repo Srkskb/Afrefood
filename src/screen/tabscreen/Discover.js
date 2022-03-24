@@ -37,6 +37,9 @@ export default class Discover extends Component {
    
    </View>
    </TouchableOpacity>
+   <View>
+     
+   </View>
    </SafeAreaView>
  
     )
