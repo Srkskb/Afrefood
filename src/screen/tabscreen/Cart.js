@@ -1,4 +1,4 @@
-import { Switch,Animated,Text, View,ImageBackground,Dimensions ,TouchableOpacity,Image,TextInput,ScrollView,StyleSheet} from 'react-native'
+import { Switch, Animated, Text, View, ImageBackground, Dimensions, TouchableOpacity, Image, TextInput, ScrollView, StyleSheet } from 'react-native'
 import React, { Component } from 'react'
 const { width, height } = Dimensions.get("window");
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
@@ -18,215 +18,215 @@ import {
 
 const FirstRoute = () => (
   <View style={[styles.container, { backgroundColor: '#ffffff' }]} >
-<View style={{alignItems:"center",borderRadius:5,borderWidth:1,marginHorizontal:width*0.05,flexDirection:"row",borderColor:"#E42217",justifyContent:"space-between"}}>
-<FIcon name="search" size={width*0.06} color="#DCDCDC"
-style={{paddingHorizontal:width*0.02}}
-    />
-     <TextInput
-         style={{fontSize:20}}
-         placeholder={'Restaurant name or dish name..'}
-         placeholderTextColor={"#DCDCDC"}
+    <View style={{ alignItems: "center", borderRadius: 5, borderWidth: 1, marginHorizontal: width * 0.05, flexDirection: "row", borderColor: "#E42217", justifyContent: "space-between" }}>
+      <FIcon name="search" size={width * 0.06} color="#DCDCDC"
+        style={{ paddingHorizontal: width * 0.02 }}
+      />
+      <TextInput
+        style={{ fontSize: 20 }}
+        placeholder={'Restaurant name or dish name..'}
+        placeholderTextColor={"#DCDCDC"}
+      />
+      <TouchableOpacity
+        onPress={() => alert("Please Speak something...")}>
+        <FIcon name="mic" size={width * 0.06} color="#E42217"
+
         />
-         <TouchableOpacity
-    onPress={()=>alert("Please Speak something...")}>
-   <FIcon name="mic" size={width*0.06} color="#E42217"
-   
-    />
-    </TouchableOpacity>
-</View>
-<View style={{flexDirection:'row',alignItems:"center",paddingHorizontal:width*0.05,paddingTop:width*0.03,}}>
-<Switch
-            
-    
-/>
-<Text style={{paddingHorizontal:width*0.02}}>
-  Veg
-</Text>
-<Switch
-              
-      
-/>
-<Text style={{paddingHorizontal:width*0.02}}>
-  Non-Veg
-</Text>
-</View>
-<View style={{paddingHorizontal:width*0.05,paddingTop:width*0.05,flexDirection:"row",alignItems:"center",justifyContent:"space-between"}}>
-<Text style={{fontSize:width*0.05,fontWeight:"bold"}}>
-  Recommended (30)
-</Text>
-<TouchableOpacity>
-<AntDesign
-name='caretup' size={width*0.04} color="#000000"
-/>
-</TouchableOpacity>
-</View>
-<View style={{paddingHorizontal:width*0.05,paddingTop:width*0.05,width:width,flexDirection:"row"}}>
-<View style={{width:'64%',backgroundColor: '#FFFFFF'}}>
-  <View style={{flexDirection:'row'}}>
-<Image
-source={require('../../images/arrow.png')}
-style={{height:25,width:25,paddingTop:width*0.02}}
-resizeMode="contain"
-/>
-<Text style={{borderWidth:1,borderRadius:5,borderColor:"#F15267",backgroundColor:"#F15267",paddingHorizontal:width*0.01,marginHorizontal:width*0.01,textAlign:"center",color:"#ffffff",}}>
-  Bestseller
-</Text>
-  </View>
-<Text style={{fontSize:width*0.05,fontWeight:"bold",color:"#000000"}}>
-Mutton Korma
-</Text>
-<Text>
-  In Main Course
-</Text>
-<Text style={{color:"#000000",fontWeight:"bold"}}>
-  340
-</Text>
-<Text style={{paddingTop:width*0.01}}>
- {' Mutton stirred in with curd water\n and a meiange of s....read more'}
-</Text>
-<View style={{paddingTop:width*0.02}}>
-<View style={{flexDirection:"row",borderWidth:1,borderRadius:5,borderColor:"#EAC117",width:width*0.2}}>
-<AntDesign
-name='star' size={width*0.03} color="#EAC117"
-/>
-<AntDesign
-name='star' size={width*0.03} color="#EAC117"
-/>
-<AntDesign
-name='star' size={width*0.03} color="#EAC117"
-/>
-<AntDesign
-name='star' size={width*0.03} color="#EAC117"
-/>
-<AntDesign
-name='staro' size={width*0.03} color="#EAC117"
-/>
-<Text style={{fontSize:width*0.03,fontWeight:"bold"}}>
-  14
-</Text>
-</View>
-</View>
-<View style={{paddingTop:width*0.02}}>
-<TouchableOpacity>
-<Image
-source={require('../../images/LIKE.png')}
-style={{height:45,width:45,paddingTop:width*0.02}}
-resizeMode="contain"
-/>
-</TouchableOpacity>
-</View>
-</View>
-<View style={{width:'36%',backgroundColor: '#FFFFFF'}}>
-  <Image
-  source={require('../../images/diish1.png')}
-  style={{height:height*0.12,width:width*0.42}}
-  resizeMode="contain"
-  />
-  <TouchableOpacity onPress={()=>alert('Adding...')}>
-  <View style={{paddingTop:width*0.01,paddingHorizontal:width*0.06}}>
-  <View style={{borderRadius:10,borderWidth:1,width:width*0.3,backgroundColor:"#FFF6F5",borderColor:"#E75162"}}>
-<Text style={{textAlign:'center',fontWeight:"bold",padding:10,color:"#E75162",fontSize:width*0.04}}>
-  ADD +
-</Text>
+      </TouchableOpacity>
+    </View>
+    <View style={{ flexDirection: 'row', alignItems: "center", paddingHorizontal: width * 0.05, paddingTop: width * 0.03, }}>
+      <Switch
 
-  </View>
-  </View>
-  </TouchableOpacity>
-</View>
-</View>
-<View style={{borderBottomWidth:1,paddingTop:width*0.05,borderBottomColor:"#DCDCDC"}}>
 
-</View>
-<View style={{paddingHorizontal:width*0.05,paddingTop:width*0.05,width:width,flexDirection:"row"}}>
-<View style={{width:'64%',backgroundColor: '#FFFFFF'}}>
-  <View style={{flexDirection:'row'}}>
-<Image
-source={require('../../images/arrow.png')}
-style={{height:25,width:25,paddingTop:width*0.02}}
-resizeMode="contain"
-/>
-<Text style={{borderWidth:1,borderRadius:5,borderColor:"#F15267",backgroundColor:"#F15267",paddingHorizontal:width*0.01,marginHorizontal:width*0.01,textAlign:"center",color:"#ffffff",}}>
-  Bestseller
-</Text>
-  </View>
-<Text style={{fontSize:width*0.05,fontWeight:"bold",color:"#000000"}}>
-  Butter Chicken Boneless
-</Text>
-<Text>
-  In Main Course
-</Text>
-<Text style={{color:"#000000",fontWeight:"bold"}}>
-  340
-</Text>
-<Text style={{paddingTop:width*0.01}}>
- {' Charcoal grilled boneless chicken\n cooked in creame....read more'}
-</Text>
-<View style={{paddingTop:width*0.02}}>
-<View style={{flexDirection:"row",borderWidth:1,borderRadius:5,borderColor:"#EAC117",width:width*0.2}}>
-<AntDesign
-name='star' size={width*0.03} color="#EAC117"
-/>
-<AntDesign
-name='star' size={width*0.03} color="#EAC117"
-/>
-<AntDesign
-name='star' size={width*0.03} color="#EAC117"
-/>
-<AntDesign
-name='star' size={width*0.03} color="#EAC117"
-/>
-<AntDesign
-name='star' size={width*0.03} color="#EAC117"
-/>
-<Text style={{fontSize:width*0.03,fontWeight:"bold"}}>
-  38
-</Text>
-</View>
-</View>
-<View style={{paddingTop:width*0.02}}>
-<TouchableOpacity>
-<Image
-source={require('../../images/LIKE.png')}
-style={{height:45,width:45,paddingTop:width*0.02}}
-resizeMode="contain"
-/>
-</TouchableOpacity>
-</View>
-</View>
-<View style={{width:'36%',backgroundColor: '#FFFFFF'}}>
-  <Image
-  source={require('../../images/dish2.png')}
-  style={{height:height*0.12,width:width*0.42}}
-  resizeMode="contain"
-  />
-  <TouchableOpacity onPress={()=>alert('Adding...')}>
-  <View style={{paddingTop:width*0.01,paddingHorizontal:width*0.06}}>
-  <View style={{borderRadius:10,borderWidth:1,width:width*0.3,backgroundColor:"#FFF6F5",borderColor:"#E75162"}}>
-<Text style={{textAlign:'center',fontWeight:"bold",padding:10,color:"#E75162",fontSize:width*0.04}}>
-  ADD +
-</Text>
+      />
+      <Text style={{ paddingHorizontal: width * 0.02 }}>
+        Veg
+      </Text>
+      <Switch
 
-  </View>
-  </View>
-  </TouchableOpacity>
-  <View style={{paddingTop:width*0.03,paddingHorizontal:width*0.06}}>
-  <View style={{borderRadius:30,borderWidth:1,width:width*0.3,backgroundColor:"#000000",borderColor:"#000000",flexDirection:'row',padding:10,justifyContent:"space-evenly"}}>
-    <MaterialCommunityIcons
-    name='silverware-fork-knife' size={width*0.025} color={"#ffffff"}
-    />
-<Text style={{textAlign:'center',fontWeight:"bold",color:"#ffffff",fontSize:width*0.025}}>
-Browser Menu
-</Text>
-</View>
-</View>
 
-</View>
-</View>
-<View style={{borderBottomWidth:1,paddingTop:width*0.05,borderBottomColor:"#DCDCDC"}}>
+      />
+      <Text style={{ paddingHorizontal: width * 0.02 }}>
+        Non-Veg
+      </Text>
+    </View>
+    <View style={{ paddingHorizontal: width * 0.05, paddingTop: width * 0.05, flexDirection: "row", alignItems: "center", justifyContent: "space-between" }}>
+      <Text style={{ fontSize: width * 0.05, fontWeight: "bold" }}>
+        Recommended (30)
+      </Text>
+      <TouchableOpacity>
+        <AntDesign
+          name='caretup' size={width * 0.04} color="#000000"
+        />
+      </TouchableOpacity>
+    </View>
+    <View style={{ paddingHorizontal: width * 0.05, paddingTop: width * 0.05, width: width, flexDirection: "row" }}>
+      <View style={{ width: '64%', backgroundColor: '#FFFFFF' }}>
+        <View style={{ flexDirection: 'row' }}>
+          <Image
+            source={require('../../images/arrow.png')}
+            style={{ height: 25, width: 25, paddingTop: width * 0.02 }}
+            resizeMode="contain"
+          />
+          <Text style={{ borderWidth: 1, borderRadius: 5, borderColor: "#F15267", backgroundColor: "#F15267", paddingHorizontal: width * 0.01, marginHorizontal: width * 0.01, textAlign: "center", color: "#ffffff", }}>
+            Bestseller
+          </Text>
+        </View>
+        <Text style={{ fontSize: width * 0.05, fontWeight: "bold", color: "#000000" }}>
+          Mutton Korma
+        </Text>
+        <Text>
+          In Main Course
+        </Text>
+        <Text style={{ color: "#000000", fontWeight: "bold" }}>
+          340
+        </Text>
+        <Text style={{ paddingTop: width * 0.01 }}>
+          {' Mutton stirred in with curd water\n and a meiange of s....read more'}
+        </Text>
+        <View style={{ paddingTop: width * 0.02 }}>
+          <View style={{ flexDirection: "row", borderWidth: 1, borderRadius: 5, borderColor: "#EAC117", width: width * 0.2 }}>
+            <AntDesign
+              name='star' size={width * 0.03} color="#EAC117"
+            />
+            <AntDesign
+              name='star' size={width * 0.03} color="#EAC117"
+            />
+            <AntDesign
+              name='star' size={width * 0.03} color="#EAC117"
+            />
+            <AntDesign
+              name='star' size={width * 0.03} color="#EAC117"
+            />
+            <AntDesign
+              name='staro' size={width * 0.03} color="#EAC117"
+            />
+            <Text style={{ fontSize: width * 0.03, fontWeight: "bold" }}>
+              14
+            </Text>
+          </View>
+        </View>
+        <View style={{ paddingTop: width * 0.02 }}>
+          <TouchableOpacity>
+            <Image
+              source={require('../../images/LIKE.png')}
+              style={{ height: 45, width: 45, paddingTop: width * 0.02 }}
+              resizeMode="contain"
+            />
+          </TouchableOpacity>
+        </View>
+      </View>
+      <View style={{ width: '36%', backgroundColor: '#FFFFFF' }}>
+        <Image
+          source={require('../../images/diish1.png')}
+          style={{ height: height * 0.12, width: width * 0.42 }}
+          resizeMode="contain"
+        />
+        <TouchableOpacity onPress={() => alert('Adding...')}>
+          <View style={{ paddingTop: width * 0.01, paddingHorizontal: width * 0.06 }}>
+            <View style={{ borderRadius: 10, borderWidth: 1, width: width * 0.3, backgroundColor: "#FFF6F5", borderColor: "#E75162" }}>
+              <Text style={{ textAlign: 'center', fontWeight: "bold", padding: 10, color: "#E75162", fontSize: width * 0.04 }}>
+                ADD +
+              </Text>
 
-</View>
-</View>
-  
+            </View>
+          </View>
+        </TouchableOpacity>
+      </View>
+    </View>
+    <View style={{ borderBottomWidth: 1, paddingTop: width * 0.05, borderBottomColor: "#DCDCDC" }}>
+
+    </View>
+    <View style={{ paddingHorizontal: width * 0.05, paddingTop: width * 0.05, width: width, flexDirection: "row" }}>
+      <View style={{ width: '64%', backgroundColor: '#FFFFFF' }}>
+        <View style={{ flexDirection: 'row' }}>
+          <Image
+            source={require('../../images/arrow.png')}
+            style={{ height: 25, width: 25, paddingTop: width * 0.02 }}
+            resizeMode="contain"
+          />
+          <Text style={{ borderWidth: 1, borderRadius: 5, borderColor: "#F15267", backgroundColor: "#F15267", paddingHorizontal: width * 0.01, marginHorizontal: width * 0.01, textAlign: "center", color: "#ffffff", }}>
+            Bestseller
+          </Text>
+        </View>
+        <Text style={{ fontSize: width * 0.05, fontWeight: "bold", color: "#000000" }}>
+          Butter Chicken Boneless
+        </Text>
+        <Text>
+          In Main Course
+        </Text>
+        <Text style={{ color: "#000000", fontWeight: "bold" }}>
+          340
+        </Text>
+        <Text style={{ paddingTop: width * 0.01 }}>
+          {' Charcoal grilled boneless chicken\n cooked in creame....read more'}
+        </Text>
+        <View style={{ paddingTop: width * 0.02 }}>
+          <View style={{ flexDirection: "row", borderWidth: 1, borderRadius: 5, borderColor: "#EAC117", width: width * 0.2 }}>
+            <AntDesign
+              name='star' size={width * 0.03} color="#EAC117"
+            />
+            <AntDesign
+              name='star' size={width * 0.03} color="#EAC117"
+            />
+            <AntDesign
+              name='star' size={width * 0.03} color="#EAC117"
+            />
+            <AntDesign
+              name='star' size={width * 0.03} color="#EAC117"
+            />
+            <AntDesign
+              name='star' size={width * 0.03} color="#EAC117"
+            />
+            <Text style={{ fontSize: width * 0.03, fontWeight: "bold" }}>
+              38
+            </Text>
+          </View>
+        </View>
+        <View style={{ paddingTop: width * 0.02 }}>
+          <TouchableOpacity>
+            <Image
+              source={require('../../images/LIKE.png')}
+              style={{ height: 45, width: 45, paddingTop: width * 0.02 }}
+              resizeMode="contain"
+            />
+          </TouchableOpacity>
+        </View>
+      </View>
+      <View style={{ width: '36%', backgroundColor: '#FFFFFF' }}>
+        <Image
+          source={require('../../images/dish2.png')}
+          style={{ height: height * 0.12, width: width * 0.42 }}
+          resizeMode="contain"
+        />
+        <TouchableOpacity onPress={() => alert('Adding...')}>
+          <View style={{ paddingTop: width * 0.01, paddingHorizontal: width * 0.06 }}>
+            <View style={{ borderRadius: 10, borderWidth: 1, width: width * 0.3, backgroundColor: "#FFF6F5", borderColor: "#E75162" }}>
+              <Text style={{ textAlign: 'center', fontWeight: "bold", padding: 10, color: "#E75162", fontSize: width * 0.04 }}>
+                ADD +
+              </Text>
+
+            </View>
+          </View>
+        </TouchableOpacity>
+        <View style={{ paddingTop: width * 0.03, paddingHorizontal: width * 0.06 }}>
+          <View style={{ borderRadius: 30, borderWidth: 1, width: width * 0.3, backgroundColor: "#000000", borderColor: "#000000", flexDirection: 'row', padding: 10, justifyContent: "space-evenly" }}>
+            <MaterialCommunityIcons
+              name='silverware-fork-knife' size={width * 0.025} color={"#ffffff"}
+            />
+            <Text style={{ textAlign: 'center', fontWeight: "bold", color: "#ffffff", fontSize: width * 0.025 }}>
+              Browser Menu
+            </Text>
+          </View>
+        </View>
+
+      </View>
+    </View>
+    <View style={{ borderBottomWidth: 1, paddingTop: width * 0.05, borderBottomColor: "#DCDCDC" }}>
+
+    </View>
+  </View>
+
 );
 const SecondRoute = () => (
   <View style={[styles.container, { backgroundColor: '#673ab7' }]} />
@@ -242,7 +242,7 @@ export default class Cart extends Component {
       { key: 'second', title: 'Most Love Combos' },
       { key: 'third', title: 'Meal' },
     ],
-    
+
   };
 
   _handleIndexChange = (index) => this.setState({ index });
@@ -264,7 +264,7 @@ export default class Cart extends Component {
             <TouchableOpacity
               style={styles.tabItem}
               onPress={() => this.setState({ index: i })}>
-              <Animated.Text style={{color:"#E42217",opacity,fontWeight:"bold",borderBottomWidth:1,borderBottomColor:"#E42217",fontSize:15 }}>{route.title}</Animated.Text>
+              <Animated.Text style={{ color: "#E42217", opacity, fontWeight: "bold", borderBottomWidth: 1, borderBottomColor: "#E42217", fontSize: 15 }}>{route.title}</Animated.Text>
               <Text>
 
               </Text>
@@ -276,111 +276,115 @@ export default class Cart extends Component {
   };
 
   _renderScene = SceneMap({
-    first:FirstRoute,
-    second:SecondRoute,
-    third:ThirdRoute,
+    first: FirstRoute,
+    second: SecondRoute,
+    third: ThirdRoute,
   });
 
-  render() { 
+  render() {
     return (
-     <View style={{flex:1,backgroundColor:"#ffffff"}}>
-<ScrollView contentContainerStyle={{flexGrow: 1}}>
- <BackButtonHeader1
-    backPressed={() => { this.props.navigation.goBack() }}
-     />
-     <View style={{paddingHorizontal:width*0.05,height:height*0.24}}>
-       <Image
-       source={require('../../images/banner1.png')}
-       style={{height:height*0.24,width:width*0.92,alignSelf:"center"}} resizeMode={'contain'}
-       />
-     </View>
-     <View style={{paddingHorizontal:width*0.05,height:height*0.06}}>
-       <Text style={{fontSize:width*0.06,fontWeight:'bold',color:"#000000",fontFamily: "Poppins-Medium"}}>
-         Nazeer Foods
-       </Text>
-     </View>
-     <View style={{paddingHorizontal:width*0.05,height:height*0.04}}>
-       <Text style={{fontSize:width*0.04,fontWeight:'bold',color:"#000000"}}>
-North Indian, Mughlai,Fast Food
-       </Text>
-     </View>
-     <View style={{flexDirection:"row",alignItems:"center",paddingHorizontal:width*0.05,
-     height:height*0.04}}>
-       <Text>
-M-42 Connaught Place,New Delhi.
-       </Text>
-       <Text style={{color:"#000000"}}>
+      <View style={{ flex: 1, backgroundColor: "#ffffff" }}>
+        <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
+          <BackButtonHeader1
+            backPressed={() => { this.props.navigation.goBack() }}
+          />
+          <View style={{ paddingHorizontal: width * 0.05, height: height * 0.24 }}>
+            <Image
+              source={require('../../images/banner1.png')}
+              style={{ height: height * 0.24, width: width * 0.92, alignSelf: "center" }} resizeMode={'contain'}
+            />
+          </View>
+          <View style={{ paddingHorizontal: width * 0.05, height: height * 0.06 }}>
+            <Text style={{ fontSize: width * 0.06, fontWeight: 'bold', color: "#000000", fontFamily: "Poppins-Medium" }}>
+              Nazeer Foods
+            </Text>
+          </View>
+          <View style={{ paddingHorizontal: width * 0.05, height: height * 0.04 }}>
+            <Text style={{ fontSize: width * 0.04, fontWeight: 'bold', color: "#000000" }}>
+              North Indian, Mughlai,Fast Food
+            </Text>
+          </View>
+          <View style={{
+            flexDirection: "row", alignItems: "center", paddingHorizontal: width * 0.05,
+            height: height * 0.04
+          }}>
+            <Text>
+              M-42 Connaught Place,New Delhi.
+            </Text>
+            <Text style={{ color: "#000000" }}>
 
-2KM       </Text>
-     </View>
-     <View style={{flexDirection:"row",alignItems:"center",height:height*0.04,paddingHorizontal:width*0.05}}>
-       <Text style={{color:"#000000",fontWeight:"bold",fontFamily: "Poppins-Medium"}}>
-Delivery
-       </Text>
-       <Text style={{color:"#000000",fontWeight:"bold",fontFamily: "Poppins-Medium",paddingHorizontal:width*0.2}}>
-Open time</Text>
-     </View>
-     <View style={{flexDirection:"row",alignItems:"center",paddingHorizontal:width*0.05,height:height*0.04}}>
-       <Text style={{fontWeight:"bold",fontFamily: "Poppins-Medium"}}>
-Free
-       </Text>
+              2KM       </Text>
+          </View>
+          <View style={{ flexDirection: "row", alignItems: "center", height: height * 0.04, paddingHorizontal: width * 0.05 }}>
+            <Text style={{ color: "#000000", fontWeight: "bold", fontFamily: "Poppins-Medium" }}>
+              Delivery
+            </Text>
+            <Text style={{ color: "#000000", fontWeight: "bold", fontFamily: "Poppins-Medium", paddingHorizontal: width * 0.2 }}>
+              Open time</Text>
+          </View>
+          <View style={{ flexDirection: "row", alignItems: "center", paddingHorizontal: width * 0.05, height: height * 0.04 }}>
+            <Text style={{ fontWeight: "bold", fontFamily: "Poppins-Medium" }}>
+              Free
+            </Text>
 
-<Text style={{fontWeight:"bold",fontFamily: "Poppins-Medium",paddingHorizontal:width*0.27}}>
-8:00AM
-</Text>
-     </View>
-     <View style={{flexDirection:"row",alignItems:"center",justifyContent:"space-evenly",
-     height:height*0.1}}>
-       <TouchableOpacity onPress={()=>alert("Will add soon")}>
-   <View style={styles.tabBarStyle}>
-    
-     <Image
-     source={require('../../images/iocon.png')}
-     resizeMode="contain"
-          style={{width:width*0.09,height:height*0.06}}
-     />
-     <Text style={{paddingHorizontal:width*0.03,paddingTop:width*0.02,color:"#000",fontWeight:"bold"}}>
-      {'10% OFF up to..\nuse code Maxsa...'}.
-     </Text>
+            <Text style={{ fontWeight: "bold", fontFamily: "Poppins-Medium", paddingHorizontal: width * 0.27 }}>
+              8:00AM
+            </Text>
+          </View>
+          <View style={{
+            flexDirection: "row", alignItems: "center", justifyContent: "space-evenly",
+            height: height * 0.1
+          }}>
+            <TouchableOpacity onPress={() => alert("Will add soon")}>
+              <View style={styles.tabBarStyle}>
 
-   </View>
-   </TouchableOpacity>
-   <TouchableOpacity onPress={()=>alert("Will add soon")}>
-   <View style={styles.tabBarStyle}>
-     <Image
-     source={require('../../images/iocon.png')}
-     resizeMode="contain"
-     style={{width:width*0.09,height:height*0.06}}
-     />
-   <Text style={{paddingHorizontal:width*0.03,paddingTop:width*0.02,color:"#000",fontWeight:"bold"}}>
-      {'10% OFF up to..\nuse code ZOMPA...'}.
-     </Text>
-   </View>
-   </TouchableOpacity>
-     </View>
-     <View style={{width:width,height:height,backgroundColor: '#FFFFFF'}}>
-     <TabView
-        navigationState={this.state}
-        renderScene={this._renderScene}
-        renderTabBar={this._renderTabBar}
-        onIndexChange={this._handleIndexChange}
-      />
+                <Image
+                  source={require('../../images/iocon.png')}
+                  resizeMode="contain"
+                  style={{ width: width * 0.09, height: height * 0.06 }}
+                />
+                <Text style={{ paddingHorizontal: width * 0.03, paddingTop: width * 0.02, color: "#000", fontWeight: "bold" }}>
+                  {'10% OFF up to..\nuse code Maxsa...'}.
+                </Text>
+
+              </View>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => alert("Will add soon")}>
+              <View style={styles.tabBarStyle}>
+                <Image
+                  source={require('../../images/iocon.png')}
+                  resizeMode="contain"
+                  style={{ width: width * 0.09, height: height * 0.06 }}
+                />
+                <Text style={{ paddingHorizontal: width * 0.03, paddingTop: width * 0.02, color: "#000", fontWeight: "bold" }}>
+                  {'10% OFF up to..\nuse code ZOMPA...'}.
+                </Text>
+              </View>
+            </TouchableOpacity>
+          </View>
+          <View style={{ width: width, height: height, backgroundColor: '#FFFFFF' }}>
+            <TabView
+              navigationState={this.state}
+              renderScene={this._renderScene}
+              renderTabBar={this._renderTabBar}
+              onIndexChange={this._handleIndexChange}
+            />
+          </View>
+
+        </ScrollView>
       </View>
-     
-     </ScrollView>
-     </View>
     )
   }
 }
 const styles = StyleSheet.create({
   tabBarStyle: {
-    flexDirection:"row",
+    flexDirection: "row",
     elevation: 5,
     backgroundColor: "#FFFFFF",
     borderRadius: 10,
-    
+
     height: 50,
-    width:180,
+    width: 180,
     shadowColor: "#7F5DF0",
     shadowOffset: {
       width: 0,
@@ -390,21 +394,21 @@ const styles = StyleSheet.create({
     shadowRadius: 3.5
   },
   container: {
-    width:width,
-    height:'100%'
+    width: width,
+    height: '100%'
   },
   tabBar: {
     flexDirection: 'row',
     paddingTop: 10,
-    justifyContent:"space-evenly"
-    
+    justifyContent: "space-evenly"
+
   },
   tabItem: {
-    flex:1,
+    flex: 1,
     alignItems: 'center',
     padding: 16,
-  
 
-    
+
+
   },
 })

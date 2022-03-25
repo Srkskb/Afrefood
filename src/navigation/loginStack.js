@@ -1,8 +1,8 @@
 import React from 'react';
-import { Text, View,Button,ImageBackground,Image,Dimensions,StyleSheet,picker,TouchableOpacity } from 'react-native'
+import { Text, View, Button, ImageBackground, Image, Dimensions, StyleSheet, picker, TouchableOpacity } from 'react-native'
 import Registration from '../screen/signup/Registration'
 import { createStackNavigator, TransitionPresets } from '@react-navigation/stack';
-import { DrawerContentScrollView,DrawerItemList,DrawerItem } from '@react-navigation/drawer';
+import { DrawerContentScrollView, DrawerItemList, DrawerItem } from '@react-navigation/drawer';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import Login from '../screen/login/Login';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
@@ -20,104 +20,104 @@ import Favorite from '../screen/tabscreen/Favorite';
 import Profile from '../screen/tabscreen/Profile';
 import style from 'react-native-datepicker/style';
 const Tab = createMaterialTopTabNavigator();
-const CustomTabBarButton=({children,onPress})=>(
-<TouchableOpacity style={{height:70,width:70,top:-30,justifyContent:"center",alignItems:"center",...styles.shadow}} onPress={onPress}>
-  <View style={{height:70,width:70,borderRadius:35,backgroundColor:"#e32f45"}}>
-{children}
-  </View>
-</TouchableOpacity>
+const CustomTabBarButton = ({ children, onPress }) => (
+  <TouchableOpacity style={{ height: 70, width: 70, top: -30, justifyContent: "center", alignItems: "center", ...styles.shadow }} onPress={onPress}>
+    <View style={{ height: 70, width: 70, borderRadius: 35, backgroundColor: "#e32f45" }}>
+      {children}
+    </View>
+  </TouchableOpacity>
 
 );
 function MyTabs() {
   return (
     <Tab.Navigator initialRouteName="MainScreen"
-    tabBarPosition='bottom'
-    screenOptions={{
-      tabBarShowLabel:false,
-      tabBarStyle: {
-    position: "absolute",
-    bottom: 25,
-    left: 20,
-    right: 20,
-    elevation: 5,
-    backgroundColor: "#DCDCDC",
-    borderRadius: 15,
-    height: 70,
-    shadowColor: "#7F5DF0",
-    shadowOffset: {
-      width: 0,
-      height: 0
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.5
-  }
+      tabBarPosition='bottom'
+      screenOptions={{
+        tabBarShowLabel: false,
+        tabBarStyle: {
+          position: "absolute",
+          bottom: 25,
+          left: 20,
+          right: 20,
+          elevation: 5,
+          backgroundColor: "#DCDCDC",
+          borderRadius: 15,
+          height: 70,
+          shadowColor: "#7F5DF0",
+          shadowOffset: {
+            width: 0,
+            height: 0
+          },
+          shadowOpacity: 0.25,
+          shadowRadius: 3.5
+        }
       }}
     >
       <Tab.Screen name="Attend Class" component={MainScreen}
-      options={{
-        tabBarIcon:({color,focused})=>
-        <View style={{alignItems:"center",justifyContent:"center",top:20}}>
-          <Image
-          source={require('../images/hc.png')}
-          resizeMode="contain"
-          style={{width:25,height:25,tintColor:focused ? "#e32f45" : "#748c94"}}
-          />
-          <Text style={{color:focused ? "#e32f45" : "#748c94",fontSize:12}}>Home</Text>
-        </View>
-      }}
+        options={{
+          tabBarIcon: ({ color, focused }) =>
+            <View style={{ alignItems: "center", justifyContent: "center", top: 20 }}>
+              <Image
+                source={require('../images/hc.png')}
+                resizeMode="contain"
+                style={{ width: 25, height: 25, tintColor: focused ? "#e32f45" : "#748c94" }}
+              />
+              <Text style={{ color: focused ? "#e32f45" : "#748c94", fontSize: 12 }}>Home</Text>
+            </View>
+        }}
       />
       <Tab.Screen name="Attendence" component={Discover}
-         options={{
-          tabBarIcon:({color,focused})=>
-          <View style={{alignItems:"center",justifyContent:"center",top:20}}>
-            <Image
-            source={require('../images/lc.png')}
-            resizeMode="contain"
-            style={{width:25,height:25,tintColor:focused ? "#e32f45" : "#748c94"}}
-            />
-            <Text style={{color:focused ? "#e32f45" : "#748c94",fontSize:12}}>Home</Text>
-          </View>
+        options={{
+          tabBarIcon: ({ color, focused }) =>
+            <View style={{ alignItems: "center", justifyContent: "center", top: 20 }}>
+              <Image
+                source={require('../images/lc.png')}
+                resizeMode="contain"
+                style={{ width: 25, height: 25, tintColor: focused ? "#e32f45" : "#748c94" }}
+              />
+              <Text style={{ color: focused ? "#e32f45" : "#748c94", fontSize: 12 }}>Home</Text>
+            </View>
         }}
-        />
-      <Tab.Screen name="Assignments" component={Cart} 
-       options={{
-        tabBarIcon:({color,focused})=>
-        <View style={{alignItems:"center",justifyContent:"center",top:20}}>
-          <Image
-          source={require('../images/cc.png')}
-          resizeMode="contain"
-          style={{width:25,height:25,tintColor:focused ? "#e32f45" : "#748c94"}}
-          />
-          <Text style={{color:focused ? "#e32f45" : "#748c94",fontSize:12}}>Home</Text>
-        </View>
-      }}
+      />
+      <Tab.Screen name="Assignments" component={Cart}
+        options={{
+          tabBarIcon: ({ color, focused }) =>
+            <View style={{ alignItems: "center", justifyContent: "center", top: 20 }}>
+              <Image
+                source={require('../images/cc.png')}
+                resizeMode="contain"
+                style={{ width: 25, height: 25, tintColor: focused ? "#e32f45" : "#748c94" }}
+              />
+              <Text style={{ color: focused ? "#e32f45" : "#748c94", fontSize: 12 }}>Home</Text>
+            </View>
+        }}
       />
       <Tab.Screen name="Teacher Remarks" component={Favorite}
-         options={{
-          tabBarIcon:({color,focused})=>
-          <View style={{alignItems:"center",justifyContent:"center",top:20}}>
-            <Image
-            source={require('../images/sc.png')}
-            resizeMode="contain"
-            style={{width:25,height:25,tintColor:focused ? "#e32f45" : "#748c94"}}
-            />
-            <Text style={{color:focused ? "#e32f45" : "#748c94",fontSize:12}}>Home</Text>
-          </View>
+        options={{
+          tabBarIcon: ({ color, focused }) =>
+            <View style={{ alignItems: "center", justifyContent: "center", top: 20 }}>
+              <Image
+                source={require('../images/sc.png')}
+                resizeMode="contain"
+                style={{ width: 25, height: 25, tintColor: focused ? "#e32f45" : "#748c94" }}
+              />
+              <Text style={{ color: focused ? "#e32f45" : "#748c94", fontSize: 12 }}>Home</Text>
+            </View>
         }}
-        />
-      <Tab.Screen name="Next Class Prepration" component={Profile} 
-         options={{
-          tabBarIcon:({color,focused})=>
-          <View style={{alignItems:"center",justifyContent:"center",top:20}}>
-            <Image
-            source={require('../images/pc.png')}
-            resizeMode="contain"
-            style={{width:25,height:25,tintColor:focused ? "#e32f45" : "#748c94"}}
-            />
-            <Text style={{color:focused ? "#e32f45" : "#748c94",fontSize:12}}>Home</Text>
-          </View>
+      />
+      <Tab.Screen name="Next Class Prepration" component={Profile}
+        options={{
+          tabBarIcon: ({ color, focused }) =>
+            <View style={{ alignItems: "center", justifyContent: "center", top: 20 }}>
+              <Image
+                source={require('../images/pc.png')}
+                resizeMode="contain"
+                style={{ width: 25, height: 25, tintColor: focused ? "#e32f45" : "#748c94" }}
+              />
+              <Text style={{ color: focused ? "#e32f45" : "#748c94", fontSize: 12 }}>Home</Text>
+            </View>
         }}
-        />
+      />
     </Tab.Navigator>
   );
 }
@@ -127,14 +127,14 @@ function LoginStackNavigator() {
   return (
     <Stack.Navigator initialRouteName="Login" screenOptions={{ ...(Platform.OS === "android" && TransitionPresets.SlideFromRightIOS) }}>
       <Stack.Screen name="Login" component={Login} options={{ headerShown: false }} />
-      <Stack.Screen name="ResetPassword" component={ResetPassword} options={{ headerShown: false}} />
-      <Stack.Screen name="Registration" component={Registration} options={{ headerShown: false}} />
-      <Stack.Screen name="ProfileUpdate" component={ProfileUpdate} options={{ headerShown: false}} />
-      <Stack.Screen name="Home" component={Home} options={{ headerShown: false}} />
-      <Stack.Screen name="Location" component={Location} options={{ headerShown: false}} />
-      <Stack.Screen name="Filter" component={Filter} options={{ headerShown: false}} />
-      <Stack.Screen name="MainScreen" component={MyTabs} options={{ headerShown: false}} />
-      </Stack.Navigator>
+      <Stack.Screen name="ResetPassword" component={ResetPassword} options={{ headerShown: false }} />
+      <Stack.Screen name="Registration" component={Registration} options={{ headerShown: false }} />
+      <Stack.Screen name="ProfileUpdate" component={ProfileUpdate} options={{ headerShown: false }} />
+      <Stack.Screen name="Home" component={Home} options={{ headerShown: false }} />
+      <Stack.Screen name="Location" component={Location} options={{ headerShown: false }} />
+      <Stack.Screen name="Filter" component={Filter} options={{ headerShown: false }} />
+      <Stack.Screen name="MainScreen" component={MyTabs} options={{ headerShown: false }} />
+    </Stack.Navigator>
   );
 }
 const styles = StyleSheet.create({
@@ -161,15 +161,15 @@ const styles = StyleSheet.create({
 
   },
 
-  shadow:{
-shadowColor:"#7F5DF0",
-shadowOffset:{
-  width:0,
-  height:10
-},
-shadowOpacity:0.25,
-shadowRadius:3.5,
-elevation:5
+  shadow: {
+    shadowColor: "#7F5DF0",
+    shadowOffset: {
+      width: 0,
+      height: 10
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.5,
+    elevation: 5
 
   },
 });
