@@ -23,7 +23,7 @@ const FirstRoute = () => (
         style={{ paddingHorizontal: width * 0.02 }}
       />
       <TextInput
-        style={{ fontSize: 20 }}
+        style={{ fontSize: 15 }}
         placeholder={'Restaurant name or dish name..'}
         placeholderTextColor={"#DCDCDC"}
       />
