@@ -15,12 +15,12 @@ export default class Favorite extends Component {
      <Image
      source={require("../../images/10.png")}
      resizeMode="contain"
-     style={{height:height*0.06,width:width*0.1,borderRadius:width*0.05,borderColor:"#E44217"}}
+     style={{height:height*0.06,width:width*0.1,borderRadius:width*0.1,borderColor:"#E44217"}}
      
      />
      </TouchableNativeFeedback>
    </View >
-   <View style={{justifyContent:'center',alignItems:"center",paddingTop:width*0.03}}>
+   <View style={{justifyContent:'center',alignItems:"center",paddingTop:width*0.01}}>
     
 <ImageBackground
   source={require("../../images/6.png")}
@@ -29,7 +29,7 @@ export default class Favorite extends Component {
   
 >
 <TouchableNativeFeedback onPress={()=>alert("Are you want to buy?")}>
-  <View style={{justifyContent:'center',alignItems:'center',flex:1,fontFamily:'Poppins-Semibold',paddingTop:width*0.2}}>
+  <View style={{justifyContent:'center',alignItems:'center',fontFamily:'Poppins-Semibold',paddingTop:width*0.2}}>
 <Text style={{fontSize:width*0.07,fontWeight:'bold',color:'#FFF'}}>
   Paleo Beef Blackpepper
 </Text>
@@ -60,7 +60,7 @@ export default class Favorite extends Component {
 </ImageBackground>
 
 </View>
-<View style={{justifyContent:'center',alignItems:"center",paddingTop:width*0.03}}>
+<View style={{justifyContent:'center',alignItems:"center",paddingTop:width*0.01}}>
     
     <ImageBackground
       source={require("../../images/5.png")}
@@ -69,7 +69,7 @@ export default class Favorite extends Component {
       
     >
     <TouchableNativeFeedback onPress={()=>alert("Are you want to buy?")}>
-      <View style={{justifyContent:'center',alignItems:'center',flex:1,fontFamily:'Poppins-Semibold',paddingTop:width*0.2}}>
+      <View style={{justifyContent:'center',alignItems:'center',fontFamily:'Poppins-Semibold',paddingTop:width*0.2}}>
     <Text style={{fontSize:width*0.07,fontWeight:'bold',color:'#FFF'}}>
       Fresh Pizza Margherita
     </Text>
@@ -100,7 +100,7 @@ export default class Favorite extends Component {
     </ImageBackground>
     
     </View>
-    <View style={{justifyContent:'center',alignItems:"center",paddingTop:width*0.03}}>
+    <View style={{justifyContent:'center',alignItems:"center",paddingTop:width*0.01}}>
     
     <ImageBackground
       source={require("../../images/4.png")}
@@ -109,7 +109,7 @@ export default class Favorite extends Component {
       
     >
     <TouchableNativeFeedback onPress={()=>alert("Are you want to buy?")}>
-      <View style={{justifyContent:'center',alignItems:'center',flex:1,fontFamily:'Poppins-Semibold',paddingTop:width*0.2}}>
+      <View style={{justifyContent:'center',alignItems:'center',fontFamily:'Poppins-Semibold',paddingTop:width*0.2}}>
     <Text style={{fontSize:width*0.07,fontWeight:'bold',color:'#FFF'}}>
       Indian-food-samosa
     </Text>
