@@ -52,7 +52,7 @@ export default class MainScreen extends Component {
             <Text style={{ fontSize: width * 0.05, color: "#E42217", fontWeight: "bold" }}>
               Bazar Chitil Qabar
             </Text>
-            <TouchableOpacity onPress={() => alert("Please change your location")}>
+            <TouchableOpacity onPress={() =>this.props.navigation.navigate('Location')}>
               <Entypo
                 name='chevron-small-down' size={width * 0.06} color={"#E42217"}
               />
