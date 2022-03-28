@@ -1,3 +1,4 @@
+import 'react-native-gesture-handler';
 import React from 'react';
 import AppStack from './src/navigation/appStack';
 import {YellowBox, StatusBar} from 'react-native'
