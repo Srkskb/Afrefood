@@ -5,6 +5,7 @@ import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import * as Animatable from 'react-native-animatable';
 import FIcon from 'react-native-vector-icons/Feather';
 import AntDesign from 'react-native-vector-icons/AntDesign'
+import Ionicons from 'react-native-vector-icons/Ionicons'
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
 import { Images } from "../../theme/index";
 import { TabView, SceneMap } from 'react-native-tab-view';
@@ -285,9 +286,15 @@ export default class Cart extends Component {
     return (
       <View style={{ flex: 1, backgroundColor: "#ffffff" }}>
         <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
-          <BackButtonHeader1
-            backPressed={() => { this.props.navigation.goBack() }}
-          />
+        <View style={{width: '100%',height:"7%", backgroundColor: '#fdfdfk',paddingHorizontal:width*0.01,
+      alignItems:'center',justifyContent:'flex-start',flexDirection:'row'}}>
+         <TouchableOpacity style={{flexDirection:'row'}}  onPress={() => { this.props.navigation.goBack() }}>
+     <Ionicons name="chevron-back-outline" color={"#E44217"} size={width*0.07}
+     style={{paddingVertical:width*0.005}}
+     />
+     <Text style={{fontSize:width*0.06,fontWeight:'bold',color:"#E44217"}}>Back</Text>
+   </TouchableOpacity>
+   </View>
           <View style={{ paddingHorizontal: width * 0.05, height: height * 0.24 }}>
             <Image
               source={require('../../images/banner1.png')}
