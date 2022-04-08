@@ -19,6 +19,7 @@ import Cart from '../screen/tabscreen/Cart';
 import Favorite from '../screen/tabscreen/Favorite';
 import Profile from '../screen/tabscreen/Profile';
 import style from 'react-native-datepicker/style';
+import Order from '../screen/yourOrder/Order';
 const Tab = createMaterialTopTabNavigator();
 const CustomTabBarButton = ({ children, onPress }) => (
   <TouchableOpacity style={{ height: 70, width: 70, top: -30, justifyContent: "center", alignItems: "center", ...styles.shadow }} onPress={onPress}>
@@ -133,6 +134,7 @@ function LoginStackNavigator() {
       <Stack.Screen name="Home" component={Home} options={{ headerShown: false }} />
       <Stack.Screen name="Location" component={Location} options={{ headerShown: false }} />
       <Stack.Screen name="Filter" component={Filter} options={{ headerShown: false }} />
+      <Stack.Screen name=" Your Order" component={Order} options={{ headerShown: false }} />
       <Stack.Screen name="MainScreen" component={MyTabs} options={{ headerShown: false }} />
     </Stack.Navigator>
   );

@@ -20,8 +20,12 @@ export default class Favorite extends Component {
      />
      </TouchableNativeFeedback>
    </View >
+   <View style={{justifyContent:'flex-end',alignItems:'flex-end'}}>
+    <Text>
+      Your Order
+    </Text>
+    </View> 
    <View style={{justifyContent:'center',alignItems:"center",paddingTop:width*0.01}}>
-    
 <ImageBackground
   source={require("../../images/6.png")}
   resizeMode="contain"
