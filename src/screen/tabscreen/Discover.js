@@ -29,6 +29,7 @@ export default class Discover extends Component {
       alignItems:'center',justifyContent:'flex-start',flexDirection:'row'}}>
          <TouchableOpacity style={{flexDirection:'row'}}  onPress={() => { this.props.navigation.goBack() }}>
      <Ionicons name="chevron-back-outline" color={"#E44217"} size={width*0.07}
+    
      />
      <Text style={{fontSize:width*0.06,fontWeight:'bold',color:"#E44217"}}>Back</Text>
    </TouchableOpacity>

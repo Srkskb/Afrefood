@@ -49,7 +49,7 @@ export default class MainScreen extends Component {
             <Entypo
               name='location-pin' size={width * 0.07} color={"#E42217"}
             />
-            <Text style={{ fontSize: width * 0.05, color: "#E42217", fontWeight: "bold" }}>
+            <Text style={{ fontSize: width * 0.03, color: "#E42217", fontWeight: "bold" }}>
               Bazar Chitil Qabar
             </Text>
             <TouchableOpacity onPress={() =>this.props.navigation.navigate('Location')}>
@@ -59,7 +59,7 @@ export default class MainScreen extends Component {
             </TouchableOpacity>
           </View>
           <TouchableOpacity onPress={() => this.props.navigation.navigate("Filter")}>
-            <Text style={{ fontSize: width * 0.05, color: "#FFFFFF", borderRadius: 10, borderWidth: 1, paddingHorizontal: width * 0.05, backgroundColor: "#E42217", borderColor: "#E42217" }}>Filter
+            <Text style={{ fontSize: width * 0.04, color: "#FFFFFF", borderRadius: 10, borderWidth: 1, paddingHorizontal: width * 0.05, backgroundColor: "#E42217", borderColor: "#E42217" }}>Filter
             </Text>
           </TouchableOpacity>
         </View>
