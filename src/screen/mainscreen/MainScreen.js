@@ -1,5 +1,4 @@
-import { Text, View, ImageBackground, Dimensions, TouchableOpacity, Image, TextInput, ScrollView,
-  StyleSheet } from 'react-native'
+import { Text, View, ImageBackground, Dimensions, TouchableOpacity, Image, TextInput, ScrollView, StyleSheet } from 'react-native'
 import React, { Component } from 'react'
 const { width, height } = Dimensions.get("window");
 import Icon from 'react-native-vector-icons/Feather';
@@ -41,10 +40,12 @@ export default class MainScreen extends Component {
     return (
 
       <SafeAreaView style={{ width: width, height: height, backgroundColor: "#FFFFFF" }}>
-      <View style={{flexDirection: 'row', alignItems: "center", justifyContent: 'space-between',
-          backgroundColor: "#F7B614", width: width, height: '6%', paddingHorizontal: width * 0.05,
-          paddingTop: width * 0.02}}>
-      <View style={{ flexDirection: "row", alignItems: "center" }}>
+        <View style={{
+          flexDirection: 'row', alignItems: "center", justifyContent: 'space-between',
+          backgroundColor: "#F7B614", width: width, height: '6%', paddingHorizontal: width * 0.05, paddingTop: width * 0.02
+        }}>
+
+          <View style={{ flexDirection: "row", alignItems: "center" }}>
             <Entypo
               name='location-pin' size={width * 0.07} color={"#E42217"}
             />
@@ -58,28 +59,30 @@ export default class MainScreen extends Component {
             </TouchableOpacity>
           </View>
           <TouchableOpacity onPress={() => this.props.navigation.navigate("Filter")}>
-            <Text style={{ fontSize: width * 0.05, color: "#FFFFFF", borderRadius: 10,
-            borderWidth: 1, paddingHorizontal: width * 0.05, backgroundColor: "#E42217",
-            borderColor: "#E42217" }}>Filter</Text>
+            <Text style={{ fontSize: width * 0.05, color: "#FFFFFF", borderRadius: 10, borderWidth: 1, paddingHorizontal: width * 0.05, backgroundColor: "#E42217", borderColor: "#E42217" }}>Filter
+            </Text>
           </TouchableOpacity>
         </View>
-        <View style={{justifyContent: 'center', alignItems: 'center', backgroundColor: '#F7B614',
-          width: width, height: '8%', paddingTop: width * 0.01}} >
+        <View style={{
+          justifyContent: 'center', alignItems: 'center', backgroundColor: '#F7B614',
+          width: width, height: '8%', paddingTop: width * 0.01
+        }} >
           <View style={{
             borderRadius: 10, backgroundColor: "#FFFFFF", width: "90%",
             borderColor: "#FFFFFF", height: '80%',
           }}>
-          <View style={{ flexDirection: 'row', width: '100%' }} >
-          <View style={{ width: '16%', height: '100%', justifyContent: 'center', alignItems:'center'}}>
-          <FIcon name="search" size={width * 0.06} color="#DCDCDC"/></View>
-          <View style={{ width: '68%', height: '100%', justifyContent: 'center',alignItems: 'flex-start'}}>
-          <TextInput
+
+            <View style={{ flexDirection: 'row', width: '100%' }} >
+              <View style={{ width: '16%', height: '100%', justifyContent: 'center', alignItems: 'center' }}>
+                <FIcon name="search" size={width * 0.06} color="#DCDCDC"
+                /></View>
+              <View style={{ width: '68%', height: '100%', justifyContent: 'center', alignItems: 'flex-start' }}>
+                <TextInput
                   style={{ fontSize: 20 }}
                   placeholder={'Search your delivery location'}
                   placeholderTextColor={"#DCDCDC"}
                 /></View>
-        <TouchableOpacity style={{ width: '16%', height: '100%', justifyContent: 'center',
-        alignItems: 'center' }}
+              <TouchableOpacity style={{ width: '16%', height: '100%', justifyContent: 'center', alignItems: 'center' }}
                 onPress={() => alert("Please Speak something...")}>
                 <FIcon name="mic" size={width * 0.06} color="#E42217"
                 />
@@ -88,23 +91,32 @@ export default class MainScreen extends Component {
           </View>
         </View>
         <View style={{ height: '5%', justifyContent: 'center', alignItems: 'center', width: width }}>
-        <View style={{flexDirection: "row", justifyContent: "space-evenly", alignItems: "center",
-            width: '100%', height: '80%'}}>
-        <Text style={{ borderRadius: 5, borderWidth: 1, padding: width * 0.01,borderColor: "#F7B614",
-        color: "#000000", fontSize: width * 0.03 }}>MAX Safety</Text>
-        <Text style={{ borderRadius: 5, borderWidth: 1, padding: width * 0.01,borderColor: "#F7B614",
-        color: "#000000", fontSize: width * 0.03 }}>Fast delivery</Text>
-        <Text style={{ borderRadius: 5, borderWidth: 1, padding: width * 0.01,borderColor: "#F7B614",
-            color: "#000000", fontSize: width * 0.03 }}>Rating 4.0+</Text>
-        <Text style={{ borderRadius: 5, borderWidth: 1, padding: width * 0.01, borderColor: "#F7B614",
-        color: "#000000", fontSize: width * 0.03 }}>New</Text>
-        <Text style={{ borderRadius: 5, borderWidth: 1, padding: width * 0.01, borderColor: "#F7B614",
-        color: "#000000", fontSize: width * 0.03 }}>Relevance</Text>
+          <View style={{
+            flexDirection: "row", justifyContent: "space-evenly", alignItems: "center",
+            width: '100%', height: '80%'
+          }}>
+            <Text style={{ borderRadius: 5, borderWidth: 1, padding: width * 0.01, borderColor: "#F7B614", color: "#000000", fontSize: width * 0.03 }}>
+              MAX Safety
+            </Text>
+            <Text style={{ borderRadius: 5, borderWidth: 1, padding: width * 0.01, borderColor: "#F7B614", color: "#000000", fontSize: width * 0.03 }}>
+              Fast delivery
+            </Text>
+            <Text style={{ borderRadius: 5, borderWidth: 1, padding: width * 0.01, borderColor: "#F7B614", color: "#000000", fontSize: width * 0.03 }}>
+              Raiting 4.0+
+            </Text>
+            <Text style={{ borderRadius: 5, borderWidth: 1, padding: width * 0.01, borderColor: "#F7B614", color: "#000000", fontSize: width * 0.03 }}>
+              New
+            </Text>
+            <Text style={{ borderRadius: 5, borderWidth: 1, padding: width * 0.01, borderColor: "#F7B614", color: "#000000", fontSize: width * 0.03 }}>
+              Relevance
+            </Text>
           </View>
         </View>
         <ScrollView showsVerticalScrollIndicator={false} style={{ width: width, height: '81%' }}>
-          <View style={{paddingTop: width * 0.03, alignItems: "center", marginHorizontal: width * 0.04,
-            justifyContent: 'center', paddingBottom: width * 0.05}}>
+          <View style={{
+            paddingTop: width * 0.03, alignItems: "center", marginHorizontal: width * 0.04,
+            justifyContent: 'center', paddingBottom: width * 0.05
+          }}>
             <Carousel
               layout={"default"}
               ref={ref => this.carousel = ref}
@@ -248,12 +260,12 @@ export default class MainScreen extends Component {
             </View>
           </View>
           <View style={{ paddingTop: width * 0.05, marginTop: width * 0.01 }}>
-          <View style={{ flexDirection: "row", justifyContent: "space-around", alignItems: "center" }}>
-          <Text style={{ borderWidth: 1, backgroundColor: "#F7B614", color: "#ffffff",
-          borderColor:"#f7b614", fontWeight: "bold", paddingHorizontal: width * 0.04 }}>
-                20% OFF</Text>
-          <Text style={{ borderWidth: 1, backgroundColor: "#F7B614", color: "#ffffff",
-          borderColor: "#f7b614", fontWeight: "bold", paddingHorizontal: width * 0.04 }}>30% OFF
+            <View style={{ flexDirection: "row", justifyContent: "space-around", alignItems: "center" }}>
+              <Text style={{ borderWidth: 1, backgroundColor: "#F7B614", color: "#ffffff", borderColor: "#f7b614", fontWeight: "bold", paddingHorizontal: width * 0.04 }}>
+                20% OFF
+              </Text>
+              <Text style={{ borderWidth: 1, backgroundColor: "#F7B614", color: "#ffffff", borderColor: "#f7b614", fontWeight: "bold", paddingHorizontal: width * 0.04 }}>
+                30% OFF
               </Text>
               <Text style={{ borderWidth: 1, backgroundColor: "#F7B614", color: "#ffffff", borderColor: "#f7b614", fontWeight: "bold", paddingHorizontal: width * 0.04 }}>
                 50% OFF
