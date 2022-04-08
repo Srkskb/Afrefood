@@ -134,7 +134,7 @@ function LoginStackNavigator() {
       <Stack.Screen name="Home" component={Home} options={{ headerShown: false }} />
       <Stack.Screen name="Location" component={Location} options={{ headerShown: false }} />
       <Stack.Screen name="Filter" component={Filter} options={{ headerShown: false }} />
-      <Stack.Screen name=" Your Order" component={Order} options={{ headerShown: false }} />
+      <Stack.Screen name="Order" component={Order} options={{ headerShown: false }} />
       <Stack.Screen name="MainScreen" component={MyTabs} options={{ headerShown: false }} />
     </Stack.Navigator>
   );
