@@ -36,9 +36,9 @@ function MyTabs() {
         tabBarShowLabel: false,
         tabBarStyle: {
           position: "absolute",
-          bottom: 25,
-          left: 20,
-          right: 20,
+          bottom: 1,
+          left: 1,
+          right: 1,
           elevation: 5,
           backgroundColor: "#DCDCDC",
           borderRadius: 15,

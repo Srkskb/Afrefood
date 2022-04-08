@@ -29,9 +29,9 @@ export default class Discover extends Component {
       alignItems:'center',justifyContent:'flex-start',flexDirection:'row'}}>
          <TouchableOpacity style={{flexDirection:'row'}}  onPress={() => { this.props.navigation.goBack() }}>
      <Ionicons name="chevron-back-outline" color={"#E44217"} size={width*0.07}
-    
+    style={{paddingTop:width*0.003}}
      />
-     <Text style={{fontSize:width*0.06,fontWeight:'bold',color:"#E44217"}}>Back</Text>
+     <Text style={{fontSize:width*0.06,fontWeight:'bold',color:"#E44217",}}>Back</Text>
    </TouchableOpacity>
    </View>
    <View style={{borderWidth:1,borderRadius:8,marginHorizontal:width*0.03,flexDirection:'row',alignItems:'center',justifyContent:'flex-start',paddingHorizontal:width*0.05}}>
@@ -49,22 +49,26 @@ export default class Discover extends Component {
      <View style={{flexDirection:'row',alignItems:'center',justifyContent:'space-evenly',paddingTop:width*0.05}}>
        <View style={{width:"40%",borderRadius:5,borderWidth:1,flexDirection:'row',alignItems:'center',backgroundColor:'#DCDCDC',paddingHorizontal:width*0.05,justifyContent:'space-evenly',padding:width*0.04}}>
          <TouchableOpacity style={{flexDirection:'row'}}onPress={()=>alert('Track your food location')}>
+           <View style={{flexDirection:'row',justifyContent:'space-around',alignItems:'center'}}>
          <MaterialIcons
           name="delivery-dining" color={"#FF9933"} size={width*0.07}
          />
-<Text style={{fontSize:width*0.05,fontWeight:"bold"}}>
+<Text style={{fontSize:width*0.05,fontWeight:"500",color:"#000"}}>
 Delivery
 </Text>
+</View>
 </TouchableOpacity>
        </View>
        <View style={{width:"40%",borderRadius:5,borderWidth:1,flexDirection:'row',alignItems:'center',backgroundColor:'#E44217',paddingHorizontal:width*0.05,justifyContent:'space-evenly',padding:width*0.04}}>
          <TouchableOpacity style={{flexDirection:'row'}} onPress={()=>alert('Select Your Food')}>
+         <View style={{flexDirection:'row',justifyContent:'space-around',alignItems:'center'}}>
          <MaterialIcons
           name="local-dining" color={"#FF9933"} size={width*0.07}
          />
-<Text style={{fontSize:width*0.05,fontWeight:"bold",color:"#FFFFFF"}}>
+<Text style={{fontSize:width*0.05,fontWeight:"500",color:"#FFFFFF"}}>
 Dining
 </Text>
+</View>
 </TouchableOpacity>
        </View>
 
