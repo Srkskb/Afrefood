@@ -4,7 +4,12 @@ import React, { Component } from 'react'
 const { width, height } = Dimensions.get("window");
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import * as Animatable from 'react-native-animatable';
-
+import {
+	AppButton,
+	LinkText,
+	FloatingLabelInput,
+	BackButtonHeader
+  } from '../../components/index';
 export default class Order extends Component {
 
     render() {
@@ -12,6 +17,10 @@ export default class Order extends Component {
         return (
             <View style={{flex:1,justifyContent:'center',alignItems:'center',padding:width*0.02,
             backgroundColor: '#fff'}}>
+				 <BackButtonHeader
+    backgroundColor={"#F7B614"}
+    backPressed={() => { this.props.navigation.goBack() }} />
+
                 <View style={{paddingBottom:width*0.02}}>
                     <Text style={{fontWeight:'bold',fontSize:width*0.07,color:'#E6A913'}}>
                         Your Order

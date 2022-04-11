@@ -20,14 +20,6 @@ export default class Favorite extends Component {
      />
      </TouchableNativeFeedback>
    </View >
-   <TouchableOpacity onPress={()=>this.props.navigation.navigate('Order')}>
-   <View style={{justifyContent:'center',alignItems:'center',padding:10}}>
-     
-    <Text style={{fontSize:width*0.05 ,color:'#fff',borderRadius:5,borderWidth:1,padding:5,backgroundColor:'#E42217',borderColor:"#e42217"}}>
-      Your Order
-    </Text>
-    </View> 
-    </TouchableOpacity>
    <View style={{justifyContent:'center',alignItems:"center",paddingTop:width*0.01}}>
 <ImageBackground
   source={require("../../images/6.png")}
