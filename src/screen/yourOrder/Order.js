@@ -1,4 +1,4 @@
-import { Text, View,ImageBackground,Dimensions ,TouchableOpacity,Image,TextInput,StyleSheet} 
+import { Text, View,ImageBackground,Dimensions ,TouchableOpacity,Image,TextInput,StyleSheet,ScrollView} 
 from 'react-native'
 import React, { Component } from 'react'
 const { width, height } = Dimensions.get("window");
@@ -20,7 +20,7 @@ export default class Order extends Component {
 				 <BackButtonHeader
     backgroundColor={"#F7B614"}
     backPressed={() => { this.props.navigation.goBack() }} />
-
+ <ScrollView style={{width: '100%',height: '86%'}} showsVerticalScrollIndicator={false}>
                 <View style={{paddingBottom:width*0.02}}>
                     <Text style={{fontWeight:'bold',fontSize:width*0.07,color:'#E6A913'}}>
                         Your Order
@@ -234,6 +234,7 @@ export default class Order extends Component {
          		)
          })}
          </Animatable.View>
+		 </ScrollView>
             </View>
         )
     }
