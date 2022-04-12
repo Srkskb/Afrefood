@@ -308,9 +308,9 @@ export default class MainScreen extends Component {
             </View>
           </View>
           
-          <View style={{ paddingHorizontal: width * 0.05 }}>
-            <Text style={{ fontSize: width * 0.06, textAlign: "center", color: "#000000", fontWeight: "bold" }}>
-              Top Brand for you
+          <View style={{ paddingHorizontal: width * 0.05,paddingTop:width*0.1 }}>
+            <Text style={{ fontSize: width * 0.06, color: "#000000", fontWeight: "bold" }}>
+              Eat What makes you happy
             </Text>
           </View>
           <View style={{ paddingTop: width * 0.05 }}>
