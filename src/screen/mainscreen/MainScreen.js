@@ -307,6 +307,156 @@ export default class MainScreen extends Component {
               </Text>
             </View>
           </View>
+          
+          <View style={{ paddingHorizontal: width * 0.05 }}>
+            <Text style={{ fontSize: width * 0.06, textAlign: "center", color: "#000000", fontWeight: "bold" }}>
+              Top Brand for you
+            </Text>
+          </View>
+          <View style={{ paddingTop: width * 0.05 }}>
+            <View style={{ flexDirection: "row", justifyContent: "space-around", alignItems: "center" }}>
+              <Image
+                source={require('../../images/logo1.jpg')}
+                resizeMode="contain"
+                style={{ borderWidth: 1, borderRadius: 50, height: 50, width: 50, borderColor: "#F7B614" }}
+              />
+              <Image
+                source={require('../../images/logo2.jpg')}
+                resizeMode="contain"
+                style={{ borderWidth: 1, borderRadius: 50, height: 50, width: 50, borderColor: "#F7B614" }}
+              />
+              <Image
+                source={require('../../images/log3.jpg')}
+                resizeMode="contain"
+                style={{ borderWidth: 1, borderRadius: 150, height: 50, width: 50, borderColor: "#F7B614" }}
+              />
+              <Image
+                source={require('../../images/logo4.jpg')}
+                resizeMode="contain"
+                style={{ borderWidth: 1, borderRadius: 50, height: 50, width: 50, borderColor: "#F7B614" }}
+              />
+            </View>
+          </View>
+          <View style={{ paddingTop: width * 0.05, marginTop: width * 0.01 }}>
+            <View style={{ flexDirection: "row", justifyContent: "space-around", alignItems: "center" }}>
+              <Text style={{ borderWidth: 1, backgroundColor: "#F7B614", color: "#ffffff", borderColor: "#f7b614", fontWeight: "bold", paddingHorizontal: width * 0.04 }}>
+                50% OFF
+              </Text>
+              <Text style={{ borderWidth: 1, backgroundColor: "#F7B614", color: "#ffffff", borderColor: "#f7b614", fontWeight: "bold", paddingHorizontal: width * 0.04 }}>
+                20% OFF
+              </Text>
+              <Text style={{ borderWidth: 1, backgroundColor: "#F7B614", color: "#ffffff", borderColor: "#f7b614", fontWeight: "bold", paddingHorizontal: width * 0.04 }}>
+                50% OFF
+              </Text>
+              <Text style={{ borderWidth: 1, backgroundColor: "#F7B614", color: "#ffffff", borderColor: "#f7b614", fontWeight: "bold", paddingHorizontal: width * 0.04 }}>
+                30% OFF
+              </Text>
+            </View>
+          </View>
+          <View style={{ paddingTop: width * 0.01 }}>
+            <View style={{ flexDirection: "row", justifyContent: "space-around", alignItems: "center" }}>
+              <Text style={{ color: "#000000", fontWeight: "bold", }}>
+                McDonald's
+              </Text>
+              <Text style={{ color: "#000000", fontWeight: "bold", }}>
+                Domino's
+              </Text>
+              <Text style={{ color: "#000000", fontWeight: "bold", }}>
+                Subway
+              </Text>
+              <Text style={{ color: "#000000", fontWeight: "bold", paddingHorizontal: width * 0.04 }}>
+                KFC
+              </Text>
+            </View>
+          </View>
+          <View style={{ paddingHorizontal: width * 0.01 }}>
+            <View style={{ flexDirection: "row", justifyContent: "space-around", alignItems: "center" }}>
+              <Text style={{ fontWeight: "bold", fontSize: width * 0.03 }}>
+                45 minits
+              </Text>
+              <Text style={{ fontWeight: "bold", fontSize: width * 0.03 }}>
+                35 minits
+              </Text>
+              <Text style={{ fontWeight: "bold", fontSize: width * 0.03 }}>
+                20 minits
+              </Text>
+              <Text style={{ fontWeight: "bold", fontSize: width * 0.03 }}>
+                10 minits
+              </Text>
+            </View>
+          </View>
+          <View style={{ paddingTop: width * 0.05 }}>
+            <View style={{ flexDirection: "row", justifyContent: "space-around", alignItems: "center" }}>
+              <Image
+                source={require('../../images/logo5.jpg')}
+                resizeMode="contain"
+                style={{ borderWidth: 1, borderRadius: 50, height: 50, width: 50, borderColor: "#F7B614" }}
+              />
+              <Image
+                source={require('../../images/logo6.jpg')}
+                resizeMode="contain"
+                style={{ borderWidth: 1, borderRadius: 50, height: 50, width: 50, borderColor: "#F7B614" }}
+              />
+              <Image
+                source={require('../../images/logo7.jpg')}
+                resizeMode="contain"
+                style={{ borderWidth: 1, borderRadius: 150, height: 50, width: 50, borderColor: "#F7B614" }}
+              />
+              <Image
+                source={require('../../images/logo8.jpg')}
+                resizeMode="contain"
+                style={{ borderWidth: 1, borderRadius: 50, height: 50, width: 50, borderColor: "#F7B614" }}
+              />
+            </View>
+          </View>
+          <View style={{ paddingTop: width * 0.05, marginTop: width * 0.01 }}>
+            <View style={{ flexDirection: "row", justifyContent: "space-around", alignItems: "center" }}>
+              <Text style={{ borderWidth: 1, backgroundColor: "#F7B614", color: "#ffffff", borderColor: "#f7b614", fontWeight: "bold", paddingHorizontal: width * 0.04 }}>
+                20% OFF
+              </Text>
+              <Text style={{ borderWidth: 1, backgroundColor: "#F7B614", color: "#ffffff", borderColor: "#f7b614", fontWeight: "bold", paddingHorizontal: width * 0.04 }}>
+                30% OFF
+              </Text>
+              <Text style={{ borderWidth: 1, backgroundColor: "#F7B614", color: "#ffffff", borderColor: "#f7b614", fontWeight: "bold", paddingHorizontal: width * 0.04 }}>
+                50% OFF
+              </Text>
+              <Text style={{ borderWidth: 1, backgroundColor: "#F7B614", color: "#ffffff", borderColor: "#f7b614", fontWeight: "bold", paddingHorizontal: width * 0.04 }}>
+                35% OFF
+              </Text>
+            </View>
+          </View>
+          <View style={{ paddingTop: width * 0.01 }}>
+            <View style={{ flexDirection: "row", justifyContent: "space-around", alignItems: "center" }}>
+              <Text style={{ color: "#000000", fontWeight: "bold", paddingHorizontal: width * 0.03 }}>
+                Burger King
+              </Text>
+              <Text style={{ color: "#000000", fontWeight: "bold", }}>
+                Kuwality wal.
+              </Text>
+              <Text style={{ color: "#000000", fontWeight: "bold", }}>
+                Nazeer foo.
+              </Text>
+              <Text style={{ color: "#000000", fontWeight: "bold", paddingHorizontal: width * 0.04 }}>
+                Chai Point
+              </Text>
+            </View>
+          </View>
+          <View style={{ paddingHorizontal: width * 0.01 }}>
+            <View style={{ flexDirection: "row", justifyContent: "space-around", alignItems: "center" }}>
+              <Text style={{ fontWeight: "bold", fontSize: width * 0.03 }}>
+                45 minits
+              </Text>
+              <Text style={{ fontWeight: "bold", fontSize: width * 0.03 }}>
+                35 minits
+              </Text>
+              <Text style={{ fontWeight: "bold", fontSize: width * 0.03 }}>
+                20 minits
+              </Text>
+              <Text style={{ fontWeight: "bold", fontSize: width * 0.03 }}>
+                10 minits
+              </Text>
+            </View>
+          </View>
           <View style={{ paddingTop: width * 0.05 }}>
             <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
               <Text style={{ paddingHorizontal: width * 0.05, fontSize: width * 0.06, fontWeight: "bold", color: "#000000" }}>
