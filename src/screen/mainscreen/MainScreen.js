@@ -167,40 +167,24 @@ export default class MainScreen extends Component {
             <View style={{ flexDirection: "row", justifyContent: "space-around", alignItems: "center" }}>
               <Image
                 source={require('../../images/logo1.jpg')}
-                resizeMode="contain"
-                style={{ borderWidth: 1, borderRadius: 50, height: 50, width: 50, borderColor: "#F7B614" }}
+                
+                style={{ borderWidth: 1, borderRadius: 35, height: 70, width: 70, borderColor: "#F7B614" }}
               />
               <Image
                 source={require('../../images/logo2.jpg')}
-                resizeMode="contain"
-                style={{ borderWidth: 1, borderRadius: 50, height: 50, width: 50, borderColor: "#F7B614" }}
+                
+                style={{ borderWidth: 1, borderRadius: 35, height: 70, width: 70, borderColor: "#F7B614" }}
               />
               <Image
                 source={require('../../images/log3.jpg')}
-                resizeMode="contain"
-                style={{ borderWidth: 1, borderRadius: 150, height: 50, width: 50, borderColor: "#F7B614" }}
+              
+                style={{ borderWidth: 1, borderRadius: 35, height: 70, width: 70, borderColor: "#F7B614" }}
               />
               <Image
                 source={require('../../images/logo4.jpg')}
-                resizeMode="contain"
-                style={{ borderWidth: 1, borderRadius: 50, height: 50, width: 50, borderColor: "#F7B614" }}
+            
+                style={{ borderWidth: 1, borderRadius: 35, height: 70, width: 70, borderColor: "#F7B614" }}
               />
-            </View>
-          </View>
-          <View style={{ paddingTop: width * 0.05, marginTop: width * 0.01 }}>
-            <View style={{ flexDirection: "row", justifyContent: "space-around", alignItems: "center" }}>
-              <Text style={{ borderWidth: 1, backgroundColor: "#F7B614", color: "#ffffff", borderColor: "#f7b614", fontWeight: "bold", paddingHorizontal: width * 0.04 }}>
-                50% OFF
-              </Text>
-              <Text style={{ borderWidth: 1, backgroundColor: "#F7B614", color: "#ffffff", borderColor: "#f7b614", fontWeight: "bold", paddingHorizontal: width * 0.04 }}>
-                20% OFF
-              </Text>
-              <Text style={{ borderWidth: 1, backgroundColor: "#F7B614", color: "#ffffff", borderColor: "#f7b614", fontWeight: "bold", paddingHorizontal: width * 0.04 }}>
-                50% OFF
-              </Text>
-              <Text style={{ borderWidth: 1, backgroundColor: "#F7B614", color: "#ffffff", borderColor: "#f7b614", fontWeight: "bold", paddingHorizontal: width * 0.04 }}>
-                30% OFF
-              </Text>
             </View>
           </View>
           <View style={{ paddingTop: width * 0.01 }}>
@@ -239,40 +223,24 @@ export default class MainScreen extends Component {
             <View style={{ flexDirection: "row", justifyContent: "space-around", alignItems: "center" }}>
               <Image
                 source={require('../../images/logo5.jpg')}
-                resizeMode="contain"
-                style={{ borderWidth: 1, borderRadius: 50, height: 50, width: 50, borderColor: "#F7B614" }}
+                
+                style={{ borderWidth: 1, borderRadius: 35, height: 70, width: 70, borderColor: "#F7B614" }}
               />
               <Image
                 source={require('../../images/logo6.jpg')}
-                resizeMode="contain"
-                style={{ borderWidth: 1, borderRadius: 50, height: 50, width: 50, borderColor: "#F7B614" }}
+                
+                style={{ borderWidth: 1, borderRadius: 35, height: 70, width: 70, borderColor: "#F7B614" }}
               />
               <Image
                 source={require('../../images/logo7.jpg')}
-                resizeMode="contain"
-                style={{ borderWidth: 1, borderRadius: 150, height: 50, width: 50, borderColor: "#F7B614" }}
+              
+                style={{ borderWidth: 1, borderRadius: 35, height: 70, width: 70, borderColor: "#F7B614" }}
               />
               <Image
                 source={require('../../images/logo8.jpg')}
-                resizeMode="contain"
-                style={{ borderWidth: 1, borderRadius: 50, height: 50, width: 50, borderColor: "#F7B614" }}
+                
+                style={{ borderWidth: 1, borderRadius: 35, height: 70, width: 70, borderColor: "#F7B614" }}
               />
-            </View>
-          </View>
-          <View style={{ paddingTop: width * 0.05, marginTop: width * 0.01 }}>
-            <View style={{ flexDirection: "row", justifyContent: "space-around", alignItems: "center" }}>
-              <Text style={{ borderWidth: 1, backgroundColor: "#F7B614", color: "#ffffff", borderColor: "#f7b614", fontWeight: "bold", paddingHorizontal: width * 0.04 }}>
-                20% OFF
-              </Text>
-              <Text style={{ borderWidth: 1, backgroundColor: "#F7B614", color: "#ffffff", borderColor: "#f7b614", fontWeight: "bold", paddingHorizontal: width * 0.04 }}>
-                30% OFF
-              </Text>
-              <Text style={{ borderWidth: 1, backgroundColor: "#F7B614", color: "#ffffff", borderColor: "#f7b614", fontWeight: "bold", paddingHorizontal: width * 0.04 }}>
-                50% OFF
-              </Text>
-              <Text style={{ borderWidth: 1, backgroundColor: "#F7B614", color: "#ffffff", borderColor: "#f7b614", fontWeight: "bold", paddingHorizontal: width * 0.04 }}>
-                35% OFF
-              </Text>
             </View>
           </View>
           <View style={{ paddingTop: width * 0.01 }}>
@@ -314,146 +282,81 @@ export default class MainScreen extends Component {
             </Text>
           </View>
           <View style={{ paddingTop: width * 0.05 }}>
-            <View style={{ flexDirection: "row", justifyContent: "space-around", alignItems: "center" }}>
+            <View style={{ flexDirection: "row", justifyContent: "space-around",
+             alignItems: "center" }}>
               <Image
-                source={require('../../images/logo1.jpg')}
-                resizeMode="contain"
-                style={{ borderWidth: 1, borderRadius: 50, height: 50, width: 50, borderColor: "#F7B614" }}
+                source={require('../../images/802.jpg')}
+                style={{ borderRadius: 35, height:70, width: 70, borderColor: "#F7B614" ,borderWidth:2}}
               />
               <Image
-                source={require('../../images/logo2.jpg')}
-                resizeMode="contain"
-                style={{ borderWidth: 1, borderRadius: 50, height: 50, width: 50, borderColor: "#F7B614" }}
+                source={require('../../images/801.jpg')}
+                style={{ borderRadius:35, height:70, width: 70, borderColor: "#F7B614" ,borderWidth:2 }}
               />
               <Image
-                source={require('../../images/log3.jpg')}
-                resizeMode="contain"
-                style={{ borderWidth: 1, borderRadius: 150, height: 50, width: 50, borderColor: "#F7B614" }}
+                source={require('../../images/800.jpg')}
+               style={{ borderRadius: 35, height:70, width: 70, borderColor: "#F7B614",borderWidth:2  }}
               />
               <Image
-                source={require('../../images/logo4.jpg')}
-                resizeMode="contain"
-                style={{ borderWidth: 1, borderRadius: 50, height: 50, width: 50, borderColor: "#F7B614" }}
+                source={require('../../images/795.jpg')}
+      
+                style={{borderRadius: 35, height:70, width: 70, borderColor: "#F7B614",borderWidth:2 }}
               />
-            </View>
-          </View>
-          <View style={{ paddingTop: width * 0.05, marginTop: width * 0.01 }}>
-            <View style={{ flexDirection: "row", justifyContent: "space-around", alignItems: "center" }}>
-              <Text style={{ borderWidth: 1, backgroundColor: "#F7B614", color: "#ffffff", borderColor: "#f7b614", fontWeight: "bold", paddingHorizontal: width * 0.04 }}>
-                50% OFF
-              </Text>
-              <Text style={{ borderWidth: 1, backgroundColor: "#F7B614", color: "#ffffff", borderColor: "#f7b614", fontWeight: "bold", paddingHorizontal: width * 0.04 }}>
-                20% OFF
-              </Text>
-              <Text style={{ borderWidth: 1, backgroundColor: "#F7B614", color: "#ffffff", borderColor: "#f7b614", fontWeight: "bold", paddingHorizontal: width * 0.04 }}>
-                50% OFF
-              </Text>
-              <Text style={{ borderWidth: 1, backgroundColor: "#F7B614", color: "#ffffff", borderColor: "#f7b614", fontWeight: "bold", paddingHorizontal: width * 0.04 }}>
-                30% OFF
-              </Text>
             </View>
           </View>
           <View style={{ paddingTop: width * 0.01 }}>
             <View style={{ flexDirection: "row", justifyContent: "space-around", alignItems: "center" }}>
               <Text style={{ color: "#000000", fontWeight: "bold", }}>
-                McDonald's
+                Home Style
+              </Text>
+              <Text style={{ color: "#000000", fontWeight: "bold",marginRight:20}}>
+                Burger
               </Text>
               <Text style={{ color: "#000000", fontWeight: "bold", }}>
-                Domino's
+                Pizza
               </Text>
-              <Text style={{ color: "#000000", fontWeight: "bold", }}>
-                Subway
-              </Text>
-              <Text style={{ color: "#000000", fontWeight: "bold", paddingHorizontal: width * 0.04 }}>
-                KFC
-              </Text>
-            </View>
-          </View>
-          <View style={{ paddingHorizontal: width * 0.01 }}>
-            <View style={{ flexDirection: "row", justifyContent: "space-around", alignItems: "center" }}>
-              <Text style={{ fontWeight: "bold", fontSize: width * 0.03 }}>
-                45 minits
-              </Text>
-              <Text style={{ fontWeight: "bold", fontSize: width * 0.03 }}>
-                35 minits
-              </Text>
-              <Text style={{ fontWeight: "bold", fontSize: width * 0.03 }}>
-                20 minits
-              </Text>
-              <Text style={{ fontWeight: "bold", fontSize: width * 0.03 }}>
-                10 minits
+              <Text style={{ color: "#000000", fontWeight: "bold",paddingHorizontal:width*0.04}}>
+                Rolls
               </Text>
             </View>
           </View>
           <View style={{ paddingTop: width * 0.05 }}>
-            <View style={{ flexDirection: "row", justifyContent: "space-around", alignItems: "center" }}>
+            <View style={{ flexDirection: "row", justifyContent: "space-around", 
+            alignItems: "center"}}>
               <Image
-                source={require('../../images/logo5.jpg')}
-                resizeMode="contain"
-                style={{ borderWidth: 1, borderRadius: 50, height: 50, width: 50, borderColor: "#F7B614" }}
+                source={require('../../images/799.jpg')}
+                
+                style={{  borderRadius: 35, height: 70, width: 70, borderColor: "#F7B614",borderWidth:2 }}
               />
               <Image
-                source={require('../../images/logo6.jpg')}
-                resizeMode="contain"
-                style={{ borderWidth: 1, borderRadius: 50, height: 50, width: 50, borderColor: "#F7B614" }}
+                source={require('../../images/798.jpg')}
+                
+                style={{  borderRadius: 35, height: 70, width: 70, borderColor: "#F7B614",borderWidth:2 }}
               />
               <Image
-                source={require('../../images/logo7.jpg')}
-                resizeMode="contain"
-                style={{ borderWidth: 1, borderRadius: 150, height: 50, width: 50, borderColor: "#F7B614" }}
+                source={require('../../images/797.jpg')}
+                
+                style={{ borderRadius: 35, height: 70, width: 70, borderColor: "#F7B614",borderWidth:2 }}
               />
               <Image
-                source={require('../../images/logo8.jpg')}
-                resizeMode="contain"
-                style={{ borderWidth: 1, borderRadius: 50, height: 50, width: 50, borderColor: "#F7B614" }}
+                source={require('../../images/796.jpg')}
+              
+                style={{ borderRadius: 35, height: 70, width: 70, borderColor: "#F7B614",borderWidth:2 }}
               />
-            </View>
-          </View>
-          <View style={{ paddingTop: width * 0.05, marginTop: width * 0.01 }}>
-            <View style={{ flexDirection: "row", justifyContent: "space-around", alignItems: "center" }}>
-              <Text style={{ borderWidth: 1, backgroundColor: "#F7B614", color: "#ffffff", borderColor: "#f7b614", fontWeight: "bold", paddingHorizontal: width * 0.04 }}>
-                20% OFF
-              </Text>
-              <Text style={{ borderWidth: 1, backgroundColor: "#F7B614", color: "#ffffff", borderColor: "#f7b614", fontWeight: "bold", paddingHorizontal: width * 0.04 }}>
-                30% OFF
-              </Text>
-              <Text style={{ borderWidth: 1, backgroundColor: "#F7B614", color: "#ffffff", borderColor: "#f7b614", fontWeight: "bold", paddingHorizontal: width * 0.04 }}>
-                50% OFF
-              </Text>
-              <Text style={{ borderWidth: 1, backgroundColor: "#F7B614", color: "#ffffff", borderColor: "#f7b614", fontWeight: "bold", paddingHorizontal: width * 0.04 }}>
-                35% OFF
-              </Text>
             </View>
           </View>
           <View style={{ paddingTop: width * 0.01 }}>
             <View style={{ flexDirection: "row", justifyContent: "space-around", alignItems: "center" }}>
               <Text style={{ color: "#000000", fontWeight: "bold", paddingHorizontal: width * 0.03 }}>
-                Burger King
+                Chaat
               </Text>
               <Text style={{ color: "#000000", fontWeight: "bold", }}>
-                Kuwality wal.
+                Momos
               </Text>
               <Text style={{ color: "#000000", fontWeight: "bold", }}>
-                Nazeer foo.
+                Healthy
               </Text>
               <Text style={{ color: "#000000", fontWeight: "bold", paddingHorizontal: width * 0.04 }}>
-                Chai Point
-              </Text>
-            </View>
-          </View>
-          <View style={{ paddingHorizontal: width * 0.01 }}>
-            <View style={{ flexDirection: "row", justifyContent: "space-around", alignItems: "center" }}>
-              <Text style={{ fontWeight: "bold", fontSize: width * 0.03 }}>
-                45 minits
-              </Text>
-              <Text style={{ fontWeight: "bold", fontSize: width * 0.03 }}>
-                35 minits
-              </Text>
-              <Text style={{ fontWeight: "bold", fontSize: width * 0.03 }}>
-                20 minits
-              </Text>
-              <Text style={{ fontWeight: "bold", fontSize: width * 0.03 }}>
-                10 minits
+                Thali
               </Text>
             </View>
           </View>

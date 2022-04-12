@@ -41,7 +41,7 @@ function MyTabs() {
           left: 1,
           right: 1,
           elevation: 5,
-          backgroundColor: "#DCDCDC",
+          backgroundColor: "#FFFFFF",
           borderRadius: 15,
           height: 70,
           shadowColor: "#7F5DF0",
@@ -59,9 +59,9 @@ function MyTabs() {
           tabBarIcon: ({ color, focused }) =>
             <View style={{ alignItems: "center", justifyContent: "center", top: 20 }}>
               <Image
-                source={require('../images/hc.png')}
+                source={require('../images/806.png')}
                 resizeMode="contain"
-                style={{ width: 25, height: 25, tintColor: focused ? "#e32f45" : "#748c94" }}
+                style={{ width: 30, height: 30, tintColor: focused ? "#e32f45" : "#748c94" }}
               />
               <Text style={{ color: focused ? "#e32f45" : "#748c94", fontSize: 12 }}>Home</Text>
             </View>
@@ -72,9 +72,9 @@ function MyTabs() {
           tabBarIcon: ({ color, focused }) =>
             <View style={{ alignItems: "center", justifyContent: "center", top: 20 }}>
               <Image
-                source={require('../images/lc.png')}
+                source={require('../images/805.png')}
                 resizeMode="contain"
-                style={{ width: 25, height: 25, tintColor: focused ? "#e32f45" : "#748c94" }}
+                style={{ width: 30, height: 30, tintColor: focused ? "#e32f45" : "#748c94" }}
               />
               <Text style={{ color: focused ? "#e32f45" : "#748c94", fontSize: 12 }}>Home</Text>
             </View>
@@ -83,11 +83,11 @@ function MyTabs() {
       <Tab.Screen name="Assignments" component={Cart}
         options={{
           tabBarIcon: ({ color, focused }) =>
-            <View style={{ alignItems: "center", justifyContent: "center", top: 20 }}>
+            <View style={{ alignItems: "center", justifyContent: "center"  }}>
               <Image
-                source={require('../images/cc.png')}
-                resizeMode="contain"
-                style={{ width: 25, height: 25, tintColor: focused ? "#e32f45" : "#748c94" }}
+                source={require('../images/hc.png')}
+              
+                style={{ width:44, height:44 ,borderRadius:25, tintColor: focused ? "#e32f45" : "#748c94" }}
               />
               <Text style={{ color: focused ? "#e32f45" : "#748c94", fontSize: 12 }}>Home</Text>
             </View>
@@ -98,9 +98,9 @@ function MyTabs() {
           tabBarIcon: ({ color, focused }) =>
             <View style={{ alignItems: "center", justifyContent: "center", top: 20 }}>
               <Image
-                source={require('../images/sc.png')}
+                source={require('../images/804.png')}
                 resizeMode="contain"
-                style={{ width: 25, height: 25, tintColor: focused ? "#e32f45" : "#748c94" }}
+                style={{ width: 30, height: 30, tintColor: focused ? "#e32f45" : "#748c94" }}
               />
               <Text style={{ color: focused ? "#e32f45" : "#748c94", fontSize: 12 }}>Home</Text>
             </View>
