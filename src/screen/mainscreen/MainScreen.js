@@ -1,11 +1,13 @@
-import { Text, View, ImageBackground, Dimensions, TouchableOpacity, Image, TextInput, ScrollView, StyleSheet } from 'react-native'
+import { Text, View, ImageBackground, Dimensions,TouchableNativeFeedback, TouchableOpacity, Image, TextInput, ScrollView, StyleSheet } from 'react-native'
 import React, { Component } from 'react'
 const { width, height } = Dimensions.get("window");
 import Icon from 'react-native-vector-icons/Feather';
 import FIcon from 'react-native-vector-icons/Feather';
 import AntDesign from 'react-native-vector-icons/AntDesign'
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
 import Entypo from 'react-native-vector-icons/Entypo'
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import DropDownPicker from 'react-native-dropdown-picker';
 import { Images } from "../../theme/index";
 import {
@@ -49,9 +51,14 @@ export default class MainScreen extends Component {
             <Entypo
               name='location-pin' size={width * 0.07} color={"#E42217"}
             />
+            <View style={{flexDirection:'column',justifyContent:'flex-start',alignItems:'flex-start',paddingTop:width*0.03}}>
             <Text style={{ fontSize: width * 0.03, color: "#E42217", fontWeight: "bold" }}>
               Bazar Chitil Qabar
+            </Text >
+            <Text style={{fontSize:9,color:'#FFF'}}>
+               chandni chowk new delhi
             </Text>
+            </View>
             <TouchableOpacity onPress={() =>this.props.navigation.navigate('Location')}>
               <Entypo
                 name='chevron-small-down' size={width * 0.06} color={"#E42217"}
@@ -59,9 +66,25 @@ export default class MainScreen extends Component {
             </TouchableOpacity>
           </View>
           <TouchableOpacity onPress={() => this.props.navigation.navigate("Filter")}>
-            <Text style={{ fontSize: width * 0.04, color: "#FFFFFF", borderRadius: 10, borderWidth: 1, paddingHorizontal: width * 0.05, backgroundColor: "#E42217", borderColor: "#E42217" }}>Filter
+            <Text style={{ fontSize: width * 0.04, color: "#FFFFFF", borderRadius: 10, borderWidth: 1, paddingHorizontal: width * 0.02, backgroundColor: "#E42217", borderColor: "#E42217" }}>Filter
             </Text>
           </TouchableOpacity>
+          <View style={{flexDirection:'row',justifyContent:'space-evenly',alignItems:'center',borderWidth:1,borderRadius:10,padding:3,backgroundColor:'#FFF',borderColor:'#fff',paddingHorizontal:width*0.02}}>
+          <MaterialIcons
+                name='language' size={width * 0.03} color={"#000"}
+              />
+            <Text style={{color:'#000',fontSize:width*0.03}} >
+            language
+            </Text>
+          </View>
+          <TouchableNativeFeedback onPress={()=>alert("Are you want to change your profile.")}>
+     <Image
+     source={require("../../images/10.png")}
+     resizeMode="contain"
+     style={{height:height*0.06,width:width*0.1,borderRadius:width*0.1,borderColor:"#E44217"}}
+     
+     />
+     </TouchableNativeFeedback>
         </View>
         <View style={{
           justifyContent: 'center', alignItems: 'center', backgroundColor: '#F7B614',

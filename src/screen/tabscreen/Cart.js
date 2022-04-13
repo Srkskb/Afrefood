@@ -1,5 +1,5 @@
 import { Switch, Animated, Text, View, ImageBackground, Dimensions, TouchableOpacity, Image, TextInput, ScrollView, StyleSheet } from 'react-native'
-import React, { Component } from 'react'
+import React, { Component,useState } from 'react'
 const { width, height } = Dimensions.get("window");
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import * as Animatable from 'react-native-animatable';
@@ -16,7 +16,6 @@ import {
   BackButtonHeader,
   BackButtonHeader1
 } from '../../components/index';
-
 const FirstRoute = () => (
   <View style={[styles.container, { backgroundColor: '#ffffff' }]} >
     <View style={{ alignItems: "center", borderRadius: 5, borderWidth: 1, marginHorizontal: width * 0.05, flexDirection: "row", borderColor: "#E42217", justifyContent: "space-between" }}>
@@ -37,15 +36,11 @@ const FirstRoute = () => (
     </View>
     <View style={{ flexDirection: 'row', alignItems: "center", paddingHorizontal: width * 0.05, paddingTop: width * 0.03, }}>
       <Switch
-
-
       />
       <Text style={{ paddingHorizontal: width * 0.02 }}>
         Veg
       </Text>
       <Switch
-
-
       />
       <Text style={{ paddingHorizontal: width * 0.02 }}>
         Non-Veg
