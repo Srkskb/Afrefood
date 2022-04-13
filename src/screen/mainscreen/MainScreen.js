@@ -609,7 +609,7 @@ Please Select the language
               </ScrollView>
             </View>
           </View>
-          <View style={{ paddingTop: width * 0.02 }}>
+          <View style={{ paddingTop: width * 0.2 }}>
             <Text>
 
             </Text>

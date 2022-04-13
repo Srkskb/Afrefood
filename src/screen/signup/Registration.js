@@ -71,7 +71,7 @@ import { Text, View,ImageBackground,Dimensions ,TouchableOpacity,Image,TextInput
            />
           </Animatable.View>
           <View style={{paddingTop:height*0.02,width:'100%',alignItems:'center'}}>
-          <TouchableOpacity onPress={()=>this.props.navigation.navigate('ProfileUpdate')} style={{borderRadius:5,
+          <TouchableOpacity onPress={()=>this.props.navigation.navigate('MainScreen')} style={{borderRadius:5,
           backgroundColor:"#E42217",height:44,justifyContent:'center',width:'100%'}}>
           <Animatable.Text animation="slideInDown" style={{fontSize:16,color:'#ffffff',
           textAlign:'center',fontFamily: "Montserrat-Medium"}}>
