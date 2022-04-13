@@ -1,4 +1,4 @@
-import { Text, View, ImageBackground, Dimensions,TouchableNativeFeedback, TouchableOpacity, Image, TextInput, ScrollView, StyleSheet } from 'react-native'
+import { Text, View, ImageBackground, Dimensions,TouchableNativeFeedback, TouchableOpacity, Image, TextInput, ScrollView, StyleSheet,Modal } from 'react-native'
 import React, { Component } from 'react'
 const { width, height } = Dimensions.get("window");
 import Icon from 'react-native-vector-icons/Feather';
@@ -19,10 +19,15 @@ import {
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import Carousel, { Pagination } from 'react-native-snap-carousel';
 export default class MainScreen extends Component {
-  state = {
+  constructor()
+  {
+    super();
+ this.state = {
     data: [{ "id": "1" }, { "id": "2" }, { "id": "3" }, { "id": "4" }, { "id": "5" }, { "id": "6" }],
-    activeSlide: 0
+    activeSlide: 0,
+    show:false
   }
+}
   renderItem = ({ item, index }) => {
 
     return (
@@ -66,9 +71,10 @@ export default class MainScreen extends Component {
             </TouchableOpacity>
           </View>
           <TouchableOpacity onPress={() => this.props.navigation.navigate("Filter")}>
-            <Text style={{ fontSize: width * 0.04, color: "#FFFFFF", borderRadius: 10, borderWidth: 1, paddingHorizontal: width * 0.02, backgroundColor: "#E42217", borderColor: "#E42217" }}>Filter
+            <Text style={{ fontSize: width * 0.04, color: "#FFFFFF", borderRadius: 10, borderWidth: 1, paddingHorizontal: width * 0.04, backgroundColor: "#E42217", borderColor: "#E42217" }}>Filter
             </Text>
           </TouchableOpacity>
+          <TouchableOpacity onPress={()=>{this.setState({show:true})}}>
           <View style={{flexDirection:'row',justifyContent:'space-evenly',alignItems:'center',borderWidth:1,borderRadius:10,padding:3,backgroundColor:'#FFF',borderColor:'#fff',paddingHorizontal:width*0.02}}>
           <MaterialIcons
                 name='language' size={width * 0.03} color={"#000"}
@@ -76,15 +82,82 @@ export default class MainScreen extends Component {
             <Text style={{color:'#000',fontSize:width*0.03}} >
             language
             </Text>
+            <Modal visible={this.state.show} transparent={true}>
+<View style={{backgroundColor:"#000000aa",flex:1}}>
+  <View style={{margin:50,backgroundColor:"#ffffff",flex:1,borderRadius:10,padding:50}}>
+    <Text style={{textAlign:"center",fontSize:width*0.06,color:'#000',fontFamily:"Poppins-Semibold"}}>
+Please Select the language
+    </Text>
+    <TouchableOpacity onPress={()=>{this.setState({show:false})}}>
+    <View style={{paddingTop:width*0.09}}>
+    <View style={{justifyContent:'center',alignItems:'center',borderWidth:1,borderRadius:10}}>
+<Text style={{fontSize:width*0.05}} >
+  Hindi
+</Text>
+</View>
+    </View>
+    </TouchableOpacity>
+    <TouchableOpacity onPress={()=>{this.setState({show:false})}}>
+    <View style={{paddingTop:width*0.09}}>
+    <View style={{justifyContent:'center',alignItems:'center',borderWidth:1,borderRadius:10}}>
+<Text style={{fontSize:width*0.05}} >
+  English
+</Text>
+</View>
+    </View>
+    </TouchableOpacity>
+    <TouchableOpacity onPress={()=>{this.setState({show:false})}}>
+    <View style={{paddingTop:width*0.09}}>
+    <View style={{justifyContent:'center',alignItems:'center',borderWidth:1,borderRadius:10}}>
+<Text style={{fontSize:width*0.05}} >
+  Tamil
+</Text>
+</View>
+    </View>
+    </TouchableOpacity>
+    <TouchableOpacity onPress={()=>{this.setState({show:false})}}>
+    <View style={{paddingTop:width*0.09}}>
+    <View style={{justifyContent:'center',alignItems:'center',borderWidth:1,borderRadius:10}}>
+<Text style={{fontSize:width*0.05}} >
+  Marathi
+</Text>
+</View>
+    </View>
+    </TouchableOpacity>
+    <TouchableOpacity onPress={()=>{this.setState({show:false})}}>
+    <View style={{paddingTop:width*0.09}}>
+    <View style={{justifyContent:'center',alignItems:'center',borderWidth:1,borderRadius:10}}>
+<Text style={{fontSize:width*0.05}} >
+  Chinese
+</Text>
+</View>
+    </View>
+    </TouchableOpacity>
+    <TouchableOpacity onPress={()=>{this.setState({show:false})}}>
+    <View style={{paddingTop:width*0.09}}>
+    <View style={{justifyContent:'center',alignItems:'center',borderWidth:1,borderRadius:10}}>
+<Text style={{fontSize:width*0.05}} >
+  Spanish
+</Text>
+</View>
+    </View>
+    </TouchableOpacity>
+    <TouchableOpacity onPress={()=>{this.setState({show:false})}}>
+    <View style={{paddingTop:width*0.09}}>
+    <View style={{justifyContent:'center',alignItems:'center',borderWidth:1,borderRadius:10}}>
+<Text style={{fontSize:width*0.05}} >
+  French
+</Text>
+</View>
+    </View>
+    </TouchableOpacity>
+  </View>
+
+</View>
+            </Modal>
+            
           </View>
-          <TouchableNativeFeedback onPress={()=>alert("Are you want to change your profile.")}>
-     <Image
-     source={require("../../images/10.png")}
-     resizeMode="contain"
-     style={{height:height*0.06,width:width*0.1,borderRadius:width*0.1,borderColor:"#E44217"}}
-     
-     />
-     </TouchableNativeFeedback>
+          </TouchableOpacity>
         </View>
         <View style={{
           justifyContent: 'center', alignItems: 'center', backgroundColor: '#F7B614',
@@ -135,7 +208,7 @@ export default class MainScreen extends Component {
             </Text>
           </View>
         </View>
-        <ScrollView showsVerticalScrollIndicator={false} style={{ width: width, height: '81%' }}>
+        <ScrollView showsVerticalScrollIndicator={false} style={{ width: width, height:'81%' }}>
           <View style={{
             paddingTop: width * 0.03, alignItems: "center", marginHorizontal: width * 0.04,
             justifyContent: 'center', paddingBottom: width * 0.05
