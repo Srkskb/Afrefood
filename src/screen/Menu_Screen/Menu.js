@@ -156,7 +156,7 @@ name='arrow-back-sharp' color={"#FFF"} size={width*0.08}
           <AntDesign
               name='star' size={width * 0.03} color="#000"
             />
-            <Text style={{paddingHorizontal:width*0.01}}>
+            <Text style={{paddingHorizontal:width*0.01,fontSize:width*0.03}}>
                 3.8 (1K+) . 38 Mins . $130 for Now
             </Text>
           </View  >
@@ -188,7 +188,7 @@ name='arrow-back-sharp' color={"#FFF"} size={width*0.08}
           <AntDesign
               name='star' size={width * 0.03} color="#000"
             />
-            <Text style={{paddingHorizontal:width*0.01}}>
+            <Text style={{paddingHorizontal:width*0.01,fontSize:width*0.03}}>
                 4.0 (1K+) . 43 Mins . $250 for Now
             </Text>
           </View  >
@@ -220,7 +220,7 @@ name='arrow-back-sharp' color={"#FFF"} size={width*0.08}
           <AntDesign
               name='star' size={width * 0.03} color="#000"
             />
-            <Text style={{paddingHorizontal:width*0.01}}>
+            <Text style={{paddingHorizontal:width*0.01,fontSize:width*0.03}}>
                 3.8 (1K+) . 38 Mins . $130 for Now
             </Text>
           </View  >
@@ -252,7 +252,7 @@ name='arrow-back-sharp' color={"#FFF"} size={width*0.08}
           <AntDesign
               name='star' size={width * 0.03} color="#000"
             />
-            <Text style={{paddingHorizontal:width*0.01}}>
+            <Text style={{paddingHorizontal:width*0.01,fontSize:width*0.03}}>
                 4.0 (1K+) . 43 Mins . $250 for Now
             </Text>
           </View  >
