@@ -67,7 +67,7 @@ export default class Favorite extends Component {
       style={{height:height*0.27,width:width*0.9}}
       
     >
-    <TouchableNativeFeedback onPress={()=>alert("Are you want to buy?")}>
+    <TouchableNativeFeedback onPress={()=>this.props.navigation.navigate('Menu')}>
       <View style={{justifyContent:'center',alignItems:'center',fontFamily:'Poppins-Semibold',paddingTop:width*0.2}}>
     <Text style={{fontSize:width*0.07,fontWeight:'bold',color:'#FFF'}}>
       Fresh Pizza Margherita

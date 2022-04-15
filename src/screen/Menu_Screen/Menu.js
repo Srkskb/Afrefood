@@ -1,0 +1,281 @@
+import { Text, View, Dimensions,TouchableNativeFeedback, TouchableOpacity, Image, TextInput, ScrollView, StyleSheet,Modal,ImageBackground } from 'react-native'
+import React, { Component } from 'react'
+const { width, height } = Dimensions.get("window");
+import Icon from 'react-native-vector-icons/Feather';
+import FIcon from 'react-native-vector-icons/Feather';
+import AntDesign from 'react-native-vector-icons/AntDesign'
+import Ionicons from 'react-native-vector-icons/Ionicons'
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
+import Entypo from 'react-native-vector-icons/Entypo'
+import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import DropDownPicker from 'react-native-dropdown-picker';
+import { Images } from "../../theme/index";
+import {
+  AppButton,
+  LinkText,
+  FloatingLabelInput,
+  BackButtonHeader
+} from '../../components/index';
+import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
+import Carousel, { Pagination } from 'react-native-snap-carousel';
+export default class Menu extends Component {
+  constructor()
+  {
+    super();
+ this.state = {
+    data: [{ "id": "1" }, { "id": "2" }, { "id": "3" }, { "id": "4" }, { "id": "5" }, { "id": "6" }],
+    activeSlide: 0,
+    show:false
+  }
+}
+  renderItem = ({ item, index }) => {
+
+    return (
+      <View style={{ paddingBottom: 4 }}>
+        <Image source={require('../../images/ban3.png')}
+          style={{ height: height * 0.24, width: width * 0.92 }} resizeMode={'contain'}
+        />
+      </View>
+    );
+  }
+  render() {
+    const SLIDER_WIDTH = Dimensions.get('window').width;
+    const SLIDER_WIDTH2 = 166;
+    const ITEM_WIDTH = Math.round(SLIDER_WIDTH);
+    const ITEM_WIDTH2 = 166;
+    const ITEM_HEIGHT = Math.round(ITEM_WIDTH * 3 / 4);
+    return (
+
+      <SafeAreaView style={{ width: width, height: height, backgroundColor: "#FFFFFF" }}>
+          <View style={{justifyContent:'center',alignItems:'center'}}>
+         <ImageBackground
+         style={{height:height*0.3,width:width*1}}
+         source={require('../../images/img25.jpg')}>
+        
+         <View style={{justifyContent:'flex-start',alignItems:'flex-start',paddingTop:width*0.03,paddingHorizontal:width*0.03}}>
+<TouchableOpacity onPress={()=>this.props.navigation.goBack()}>
+<Ionicons
+name='arrow-back-sharp' color={"#FFF"} size={width*0.08}
+/>
+</TouchableOpacity>
+             </View>
+<View style={{justifyContent:'flex-end',alignItems:'flex-start',paddingHorizontal:width*0.05,paddingTop:width*0.2}}>
+<Text style={{color:'#fff',fontSize:width*0.09,fontWeight:'bold',fontFamily:'Poppins-Medium'}}>
+    PIZZAS
+</Text>
+<Text style={{color:'#fff',fontSize:width*0.04,fontWeight:'bold',fontFamily:'Poppins-Medium'}}>
+    {'Cheesilicious pizzas to make every\nday extraordinary.'}
+</Text>
+</View>
+         </ImageBackground>
+         </View>
+        <ScrollView showsVerticalScrollIndicator={false} style={{ width: width, height:'81%' }}>
+          <View style={{
+            paddingTop: width * 0.03, alignItems: "center", marginHorizontal: width * 0.04,
+            justifyContent: 'center', paddingBottom: width * 0.05
+          }}>
+            <Carousel
+              layout={"default"}
+              ref={ref => this.carousel = ref}
+              data={this.state.data}
+              renderItem={this.renderItem}
+              sliderWidth={SLIDER_WIDTH - width * 0.08}
+              itemWidth={ITEM_WIDTH}
+              loop={true}
+              autoplay={true}
+              autoplayInterval={5000}
+              onSnapToItem={(index) => this.setState({ activeSlide: index })}
+            />
+            <Pagination
+              dotsLength={this.state.data.length}
+              activeDotIndex={this.state.activeSlide}
+              containerStyle={{
+                backgroundColor: 'transparent', position: 'absolute',
+                bottom: 4, borderRadius: 10, paddingVertical: 2, paddingHorizontal: 4
+              }}
+              dotContainerStyle={{ marginHorizontal: 1 }}
+              dotStyle={{
+                width: 14,
+                height: 8,
+                borderRadius: 5,
+                backgroundColor: '#F7B614'
+              }}
+              inactiveDotStyle={{
+                width: 8,
+                height: 8,
+                borderRadius: 5,
+                backgroundColor: '#F7B614'
+              }}
+              inactiveDotOpacity={0.4}
+              inactiveDotScale={0.8}
+            />
+            {/*<Image
+    source={require('../../images/banner.png')}
+    style={{height:height*0.24,width:width*0.92}} resizeMode={'contain'}
+    />*/}
+          </View>
+          <View style={{ height: '4%', justifyContent: 'center', alignItems: 'center', width: width }}>
+          <View style={{
+            flexDirection: "row", justifyContent: "space-evenly", alignItems: "center",
+            width: '100%', height: '80%'
+          }}>
+            <Text style={{ borderRadius: 5, borderWidth: 1, padding: width * 0.01, borderColor: "#F7B614", color: "#000000", fontSize: width * 0.03 }}>
+            Relevance
+            </Text>
+            <Text style={{ borderRadius: 5, borderWidth: 1, padding: width * 0.01, borderColor: "#F7B614", color: "#000000", fontSize: width * 0.03 }}>
+              Pure Veg
+            </Text>
+            <Text style={{ borderRadius: 5, borderWidth: 1, padding: width * 0.01, borderColor: "#F7B614", color: "#000000", fontSize: width * 0.03 }}>
+              Non Veg
+            </Text>
+            <Text style={{ borderRadius: 5, borderWidth: 1, padding: width * 0.01, borderColor: "#F7B614", color: "#000000", fontSize: width * 0.03 }}>
+              Less then 30 Mins
+            </Text>
+            <Text style={{ borderRadius: 5, borderWidth: 1, padding: width * 0.01, borderColor: "#F7B614", color: "#000000", fontSize: width * 0.03 }}>
+              New
+            </Text>
+          </View>
+        </View>
+         
+        <View style={{ paddingTop: width * 0.03, width: width, flexDirection: "row" }}>
+        <View style={{ width: '30%', backgroundColor: '#FFFFFF' }}>
+        <Image
+          source={require('../../images/img20.png')}
+          style={{ height: height * 0.12, width: width * 0.42 }}
+          resizeMode="contain"
+        />
+      </View>
+      <View style={{ width: '70%', backgroundColor: '#FFFFFF' }}>
+          <View style={{justifyContent:'flex-start',alignItems:'flex-start',paddingHorizontal:width*0.05}}>
+          <Text style={{color:'#000',fontSize:width*0.05,fontWeight:'bold',fontFamily:'Poppins-Medium'}}>
+              La Pino'z Pizza
+          </Text>
+          </View>
+          <View style={{flexDirection:'row',justifyContent:'flex-start',alignItems:'center',paddingTop:width*0.02,paddingHorizontal:width*0.05}}>
+          <AntDesign
+              name='star' size={width * 0.03} color="#000"
+            />
+            <Text style={{paddingHorizontal:width*0.01}}>
+                3.8 (1K+) . 38 Mins . $130 for Now
+            </Text>
+          </View  >
+          <View style={{flexDirection:'row',justifyContent:'flex-start',alignItems:'center',paddingTop:width*0.02,paddingHorizontal:width*0.05}}>
+              <Text style={{fontSize:10}}>
+                  {'Italian,Pizzas,Fast Food,Mexican,Desserts,Beverages,\nMexican,Desserts,Beverages'}
+              </Text>
+          </View>
+    </View>
+    </View>
+    <View style={{ borderBottomWidth: 1, paddingTop: width * 0.02, borderBottomColor: "#DCDCDC" }}>
+
+    </View>
+    <View style={{ paddingTop: width * 0.03, width: width, flexDirection: "row" }}>
+        <View style={{ width: '30%', backgroundColor: '#FFFFFF',justifyContent:'flex-start',alignItems:'flex-start' }}>
+        <Image
+          source={require('../../images/img21.png')}
+          style={{ height: height * 0.12, width: width * 0.42 }}
+          resizeMode="contain"
+        />
+      </View>
+      <View style={{ width: '70%', backgroundColor: '#FFFFFF' }}>
+      <View style={{justifyContent:'flex-start',alignItems:'flex-start',paddingHorizontal:width*0.05}}>
+          <Text style={{color:'#000',fontSize:width*0.05,fontWeight:'bold',fontFamily:'Poppins-Medium'}}>
+              Canteen Central Burge..
+          </Text>
+          </View>
+          <View style={{flexDirection:'row',justifyContent:'flex-start',alignItems:'center',paddingTop:width*0.02,paddingHorizontal:width*0.05}}>
+          <AntDesign
+              name='star' size={width * 0.03} color="#000"
+            />
+            <Text style={{paddingHorizontal:width*0.01}}>
+                4.0 (1K+) . 43 Mins . $250 for Now
+            </Text>
+          </View  >
+          <View style={{flexDirection:'row',justifyContent:'flex-start',alignItems:'center',paddingTop:width*0.02,paddingHorizontal:width*0.05}}>
+              <Text style={{fontSize:10}}>
+                  {'Italian,Pizzas,American Pasta,Mexican,Beverages,\nFast Food,Desserts,North Indian'}
+              </Text>
+          </View>
+    </View>
+    </View>
+    <View style={{ borderBottomWidth: 1, paddingTop: width * 0.02, borderBottomColor: "#DCDCDC" }}>
+
+    </View>
+    <View style={{ paddingTop: width * 0.03, width: width, flexDirection: "row" }}>
+        <View style={{ width: '30%', backgroundColor: '#FFFFFF' }}>
+        <Image
+          source={require('../../images/img22.png')}
+          style={{ height: height * 0.12, width: width * 0.42 }}
+          resizeMode="contain"
+        />
+      </View>
+      <View style={{ width: '70%', backgroundColor: '#FFFFFF' }}>
+      <View style={{justifyContent:'flex-start',alignItems:'flex-start',paddingHorizontal:width*0.05}}>
+          <Text style={{color:'#000',fontSize:width*0.05,fontWeight:'bold',fontFamily:'Poppins-Medium'}}>
+         Pizzalicious
+          </Text>
+          </View>
+          <View style={{flexDirection:'row',justifyContent:'flex-start',alignItems:'center',paddingTop:width*0.02,paddingHorizontal:width*0.05}}>
+          <AntDesign
+              name='star' size={width * 0.03} color="#000"
+            />
+            <Text style={{paddingHorizontal:width*0.01}}>
+                3.8 (1K+) . 38 Mins . $130 for Now
+            </Text>
+          </View  >
+          <View style={{flexDirection:'row',justifyContent:'flex-start',alignItems:'center',paddingTop:width*0.02,paddingHorizontal:width*0.05}}>
+              <Text style={{fontSize:10}}>
+                  {'Italian,Pizzas,Fast Food,Mexican,Desserts,Beverages,\nMexican,Desserts,Beverages'}
+              </Text>
+          </View>
+    </View>
+    </View>
+    <View style={{ borderBottomWidth: 1, paddingTop: width * 0.02, borderBottomColor: "#DCDCDC" }}>
+
+    </View>
+    <View style={{ paddingTop: width * 0.03, width: width, flexDirection: "row" }}>
+        <View style={{ width: '30%', backgroundColor: '#FFFFFF' }}>
+        <Image
+          source={require('../../images/img23.png')}
+          style={{ height: height * 0.12, width: width * 0.42 }}
+          resizeMode="contain"
+        />
+      </View>
+      <View style={{ width: '70%', backgroundColor: '#FFFFFF' }}>
+      <View style={{justifyContent:'flex-start',alignItems:'flex-start',paddingHorizontal:width*0.05}}>
+          <Text style={{color:'#000',fontSize:width*0.05,fontWeight:'bold',fontFamily:'Poppins-Medium'}}>
+              Domino's Pizza
+          </Text>
+          </View>
+          <View style={{flexDirection:'row',justifyContent:'flex-start',alignItems:'center',paddingTop:width*0.02,paddingHorizontal:width*0.05}}>
+          <AntDesign
+              name='star' size={width * 0.03} color="#000"
+            />
+            <Text style={{paddingHorizontal:width*0.01}}>
+                4.0 (1K+) . 43 Mins . $250 for Now
+            </Text>
+          </View  >
+          <View style={{flexDirection:'row',justifyContent:'flex-start',alignItems:'center',paddingTop:width*0.02,paddingHorizontal:width*0.05}}>
+              <Text style={{fontSize:10}}>
+                  {'Italian,Pizzas,Fast Food,Mexican,Desserts,Beverages,\nNorth Indian,Asian,Orintenl'}
+              </Text>
+          </View>
+    </View>
+    </View>
+    <View style={{ borderBottomWidth: 1, paddingTop: width * 0.02, borderBottomColor: "#DCDCDC" }}>
+
+    </View>
+    <View style={{paddingBottom:width*0.1}}>
+
+    </View>
+        </ScrollView>
+      </SafeAreaView>
+    )
+  }
+}
+const styles = StyleSheet.create({
+  listViewHorizontal: {
+
+  },
+})
