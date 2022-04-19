@@ -83,7 +83,7 @@ name='chevron-down' size={width*0.09}
   </View>
   <View style={{width:"20%",backgroundColor:"#FFFFFF"}}>
   <View style={{paddingTop:width*0.04,alignItems:'center',justifyContent:'center'}}>
-    <TouchableOpacity>
+    <TouchableOpacity onPress={()=>this.props.navigation.navigate("Offer")}> 
 <MaterialCommunityIcons
 name='chevron-right' size={width*0.09}
 />
