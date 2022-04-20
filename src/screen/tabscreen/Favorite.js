@@ -346,7 +346,7 @@ export default class Favorite extends Component {
           </View>
           <View style={{paddingTop:width*0.03}} >
 <View style={{borderWidth:1,borderRadius:10,justifyContent:'flex-start',alignItems:'flex-start',
-borderColor:"#F7B614",marginHorizontal:width*0.03}}>
+borderColor:"#F7B614",marginHorizontal:width*0.03 }}>
 <Image
 source={require('../../images/ban.png')}
 style={{height:height*0.3,width:"100%",borderRadius:10}}
