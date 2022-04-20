@@ -101,14 +101,14 @@ name='chevron-right' size={width*0.09}
     />
 <View style={{paddingHorizontal:width*0.02}}>
   <Text style={{fontSize:width*0.05,color:"#000011",fontWeight:"500"}}>
-    Offers
+    Order History
   </Text>
 </View>
   </View>
   </View>
   <View style={{width:"20%",backgroundColor:"#FFFFFF"}}>
   <View style={{paddingTop:width*0.04,alignItems:'center',justifyContent:'center'}}>
-    <TouchableOpacity>
+    <TouchableOpacity onPress={()=>this.props.navigation.navigate('History')}>
 <MaterialCommunityIcons
 name='chevron-right' size={width*0.09}
 />
