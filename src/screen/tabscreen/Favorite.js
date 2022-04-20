@@ -106,303 +106,75 @@ export default class Favorite extends Component {
             </View>
           </View>
         </View>
-        <View style={{ height: '5%', justifyContent: 'center', alignItems: 'center', width: width }}>
-          <View style={{
-            flexDirection: "row", justifyContent: "space-evenly", alignItems: "center",
-            width: '100%', height: '80%'
-          }}>
-            <Text style={{ borderRadius: 5, borderWidth: 1, padding: width * 0.01, borderColor: "#F7B614", color: "#000000", fontSize: width * 0.03 }}>
-              MAX Safety
-            </Text>
-            <Text style={{ borderRadius: 5, borderWidth: 1, padding: width * 0.01, borderColor: "#F7B614", color: "#000000", fontSize: width * 0.03 }}>
-              Fast delivery
-            </Text>
-            <Text style={{ borderRadius: 5, borderWidth: 1, padding: width * 0.01, borderColor: "#F7B614", color: "#000000", fontSize: width * 0.03 }}>
-              Raiting 4.0+
-            </Text>
-            <Text style={{ borderRadius: 5, borderWidth: 1, padding: width * 0.01, borderColor: "#F7B614", color: "#000000", fontSize: width * 0.03 }}>
-              New
-            </Text>
-            <Text style={{ borderRadius: 5, borderWidth: 1, padding: width * 0.01, borderColor: "#F7B614", color: "#000000", fontSize: width * 0.03 }}>
-              Relevance
-            </Text>
-          </View>
-        </View>
         <ScrollView showsVerticalScrollIndicator={false} style={{ width: width, height:'81%' }}>
-          <View style={{
-            paddingTop: width * 0.03, alignItems: "center", marginHorizontal: width * 0.04,
-            justifyContent: 'center', paddingBottom: width * 0.05
-          }}>
-            <Carousel
-              layout={"default"}
-              ref={ref => this.carousel = ref}
-              data={this.state.data}
-              renderItem={this.renderItem}
-              sliderWidth={SLIDER_WIDTH - width * 0.08}
-              itemWidth={ITEM_WIDTH}
-              loop={true}
-              autoplay={true}
-              autoplayInterval={5000}
-              onSnapToItem={(index) => this.setState({ activeSlide: index })}
-            />
-            <Pagination
-              dotsLength={this.state.data.length}
-              activeDotIndex={this.state.activeSlide}
-              containerStyle={{
-                backgroundColor: 'transparent', position: 'absolute',
-                bottom: 4, borderRadius: 10, paddingVertical: 2, paddingHorizontal: 4
-              }}
-              dotContainerStyle={{ marginHorizontal: 1 }}
-              dotStyle={{
-                width: 14,
-                height: 8,
-                borderRadius: 5,
-                backgroundColor: '#F7B614'
-              }}
-              inactiveDotStyle={{
-                width: 8,
-                height: 8,
-                borderRadius: 5,
-                backgroundColor: '#F7B614'
-              }}
-              inactiveDotOpacity={0.4}
-              inactiveDotScale={0.8}
-            />
-            {/*<Image
-    source={require('../../images/banner.png')}
-    style={{height:height*0.24,width:width*0.92}} resizeMode={'contain'}
-    />*/}
-          </View>
-
-          <View style={{ paddingHorizontal: width * 0.05 }}>
-            <Text style={{ fontSize: width * 0.06, textAlign: "center", color: "#000000", fontWeight: "bold",fontFamily:'Poppins-Medium' }}>
-              Top Brand for you
-            </Text>
+          <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center'}}>
+            <View style={{paddingHorizontal:width*0.03,paddingTop:width*0.03}}>
+<Image
+source={require('../../images/star.png')}
+style={{height:50,width:50}}
+/>
+</View>
+<View >
+  <Text style={{fontSize:width*0.06,fontWeight:'bold',fontFamily:'Poppins-Medium',color:'#E44227'}}>
+    Crazy 60% OFF deals
+  </Text>
+  <Text style={{fontSize:width*0.04}}>
+    and other amazing offers too
+  </Text>
+</View>
+<View>
+  <TouchableOpacity>
+  <Text style={{fontWeight:'bold',fontFamily:'Poppins-Medium',color:'#E44227'}}>
+    See All
+  </Text>
+  </TouchableOpacity>
+</View>
           </View>
           <View style={{ paddingTop: width * 0.05 }}>
-            <View style={{ flexDirection: "row", justifyContent: "space-around", alignItems: "center" }}>
-              <Image
-                source={require('../../images/outd.png')}
-                
-                style={{ borderWidth: 1, borderRadius: 10, height: 70, width: 70, borderColor: "#F7B614" }}
-              />
-              <Image
-                source={require('../../images/prm.png')}
-                
-                style={{ borderWidth: 1, borderRadius:10, height: 70, width: 70, borderColor: "#F7B614" }}
-              />
-              <Image
-                source={require('../../images/evnt.png')}
-              
-                style={{ borderWidth: 1, borderRadius: 10, height: 70, width: 70, borderColor: "#F7B614" }}
-              />
-              <Image
-                source={require('../../images/pro.png')}
-            
-                style={{ borderWidth: 1, borderRadius: 10, height: 70, width: 70, borderColor: "#F7B614" }}
-              />
-            </View>
-          </View>
-          <View style={{ paddingTop: width * 0.01 }}>
-            <View style={{ flexDirection: "row", justifyContent: "space-around", alignItems: "center" }}>
-              <Text style={{ color: "#000000", fontWeight: "bold", }}>
-                Outdoor
-              </Text>
-              <Text style={{ color: "#000000", fontWeight: "bold", }}>
-                Premium
-              </Text>
-              <Text style={{ color: "#000000", fontWeight: "bold", }}>
-                Events
-              </Text>
-              <Text style={{ color: "#000000", fontWeight: "bold", paddingHorizontal: width * 0.04 }}>
-                Pro
-              </Text>
-            </View>
-          </View>
-          <View style={{ paddingTop: width * 0.03 }}>
-            <View style={{ flexDirection: "row", justifyContent: "space-around", alignItems: "center" }}>
-              <Image
-                source={require('../../images/icon5.png')}
-                
-                style={{ borderWidth: 1, borderRadius: 10, height: 70, width: 70, borderColor: "#F7B614" }}
-              />
-              <Image
-                source={require('../../images/icon6.png')}
-                
-                style={{ borderWidth: 1, borderRadius: 10, height: 70, width: 70, borderColor: "#F7B614" }}
-              />
-              <Image
-                source={require('../../images/icon7.png')}
-              
-                style={{ borderWidth: 1, borderRadius: 10, height: 70, width: 70, borderColor: "#F7B614" }}
-              />
-              <Image
-                source={require('../../images/icon8.png')}
-                
-                style={{ borderWidth: 1, borderRadius: 10, height: 70, width: 70, borderColor: "#F7B614" }}
-              />
-            </View>
-          </View>
-          <View style={{ paddingTop: width * 0.01 }}>
-            <View style={{ flexDirection: "row", justifyContent: "space-around", alignItems: "center" }}>
-              <Text style={{ color: "#000000", fontWeight: "bold", paddingHorizontal: width * 0.07 }}>
-                Cafe
-              </Text>
-              <Text style={{ color: "#000000", fontWeight: "bold", }}>
-                Romantic
-              </Text>
-              <Text style={{ color: "#000000", fontWeight: "bold", }}>
-               Pubs & Bars
-              </Text>
-              <Text style={{ color: "#000000", fontWeight: "bold" }}>
-                Family Dining
-              </Text>
-            </View>
-          </View>
-          <View style={{ paddingTop: width * 0.05 }}>
-            <View style={{ flexDirection: "row", justifyContent: "space-around", alignItems: "center" }}>
-              <Image
-                source={require('../../images/icon9.png')}
-                
-                style={{ borderWidth: 1, borderRadius: 10, height: 70, width: 70, borderColor: "#F7B614" }}
-              />
-              <Image
-                source={require('../../images/icon10.png')}
-                
-                style={{ borderWidth: 1, borderRadius:10, height: 70, width: 70, borderColor: "#F7B614" }}
-              />
-              <Image
-                source={require('../../images/icon11.png')}
-              
-                style={{ borderWidth: 1, borderRadius: 10, height: 70, width: 70, borderColor: "#F7B614" }}
-              />
-              <Image
-                source={require('../../images/icon12.png')}
-            
-                style={{ borderWidth: 1, borderRadius: 10, height: 70, width: 70, borderColor: "#F7B614" }}
-              />
-            </View>
-          </View>
-          <View style={{ paddingTop: width * 0.01 }}>
-            <View style={{ flexDirection: "row", justifyContent: "space-around", alignItems: "center" }}>
-              <Text style={{ color: "#000000", fontWeight: "bold",paddingHorizontal:width*0.04 }}>
-                Buffet
-              </Text>
-              <Text style={{ color: "#000000", fontWeight: "bold", }}>
-                Desserts
-              </Text>
-              <Text style={{ color: "#000000", fontWeight: "bold", }}>
-                Pure Veg
-              </Text>
-              <Text style={{ color: "#000000", fontWeight: "bold", }}>
-                Kid Friendly
-              </Text>
-            </View>
-          </View>
-          <View style={{ paddingTop: width * 0.03 }}>
-            <View style={{ flexDirection: "row", justifyContent: "space-around", alignItems: "center" }}>
-              <Image
-                source={require('../../images/icon13.png')}
-                
-                style={{ borderWidth: 1, borderRadius: 10, height: 70, width: 70, borderColor: "#F7B614" }}
-              />
-              <Image
-                source={require('../../images/icon14.png')}
-                
-                style={{ borderWidth: 1, borderRadius: 10, height: 70, width: 70, borderColor: "#F7B614" }}
-              />
-              <Image
-                source={require('../../images/icon15.png')}
-              
-                style={{ borderWidth: 1, borderRadius: 10, height: 70, width: 70, borderColor: "#F7B614" }}
-              />
-              <Image
-                source={require('../../images/icon16.png')}
-                
-                style={{ borderWidth: 1, borderRadius: 10, height: 70, width: 70, borderColor: "#F7B614" }}
-              />
-            </View>
-          </View>
-          <View style={{ paddingTop: width * 0.01 }}>
-            <View style={{ flexDirection: "row", justifyContent: "space-around", alignItems: "center" }}>
-              <Text style={{ color: "#000000", fontWeight: "bold", }}>
-                BreakFast
-              </Text>
-              <Text style={{ color: "#000000", fontWeight: "bold", }}>
-                Pet Friendly
-              </Text>
-              <Text style={{ color: "#000000", fontWeight: "bold", }}>
-               Snacks
-              </Text>
-              <Text style={{ color: "#000000", fontWeight: "bold" ,paddingHorizontal:width*0.03}}>
-                Healthy
-              </Text>
-            </View>
-          </View>
-          <View style={{ paddingHorizontal: width * 0.05,paddingTop:width*0.1 }}>
-            <Text style={{ fontSize: width * 0.06, color: "#000000", fontWeight: "bold" ,fontFamily:'Poppins-Medium'}}>
-              Popular Restaurants Around You
-            </Text>
-          </View>
-          <View style={{paddingTop:width*0.03}} >
-<View style={{borderWidth:1,borderRadius:10,justifyContent:'flex-start',alignItems:'flex-start',
-borderColor:"#F7B614",marginHorizontal:width*0.03 }}>
-<Image
-source={require('../../images/ban.png')}
-style={{height:height*0.3,width:"100%",borderRadius:10}}
-/>
-<View style={{flexDirection:'row',justifyContent:'flex-start',alignItems:'center'}}>
-  <View style={{width:'85%',paddingTop:width*0.02}}>
-<Text style={{fontSize:width*0.04,fontFamily:'Poppins-Medium',paddingHorizontal:width*0.03,color:"#111111"}}>
-  The Grill Rooms
-</Text>
-<Text style={{fontFamily:'Poppins-Medium',paddingHorizontal:width*0.03,fontSize:width*0.03}} >
-  {'3rd floor Avenue,Fire Bridge lane Cannought\nplace New Delhi,Delhi 110001'}
-</Text>
 
-</View>
-<View style={{width:'15%'}}>
-<Text style={{borderRadius:5,borderWidth:1,borderColor:'#F7B614',paddingHorizontal:width*0.02,backgroundColor:"#00670A",textAlign:'center',color:'#fff'}}>
-  5.3*
-</Text>
-<Text style={{fontFamily:'Poppins-Medium',paddingHorizontal:width*0.01,fontSize:width*0.03}}>
-  $500 for Now
-</Text>
-</View>
-</View>
-</View>
-          </View>
-          <View style={{paddingTop:width*0.03}} >
-<View style={{borderWidth:1,borderRadius:10,justifyContent:'flex-start',alignItems:'flex-start',
-borderColor:"#F7B614",marginHorizontal:width*0.03}}>
-<Image
-source={require('../../images/ban2.png')}
-style={{height:height*0.3,width:"100%",borderRadius:10}}
-/>
-<View style={{flexDirection:'row',justifyContent:'flex-start',alignItems:'center'}}>
-  <View style={{width:'85%',paddingTop:width*0.02}}>
-<Text style={{fontSize:width*0.04,fontFamily:'Poppins-Medium',paddingHorizontal:width*0.03,color:"#111111"}}>
-  The Ancient Barbeque
-</Text>
-<Text style={{fontFamily:'Poppins-Medium',paddingHorizontal:width*0.03,fontSize:width*0.03}} >
-  {'223 $223A A Good Earth City Center,Sector 50\n Gurugram Haryana,122018'}
-</Text>
+<ScrollView ref={(snapScroll) => { this.snapScroll = snapScroll; }}
+  horizontal={true}
+  decelerationRate={0}
+  onResponderRelease={() => {
 
+    var interval = 300; // WIDTH OF 1 CHILD COMPONENT 
+
+    var snapTo = (this.scrollingRight) ? Math.ceil(this.lastx / interval) :
+      Math.floor(this.lastx / interval);
+    var scrollTo = snapTo * interval;
+    this.snapScroll.scrollTo(0, scrollTo);
+  }}
+  scrollEventThrottle={32}
+  onScroll={(event) => {
+    var nextx = event.nativeEvent.contentOffset.x;
+    this.scrollingRight = (nextx > this.lastx);
+    this.lastx = nextx;
+  }}
+  showsHorizontalScrollIndicator={false}
+  style={styles.listViewHorizontal}
+>
+  <Image
+    source={require('../../images/9999.png')}
+    resizeMode="contain"
+    style={{ paddingHorizontal: width * 0.05, marginLeft: width * 0.05 }}
+  />
+  <Image
+    source={require('../../images/3333.png')}
+    resizeMode="contain"
+    style={{ paddingHorizontal: width * 0.05, marginLeft: width * 0.05 }}
+  />
+  <Image
+    source={require('../../images/6666.png')}
+    resizeMode="contain"
+    style={{ paddingHorizontal: width * 0.05, marginLeft: width * 0.05 }}
+  />
+
+
+</ScrollView>
 </View>
-<View style={{width:'15%'}}>
-<Text style={{borderRadius:5,borderWidth:1,borderColor:'#F7B614',paddingHorizontal:width*0.02,backgroundColor:"#00670A",textAlign:'center',color:'#fff'}}>
-  5.3*
-</Text>
-<Text style={{fontFamily:'Poppins-Medium',paddingHorizontal:width*0.01,fontSize:width*0.03}}>
-  $500 for Now
-</Text>
-</View>
-</View>
-</View>
-          </View>
-          <View style={{ paddingHorizontal: width * 0.05,paddingTop:width*0.1 }}>
-            <Text style={{ fontSize: width * 0.06, color: "#000000", fontWeight: "bold" ,fontFamily:'Poppins-Medium'}}>
-              Discover Restaurants For You
+<View style={{ paddingHorizontal: width * 0.05,paddingTop:width*0.1 }}>
+            <Text style={{ fontSize: width * 0.06, color: "#000000", fontWeight: "bold" ,fontFamily:'Poppins-Semibold'}}>
+              Eat What makes you happy
             </Text>
           </View>
           <View style={{ paddingTop: width * 0.05 }}>
@@ -443,52 +215,192 @@ style={{height:height*0.3,width:"100%",borderRadius:10}}
               </Text>
             </View>
           </View>
+          <View style={{ paddingHorizontal: width * 0.05,paddingTop:width*0.1 }}>
+            <Text style={{ fontSize: width * 0.06, color: "#000000", fontWeight: "bold",fontFamily:'Poppins-Semibold' }}>
+              Most loved offers on Afrefood
+            </Text>
+          </View>
           <View style={{ paddingTop: width * 0.05 }}>
-            <View style={{ flexDirection: "row", justifyContent: "space-around", 
-            alignItems: "center"}}>
+
+<ScrollView ref={(snapScroll) => { this.snapScroll = snapScroll; }}
+  horizontal={true}
+  decelerationRate={0}
+  onResponderRelease={() => {
+
+    var interval = 300; // WIDTH OF 1 CHILD COMPONENT 
+
+    var snapTo = (this.scrollingRight) ? Math.ceil(this.lastx / interval) :
+      Math.floor(this.lastx / interval);
+    var scrollTo = snapTo * interval;
+    this.snapScroll.scrollTo(0, scrollTo);
+  }}
+  scrollEventThrottle={32}
+  onScroll={(event) => {
+    var nextx = event.nativeEvent.contentOffset.x;
+    this.scrollingRight = (nextx > this.lastx);
+    this.lastx = nextx;
+  }}
+  showsHorizontalScrollIndicator={false}
+  style={styles.listViewHorizontal}
+>
+  <Image
+    source={require('../../images/deal-1.png')}
+    resizeMode="contain"
+    style={{ paddingHorizontal: width * 0.05, marginLeft: width * 0.05 }}
+  />
+  <Image
+    source={require('../../images/deal-2.png')}
+    resizeMode="contain"
+    style={{ paddingHorizontal: width * 0.05, marginLeft: width * 0.05 }}
+  />
+  <Image
+    source={require('../../images/deal-3.png')}
+    resizeMode="contain"
+    style={{ paddingHorizontal: width * 0.05, marginLeft: width * 0.05 }}
+  />
+
+
+</ScrollView>
+</View>
+<View style={{ paddingHorizontal: width * 0.05,paddingTop:width*0.05,justifyContent:'flex-start',alignItems:'flex-start' }}>
+            <Text style={{ fontSize: width * 0.06, textAlign: "center", color: "#000000", fontWeight: "bold",fontFamily:'Poppins-Semibold' }}>
+              Top Brand for you
+            </Text>
+          </View>
+          <View style={{ paddingTop: width * 0.05 }}>
+            <View style={{ flexDirection: "row", justifyContent: "space-around", alignItems: "center" }}>
               <Image
-                source={require('../../images/799.jpg')}
+                source={require('../../images/logo1.jpg')}
                 
-                style={{  borderRadius: 35, height: 70, width: 70, borderColor: "#F7B614",borderWidth:2 }}
+                style={{ borderWidth: 1, borderRadius: 35, height: 70, width: 70, borderColor: "#F7B614" }}
               />
               <Image
-                source={require('../../images/798.jpg')}
+                source={require('../../images/logo2.jpg')}
                 
-                style={{  borderRadius: 35, height: 70, width: 70, borderColor: "#F7B614",borderWidth:2 }}
+                style={{ borderWidth: 1, borderRadius: 35, height: 70, width: 70, borderColor: "#F7B614" }}
               />
               <Image
-                source={require('../../images/797.jpg')}
-                
-                style={{ borderRadius: 35, height: 70, width: 70, borderColor: "#F7B614",borderWidth:2 }}
-              />
-              <Image
-                source={require('../../images/796.jpg')}
+                source={require('../../images/log3.jpg')}
               
-                style={{ borderRadius: 35, height: 70, width: 70, borderColor: "#F7B614",borderWidth:2 }}
+                style={{ borderWidth: 1, borderRadius: 35, height: 70, width: 70, borderColor: "#F7B614" }}
+              />
+              <Image
+                source={require('../../images/logo4.jpg')}
+            
+                style={{ borderWidth: 1, borderRadius: 35, height: 70, width: 70, borderColor: "#F7B614" }}
               />
             </View>
           </View>
           <View style={{ paddingTop: width * 0.01 }}>
             <View style={{ flexDirection: "row", justifyContent: "space-around", alignItems: "center" }}>
-              <Text style={{ color: "#000000", fontWeight: "bold", paddingHorizontal: width * 0.03 }}>
-                Chaat
+              <Text style={{ color: "#000000", fontWeight: "bold", }}>
+                McDonald's
               </Text>
               <Text style={{ color: "#000000", fontWeight: "bold", }}>
-                Momos
+                Domino's
               </Text>
               <Text style={{ color: "#000000", fontWeight: "bold", }}>
-                Healthy
+                Subway
               </Text>
               <Text style={{ color: "#000000", fontWeight: "bold", paddingHorizontal: width * 0.04 }}>
-                Thali
+                KFC
               </Text>
             </View>
           </View>
+          <View style={{ paddingHorizontal: width * 0.01 }}>
+            <View style={{ flexDirection: "row", justifyContent: "space-around", alignItems: "center" }}>
+              <Text style={{ fontWeight: "bold", fontSize: width * 0.03 }}>
+                45 minits
+              </Text>
+              <Text style={{ fontWeight: "bold", fontSize: width * 0.03 }}>
+                35 minits
+              </Text>
+              <Text style={{ fontWeight: "bold", fontSize: width * 0.03 }}>
+                20 minits
+              </Text>
+              <Text style={{ fontWeight: "bold", fontSize: width * 0.03 }}>
+                10 minits
+              </Text>
+            </View>
+          </View>
+          <View style={{ paddingHorizontal: width * 0.05,paddingTop:width*0.1 }}>
+            <Text style={{ fontSize: width * 0.06, color: "#000000", fontWeight: "bold",fontFamily:'Poppins-Semibold' }}>
+              Best offers around you
+            </Text>
+          </View>
+          <View style={{paddingTop:width*0.03}} >
+<View style={{borderWidth:1,borderRadius:10,justifyContent:'flex-start',alignItems:'flex-start',
+borderColor:"#F7B614",marginHorizontal:width*0.03,}}>
+<ImageBackground
+source={require('../../images/7777.png')}
+style={{height:height*0.3,width:"100%",borderRadius:20}}
+>
+  <View style={{paddingTop:width*0.09,flexDirection:'row-reverse'}}>
+<Text style={{fontSize:width*0.05,color:'#FFF',fontWeight:'bold'}}>
+   FLAT 40 %
+</Text>
+  </View>
+</ImageBackground>
+<View style={{flexDirection:'row',justifyContent:'flex-start',alignItems:'center'}}>
+  <View style={{width:'85%',paddingTop:width*0.02}}>
+<Text style={{fontSize:width*0.06,fontFamily:'Poppins-Medium',paddingHorizontal:width*0.03,color:"#111111",fontWeight:'bold'}}>
+  Canteen Central -Burger,
+</Text>
+<Text style={{fontFamily:'Poppins-Medium',paddingHorizontal:width*0.03,fontSize:width*0.03}} >
+  {'American Pasta,Pizzas.....\nplace New Delhi,Delhi 110001'}
+</Text>
+
+</View>
+<View style={{width:'15%'}}>
+<Text style={{borderRadius:5,borderWidth:1,borderColor:'#F7B614',paddingHorizontal:width*0.02,backgroundColor:"#00670A",textAlign:'center',color:'#fff'}}>
+  4.1*
+</Text>
+<Text style={{fontFamily:'Poppins-Medium',paddingHorizontal:width*0.01,fontSize:width*0.03,color:'#E44227'}}>
+  $25.00 for Two
+</Text>
+</View>
+</View>
+</View>
+          </View>
+          <View style={{paddingTop:width*0.03}} >
+<View style={{borderWidth:1,borderRadius:10,justifyContent:'flex-start',alignItems:'flex-start',
+borderColor:"#F7B614",marginHorizontal:width*0.03}}>
+<ImageBackground
+source={require('../../images/11111.png')}
+style={{height:height*0.3,width:"100%",borderRadius:20}}
+>
+  <View style={{paddingTop:width*0.09,flexDirection:'row-reverse'}}>
+<Text style={{fontSize:width*0.05,color:'#E44227',fontWeight:'bold'}}>
+   FLAT 40 %
+</Text>
+  </View>
+</ImageBackground>
+<View style={{flexDirection:'row',justifyContent:'flex-start',alignItems:'center'}}>
+  <View style={{width:'85%',paddingTop:width*0.02}}>
+<Text style={{fontSize:width*0.05,fontFamily:'Poppins-Medium',paddingHorizontal:width*0.03,color:"#111111",fontWeight:'bold'}}>
+  Chaayos Chai+Snacks=Relax
+</Text>
+<Text style={{fontFamily:'Poppins-Medium',paddingHorizontal:width*0.03,fontSize:width*0.03}} >
+  {'Bakery,Beverages,Chaats,Desserts,\nFast food Home Food Itatian...'}
+</Text>
+
+</View>
+<View style={{width:'15%'}}>
+<Text style={{borderRadius:5,borderWidth:1,borderColor:'#F7B614',paddingHorizontal:width*0.02,backgroundColor:"#00670A",textAlign:'center',color:'#fff'}}>
+  4.1*
+</Text>
+<Text style={{fontFamily:'Poppins-Medium',paddingHorizontal:width*0.01,fontSize:width*0.03,color:'#E44227'}}>
+  $25.00 for Two
+</Text>
+</View>
+</View>
+</View>
+          </View>
           <View style={{paddingBottom:width*0.3}}>
 
-          </View>
+</View>
         </ScrollView>
-
+       
 
       </SafeAreaView>
     )
