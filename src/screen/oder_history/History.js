@@ -164,9 +164,10 @@ style={{height:height*0.1,width:width*0.2,borderRadius:10,}}
   <View style={{paddingTop:width*0.02}}>
   </View>
 <View style={{height:'10%',backgroundColor:'#E7F2F9',justifyContent:'center',alignItems:'center',marginHorizontal:width*0.03}}>
-<Text style={{color:"#aaa",fontSize:width*0.04,fontWeight:'bold',textAlign:'center'}}>
-  Please call me when you come.Thank you!
-</Text>
+<TextInput
+placeholder='Please call me when you come.Thank you'
+style={{fontSize:width*0.04}}
+/>
   </View>
   <View style={{paddingTop:width*0.06}}>
   </View>
@@ -239,7 +240,7 @@ export default class History extends Component {
       <SafeAreaView style={{ width: width, height: height, backgroundColor: "#FFFFFF" }}>
         <View style={{
           flexDirection: 'row', alignItems: "center", justifyContent: 'space-between',
-          backgroundColor: "#F7B614", width: width, height: '5%', paddingHorizontal: width * 0.03, paddingTop: width * 0.02
+          backgroundColor: "#F7B614", width: width, height: '6%', paddingHorizontal: width * 0.03, paddingTop: width * 0.02
         }}>
 
           <View style={{ flexDirection: "row", alignItems: "center" }}>
@@ -249,14 +250,31 @@ export default class History extends Component {
               
             />
             </TouchableOpacity>
-              <View style={{paddingHorizontal:width*0.25}}>
-          <Text style={{color:"#FFF",textAlign:'center',fontSize:width*0.05,fontWeight:'bold',fontFamily:'Poppins-Semibold'}}>
+            
+          <Text style={{color:"#FFF",textAlign:'center',fontSize:width*0.05,fontWeight:'bold',fontFamily:'Poppins-Semibold',paddingHorizontal:width*0.06}}>
             Order History
           </Text>
-        </View>
     </View>
-      
+    <View style={{ flexDirection: "row", alignItems: "center" }}>
+            <Entypo
+              name='location-pin' size={width * 0.07} color={"#E42217"}
+            />
+            <View style={{flexDirection:'column',justifyContent:'flex-start',alignItems:'flex-start',paddingTop:width*0.03}}>
+            <Text style={{ fontSize: width * 0.03, color: "#E42217", fontWeight: "bold" }}>
+              Bazar Chitil Qabar
+            </Text >
+            <Text style={{fontSize:9,color:'#FFF'}}>
+               chandni chowk new delhi
+            </Text>
+            </View>
+            <TouchableOpacity onPress={() =>this.props.navigation.navigate('Location')}>
+              <Entypo
+                name='chevron-small-down' size={width * 0.06} color={"#E42217"}
+              />
+            </TouchableOpacity>
+          </View>
         </View>
+        
         <View style={{
           justifyContent: 'center', alignItems: 'center', backgroundColor: '#F7B614',
           width: width, height: '8%', paddingTop: width * 0.01
