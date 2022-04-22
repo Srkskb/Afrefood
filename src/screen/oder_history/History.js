@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 const { width, height } = Dimensions.get("window");
 import Icon from 'react-native-vector-icons/Feather';
 import FIcon from 'react-native-vector-icons/Feather';
+import * as Animatable from 'react-native-animatable';
 import AntDesign from 'react-native-vector-icons/AntDesign'
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
 import Entypo from 'react-native-vector-icons/Entypo'
@@ -20,6 +21,7 @@ import {
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import Carousel, { Pagination } from 'react-native-snap-carousel';
 import { TabView, SceneMap } from 'react-native-tab-view';
+let data=[{"name":"Joseph Kuruvilla","location":'South africa'},{'name':'Test'}]
 const FirstRoute = () => (
   <View style={[styles.container, { backgroundColor: "#FFFFFF" }]}>
     <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',paddingTop:width*0.03,marginHorizontal:width*0.04}}>
@@ -187,7 +189,223 @@ style={{fontSize:width*0.04}}
 
 );
 const SecondRoute = () => (
-  <View style={[styles.container, { backgroundColor: "#E44227" }]} />
+  <View style={[styles.container, { backgroundColor: "#FFFFFF" }]} >
+    <ScrollView style={{width: '100%',height: '86%'}} showsVerticalScrollIndicator={false}>
+     <Animatable.View animation="flipInX" style={{width: '100%',height: '86%'}}>
+         {data.map((item,index)=>{
+         	return(
+         		<View key={index} style={{width: '100%',paddingVertical:8}}>
+               <View key={index} style={{width: '100%',paddingVertical:8}}>
+         		<View elevation={5} style={{width: '100%',backgroundColor: '#fdfdfd',borderRadius:4}}>
+        
+             <View style={{width: '100%',flexDirection:'row'}}>
+         		<View style={{width: '74%',flexDirection:'row',justifyContent:'flex-start',alignItems:'center'}}>
+         		
+         		<View style={{paddingHorizontal:8,justifyContent:'flex-start',alignItems:'flex-start',
+         		paddingTop:8}}>
+         		<Text style={{fontSize:18,fontFamily: "Montserrat-SemiBold",
+            		color:'#121212',textAlign:'center',fontWeight:'bold'}}>
+           		Order Number : 30284263
+          		</Text>
+          		<Text style={{fontSize:12,fontFamily: "Montserrat-Medium",
+            		color:'#121212',textAlign:'center',paddingTop:6}}>
+           		Delivery Time : 08/04/2022 10:20 Am
+          		</Text>
+          		</View>
+          		</View>
+          		<View style={{width: '26%',paddingTop:width*0.05}}>
+          		<Text style={{borderRadius:5,borderWidth:1,backgroundColor:'#E44227',color:"#fff",padding:5,borderColor:'#E44227',textAlign:'center'}}>
+                View Details
+              </Text>
+          		</View>
+          		</View>
+
+          		{/* <View style={{paddingHorizontal:8,width: '100%',marginTop:8,backgroundColor: '#E6A913'}}>
+          		<View style={{width: '100%',flexDirection:'row',paddingVertical:8}}>
+          		<View style={{width: '60%'}}>
+          		<Text style={{fontSize:14,fontFamily: "Montserrat-SemiBold",
+            		color:'#121212'}}>
+           		Item Name
+          		</Text>
+          		</View>
+          		<View style={{width: '20%'}}>
+          		<Text style={{fontSize:14,fontFamily: "Montserrat-SemiBold",
+            		color:'#121212',textAlign:'center'}}>
+           		Quantity
+          		</Text>
+         		</View>
+         		<View style={{width: '20%'}}>
+         		<Text style={{fontSize:14,fontFamily: "Montserrat-SemiBold",
+            		color:'#121212',textAlign:'center'}}>
+           		Price
+          		</Text>
+         		</View>
+         		</View>
+         		</View> */}
+         		{/* <View style={{width: '100%',marginTop:8,borderBottomWidth:1,borderColor: '#E42217',
+         		paddingBottom:6}}>
+          		<View style={{paddingHorizontal:8,width: '100%',flexDirection:'row'}}>
+          		<View style={{width: '60%'}}>
+          		<Text style={{fontSize:14,fontFamily: "Montserrat-Medium",
+            		color:'#121212'}}>
+           		Double cheese pan
+          		</Text>
+          		</View>
+          		<View style={{width: '20%'}}>
+          		<Text style={{fontSize:14,fontFamily: "Montserrat-Medium",
+            		color:'#121212',textAlign:'center'}}>
+           		05
+          		</Text>
+         		</View>
+         		<View style={{width: '20%'}}>
+         		<Text style={{fontSize:14,fontFamily: "Montserrat-Medium",
+            		color:'#121212',textAlign:'center'}}>
+           		$250
+          		</Text>
+         		</View>
+         		</View>
+         		</View> */}
+         		{/* <View style={{width: '100%',marginTop:8,borderBottomWidth:1,borderColor: '#E42217',
+         		paddingBottom:6}}>
+          		<View style={{paddingHorizontal:8,width: '100%',flexDirection:'row'}}>
+          		<View style={{width: '60%'}}>
+          		<Text style={{fontSize:14,fontFamily: "Montserrat-Medium",
+            		color:'#121212'}}>
+           		Gyoza
+          		</Text>
+          		</View>
+          		<View style={{width: '20%'}}>
+          		<Text style={{fontSize:14,fontFamily: "Montserrat-Medium",
+            		color:'#121212',textAlign:'center'}}>
+           		07
+          		</Text>
+         		</View>
+         		<View style={{width: '20%'}}>
+         		<Text style={{fontSize:14,fontFamily: "Montserrat-Medium",
+            		color:'#121212',textAlign:'center'}}>
+           		$150
+          		</Text>
+         		</View>
+         		</View></View>
+                 <View style={{width: '100%',marginTop:8,borderBottomWidth:1,borderColor: '#E42217',
+         		paddingBottom:6}}>
+          		<View style={{paddingHorizontal:8,width: '100%',flexDirection:'row'}}>
+          		<View style={{width: '60%'}}>
+          		<Text style={{fontSize:14,fontFamily: "Montserrat-Medium",
+            		color:'#121212'}}>
+           		Burger Smokehouse
+          		</Text>
+          		</View>
+          		<View style={{width: '20%'}}>
+          		<Text style={{fontSize:14,fontFamily: "Montserrat-Medium",
+            		color:'#121212',textAlign:'center'}}>
+           		04
+          		</Text>
+         		</View>
+         		<View style={{width: '20%'}}>
+         		<Text style={{fontSize:14,fontFamily: "Montserrat-Medium",
+            		color:'#121212',textAlign:'center'}}>
+           		$350
+          		</Text>
+         		</View>
+         		</View></View>
+         		<View style={{width: '100%',marginTop:8,
+         		paddingBottom:6}}>
+          		<View style={{paddingHorizontal:8,width: '100%',flexDirection:'row'}}>
+          		<View style={{width: '60%'}}>
+          		<Text style={{fontSize:14,fontFamily: "Montserrat-Medium",
+            		color:'#121212'}}>
+           		Sub Total
+          		</Text>
+          		</View>
+          		<View style={{width: '20%'}}>
+          		
+         		</View>
+         		<View style={{width: '20%'}}>
+         		<Text style={{fontSize:14,fontFamily: "Montserrat-Medium",
+            		color:'#121212',textAlign:'center'}}>
+           		$750
+          		</Text>
+         		</View>
+         		</View></View>
+         		<View style={{width: '100%',marginTop:8,
+         		paddingBottom:6}}>
+          		<View style={{paddingHorizontal:8,width: '100%',flexDirection:'row'}}>
+          		<View style={{width: '60%'}}>
+          		<Text style={{fontSize:14,fontFamily: "Montserrat-Medium",
+            		color:'#121212'}}>
+           		S Tax
+          		</Text>
+          		</View>
+          		<View style={{width: '20%'}}>
+          		
+         		</View>
+         		<View style={{width: '20%'}}>
+         		<Text style={{fontSize:14,fontFamily: "Montserrat-Medium",
+            		color:'#121212',textAlign:'center'}}>
+           		$50
+          		</Text>
+         		</View>
+         		</View></View>
+         		<View style={{width: '100%',marginTop:8,
+         		paddingBottom:6}}>
+          		<View style={{paddingHorizontal:8,width: '100%',flexDirection:'row'}}>
+          		<View style={{width: '60%'}}>
+          		<Text style={{fontSize:14,fontFamily: "Montserrat-Medium",
+            		color:'#121212'}}>
+           		Total
+          		</Text>
+          		</View>
+          		<View style={{width: '20%'}}>
+          		
+         		</View>
+         		<View style={{width: '20%'}}>
+         		<Text style={{fontSize:14,fontFamily: "Montserrat-Medium",
+            		color:'#121212',textAlign:'center'}}>
+           		$800
+          		</Text>
+         		</View>
+         		</View></View> */}
+
+         		{/* <View style={{padding:8,width: '100%',marginBottom:10,flexDirection:'row'}}>
+          		
+          		<View style={{width: '33%',paddingRight:4}}>
+          		<TouchableOpacity style={{width:'100%',justifyContent:'center',
+          		alignItems:'center',paddingVertical:8,borderWidth:1,paddingHorizontal:4,
+          		borderRadius:4}}>
+          		<Text style={{fontSize:14,fontFamily: "Montserrat-SemiBold",
+            		color:'#121212',textAlign:'center'}}>
+           		View Details
+          		</Text></TouchableOpacity>
+          		</View>
+         		<View style={{width: '33%',paddingHorizontal:4}}>
+          		<TouchableOpacity style={{width:'100%',justifyContent:'center',borderWidth:1,borderColor: '#E42217',
+          		alignItems:'center',paddingVertical:8,backgroundColor:'#E42217',paddingHorizontal:4,
+          		borderRadius:4}}>
+          		<Text style={{fontSize:14,fontFamily: "Montserrat-SemiBold",
+            		color:'#fff',textAlign:'center'}}>
+           		Cancel Order
+          		</Text></TouchableOpacity>
+          		</View>
+          		<View style={{width: '33%',paddingLeft:4}}>
+          		<TouchableOpacity style={{width:'100%',justifyContent:'center',borderWidth:1,borderColor: '#7EB721',
+          		alignItems:'center',paddingVertical:8,backgroundColor:'#7EB721',paddingHorizontal:4,
+          		borderRadius:4}}>
+          		<Text style={{fontSize:14,fontFamily: "Montserrat-SemiBold",
+            		color:'#fff',textAlign:'center'}}>
+           		Track Order
+          		</Text></TouchableOpacity>
+          		</View>
+         		</View> */}
+
+         		</View>
+         		</View>
+            </View>
+         		)
+         })}
+         </Animatable.View>
+         </ScrollView>
+    </View>
 );
 export default class History extends Component {
   state = {
@@ -235,6 +453,7 @@ export default class History extends Component {
   });
 
   render() {
+   
     return (
      
       <SafeAreaView style={{ width: width, height: height, backgroundColor: "#FFFFFF" }}>
