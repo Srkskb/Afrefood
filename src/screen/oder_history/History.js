@@ -195,12 +195,10 @@ const SecondRoute = () => (
          {data.map((item,index)=>{
          	return(
          		<View key={index} style={{width: '100%',paddingVertical:8}}>
-               <View key={index} style={{width: '100%',paddingVertical:8}}>
          		<View elevation={5} style={{width: '100%',backgroundColor: '#fdfdfd',borderRadius:4}}>
         
              <View style={{width: '100%',flexDirection:'row'}}>
          		<View style={{width: '74%',flexDirection:'row',justifyContent:'flex-start',alignItems:'center'}}>
-         		
          		<View style={{paddingHorizontal:8,justifyContent:'flex-start',alignItems:'flex-start',
          		paddingTop:8}}>
          		<Text style={{fontSize:18,fontFamily: "Montserrat-SemiBold",
@@ -400,7 +398,6 @@ const SecondRoute = () => (
 
          		</View>
          		</View>
-            </View>
          		)
          })}
          </Animatable.View>
