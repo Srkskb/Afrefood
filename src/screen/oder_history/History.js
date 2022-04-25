@@ -11,6 +11,7 @@ import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import DropDownPicker from 'react-native-dropdown-picker';
+import { Navigation } from 'react-native-navigation';
 import { Images } from "../../theme/index";
 import {
   AppButton,
@@ -22,7 +23,7 @@ import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import Carousel, { Pagination } from 'react-native-snap-carousel';
 import { TabView, SceneMap } from 'react-native-tab-view';
 let data=[{"name":"Joseph Kuruvilla","location":'South africa'},{'name':'Test'},{'name':'Shah'}]
-const FirstRoute = () => (
+const FirstRoute = ({navigation}) => (
   <View style={[styles.container, { backgroundColor: "#FFFFFF" }]}>
     <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',paddingTop:width*0.03,marginHorizontal:width*0.04}}>
        <Text style={{fontSize:width*0.05,color:'#E44227',fontFamily:'Poppins-SemiBold',fontWeight:'bold'}}>
@@ -188,7 +189,7 @@ style={{fontSize:width*0.04}}
     </View>
 
 );
-const SecondRoute = () => (
+const SecondRoute = ({navigation}) => (
   <View style={[styles.container, { backgroundColor: "#FFFFFF" }]} >
     <ScrollView style={{width: '100%',height: '86%'}} showsVerticalScrollIndicator={false}>
      <Animatable.View animation="flipInX" style={{width: '100%',height: '86%'}}>
@@ -203,19 +204,23 @@ const SecondRoute = () => (
          		paddingTop:8}}>
          		<Text style={{fontSize:18,fontFamily: "Montserrat-SemiBold",
             		color:'#121212',textAlign:'center',fontWeight:'bold'}}>
-           		Order Number : 30284263
+           		John Chambers
           		</Text>
           		<Text style={{fontSize:12,fontFamily: "Montserrat-Medium",
             		color:'#121212',textAlign:'center',paddingTop:6}}>
-           		Delivery Time : 08/04/2022 10:20 Am
+           		Order Time : Jan 15 2016 10:20 Am
           		</Text>
           		</View>
           		</View>
+              
           		<View style={{width: '26%',paddingTop:width*0.05}}>
+                <TouchableOpacity onPress={()=>alert("Are You Sure Want to See Details")}>
           		<Text style={{borderRadius:5,borderWidth:1,backgroundColor:'#E44227',color:"#fff",padding:5,borderColor:'#E44227',textAlign:'center'}}>
                 View Details
               </Text>
+              </TouchableOpacity>
           		</View>
+            
           		</View>
 
           		{/* <View style={{paddingHorizontal:8,width: '100%',marginTop:8,backgroundColor: '#E6A913'}}>
@@ -395,7 +400,50 @@ const SecondRoute = () => (
           		</Text></TouchableOpacity>
           		</View>
          		</View> */}
-
+<View style={{paddingTop:width*0.05,paddingHorizontal:width*0.03}}>
+  <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
+    <View style={{borderWidth:1,justifyContent:'center',alignItems:'center',padding:10,width:'33.3%'}}>
+      <View style={{flexDirection:'column',justifyContent:'center',alignItems:'center'}}> 
+  <Text style={{fontWeight:'bold'}}>
+    Oder ID:
+  </Text>
+  <Text style={{color:'#000',fontWeight:'500'}}>
+    #OTB45512
+  </Text>
+  </View>
+  </View>
+  <View style={{borderWidth:1,justifyContent:'center',alignItems:'center',padding:10,width:'33.3%'}}>
+  <View style={{flexDirection:'column',justifyContent:'center',alignItems:'center'}}> 
+  <Text style={{fontWeight:'bold'}}>
+    Oder Amount:
+  </Text>
+  <Text style={{color:'#000',fontWeight:'500'}}>
+    $262.35
+  </Text>
+  </View>
+  </View>
+  <View style={{borderWidth:1,justifyContent:'center',alignItems:'center',padding:10,width:'33.3%'}}>
+  <View style={{flexDirection:'column',justifyContent:'center',alignItems:'center'}}> 
+  <Text style={{fontWeight:'bold'}}>
+    Payment Type:
+  </Text>
+  <Text style={{color:'#000',fontWeight:'500'}}>
+    COD
+  </Text>
+  </View>
+  </View>
+  </View>
+</View>
+<View style={{paddingTop:width*0.01,paddingHorizontal:width*0.03}}>
+<View style={{flexDirection:'row',justifyContent:'flex-start',alignItems:'center'}}>
+<Ionicons
+              name='md-location-outline' size={width * 0.08} color={"#F7B614"}
+            />
+  <Text style={{fontWeight:'500',fontSize:width*0.03}}>
+    2645 Crestview Terrace,New York,780004,United States
+  </Text>
+</View>
+</View>
          		</View>
          		</View>
          		)
