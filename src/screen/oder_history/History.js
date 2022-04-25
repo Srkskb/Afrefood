@@ -21,7 +21,7 @@ import {
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import Carousel, { Pagination } from 'react-native-snap-carousel';
 import { TabView, SceneMap } from 'react-native-tab-view';
-let data=[{"name":"Joseph Kuruvilla","location":'South africa'},{'name':'Test'}]
+let data=[{"name":"Joseph Kuruvilla","location":'South africa'},{'name':'Test'},{'name':'Shah'}]
 const FirstRoute = () => (
   <View style={[styles.container, { backgroundColor: "#FFFFFF" }]}>
     <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',paddingTop:width*0.03,marginHorizontal:width*0.04}}>
