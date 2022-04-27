@@ -7,7 +7,7 @@ import Entypo from 'react-native-vector-icons/Entypo'
 import * as Animatable from 'react-native-animatable';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 let data=[{"name":"Joseph Kuruvilla","location":'South africa'},]
-let meta=[{"name":"Shaharukh","location":'South africa'}]
+let meta=[{"name":"Shaharukh","location":'America'},]
 export default class Address extends Component {
   render() {
     return (
@@ -80,7 +80,7 @@ export default class Address extends Component {
        </View>
        </View>
        </TouchableOpacity>
-       <Animatable.View animation="flipInX" style={{width: '100%',height: '86%'}}>
+       <Animatable.View animation="flipInX" style={{width: '100%',padding:10,}}>
          {data.map((item,index)=>{
          	return(
          		<View key={index} style={{width: '100%',paddingVertical:8}}>
@@ -88,82 +88,123 @@ export default class Address extends Component {
         
              <View style={{width: '100%',flexDirection:'row'}}>
          		<View style={{width: '74%',flexDirection:'row',justifyContent:'flex-start',alignItems:'center'}}>
-         		<View style={{paddingHorizontal:8,justifyContent:'flex-start',alignItems:'flex-start',
+         		<View style={{paddingHorizontal:8,justifyContent:'space-between',alignItems:'center',flexDirection:'row',
          		paddingTop:8}}>
+                     <Image
+                     source={require('../../images/MMMM.png')}
+                     style={{height:height*0.05,width:width*0.09}}
+                     />
          		<Text style={{fontSize:18,fontFamily: "Montserrat-SemiBold",
-            		color:'#121212',textAlign:'center',fontWeight:'bold'}}>
+            		color:'#121212',textAlign:'center',fontWeight:'bold',paddingHorizontal:width*0.02}}>
            		OFFICE ADDRESS
-          		</Text>
-          		<Text style={{fontSize:12,fontFamily: "Montserrat-Medium",
-            		color:'#121212',textAlign:'center',paddingTop:6}}>
-           		Order Time : Jan 15 2016 10:20 Am
           		</Text>
           		</View>
           		</View>
               
-          		<View style={{width: '26%',paddingTop:width*0.05}}>
-                <TouchableOpacity onPress={()=>alert("Are You Sure Want to See Details")}>
-          		<Text style={{borderRadius:5,borderWidth:1,backgroundColor:'#E44227',color:"#fff",padding:5,borderColor:'#E44227',textAlign:'center'}}>
-                View Details
-              </Text>
+          		<View style={{width: '26%',paddingTop:width*0.05,justifyContent:'flex-end',alignItems:'flex-end',paddingHorizontal:width*0.05}}>
+                <TouchableOpacity onPress={()=>alert("Are You Sure Want to Edit")}>
+          		<Image
+                  source={require('../../images/ico.png')}
+                  style={{height:height*0.03,width:width*0.06}}
+                  />
               </TouchableOpacity>
           		</View>
             
           		</View>
 <View style={{paddingTop:width*0.05,paddingHorizontal:width*0.03}}>
-  <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center',}}>
-    <View style={{borderWidth:1,justifyContent:'center',alignItems:'center',padding:10,width:'33.3%'}}>
-      <View style={{flexDirection:'column',justifyContent:'center',alignItems:'center'}}> 
-  <Text style={{fontWeight:'bold'}}>
-    Oder ID:
-  </Text>
-  <Text style={{color:'#000',fontWeight:'500'}}>
-    #OTB45512
-  </Text>
-  </View>
-  </View>
-  <View style={{borderWidth:1,justifyContent:'center',alignItems:'center',padding:10,width:'33.3%'}}>
-  <View style={{flexDirection:'column',justifyContent:'center',alignItems:'center'}}> 
-  <Text style={{fontWeight:'bold'}}>
-    Oder Amount:
-  </Text>
-  <Text style={{color:'#000',fontWeight:'500'}}>
-    $262.35
-  </Text>
-  </View>
-  </View>
-  <View style={{borderWidth:1,justifyContent:'center',alignItems:'center',padding:10,width:'33.3%'}}>
-  <View style={{flexDirection:'column',justifyContent:'center',alignItems:'center'}}> 
-  <Text style={{fontWeight:'bold'}}>
-    Payment Type:
-  </Text>
-  <Text style={{color:'#000',fontWeight:'500'}}>
-    COD
-  </Text>
-  </View>
-  </View>
-  </View>
+    <View style={{width:'80%',flexDirection:'row'}}>
+        <View style={{flexDirection:'column',justifyContent:'flex-start',alignItems:'flex-start'}}>
+        <Text>
+            Avunda Monsenhor Fellx,Rio De Janerio
+        </Text>
+        <Text>
+            Brazil-21361-131
+        </Text>
+        <Text>
+            (21)2201-7653
+        </Text>
+        </View>
+        <View style={{width:'50%',justifyContent:'center',alignItems:'center'}}>
+            <TouchableNativeFeedback onPress={()=>alert('Change location')}>
+<Image
+source={require('../../images/kkkk.png')}
+style={{height:height*0.097,width:width*0.19,}}
+/>
+</TouchableNativeFeedback>
+        </View>
+       
+    </View>
 </View>
-<View style={{paddingTop:width*0.01,paddingHorizontal:width*0.03}}>
-<View style={{flexDirection:'row',justifyContent:'flex-start',alignItems:'center'}}>
-<Ionicons
-              name='md-location-outline' size={width * 0.08} color={"#F7B614"}
-            />
-  <Text style={{fontWeight:'500',fontSize:width*0.03}}>
-    2645 Crestview Terrace,New York,780004,United States
-  </Text>
-</View>
+<View style={{paddingTop:width*0.1}}>
+
 </View>
          		</View>
          		</View>
          		)
          })}
          </Animatable.View>
-         <View elevation={5} style={{width: '100%',backgroundColor: '#fdfdfd',borderRadius:4}}>
-             <Text>
-                 Hello
-             </Text>
-         </View>
+         <Animatable.View animation="flipInX" style={{width: '100%',height: '86%',padding:10}}>
+         {meta.map((item,index)=>{
+         	return(
+         		<View key={index} style={{width: '100%',paddingVertical:8}}>
+         		<View elevation={5} style={{width: '100%',backgroundColor: '#fdfdfd',borderRadius:4}}>
+                 <View style={{width: '100%',flexDirection:'row'}}>
+         		<View style={{width: '74%',flexDirection:'row',justifyContent:'flex-start',alignItems:'center'}}>
+         		<View style={{paddingHorizontal:8,justifyContent:'space-between',alignItems:'center',flexDirection:'row',
+         		paddingTop:8}}>
+                     <Image
+                     source={require('../../images/LLLL.png')}
+                     style={{height:height*0.05,width:width*0.09}}
+                     />
+         		<Text style={{fontSize:18,fontFamily: "Montserrat-SemiBold",
+            		color:'#121212',textAlign:'center',fontWeight:'bold',paddingHorizontal:width*0.02}}>
+           		HOME ADDRESS
+          		</Text>
+          		</View>
+          		</View>
+              
+          		<View style={{width: '26%',paddingTop:width*0.05,justifyContent:'flex-end',alignItems:'flex-end',paddingHorizontal:width*0.05}}>
+                <TouchableOpacity onPress={()=>alert("Are You Sure Want to Edit")}>
+          		<Image
+                  source={require('../../images/ico.png')}
+                  style={{height:height*0.03,width:width*0.06}}
+                  />
+              </TouchableOpacity>
+          		</View>
+            
+          		</View>
+<View style={{paddingTop:width*0.05,paddingHorizontal:width*0.03}}>
+    <View style={{width:'80%',flexDirection:'row'}}>
+        <View style={{flexDirection:'column',justifyContent:'flex-start',alignItems:'flex-start'}}>
+        <Text>
+            Rua Otto Feradico Burger 1664 Lemeria
+        </Text>
+        <Text>
+           Salo Paulo Brazil-13486-603
+        </Text>
+        <Text>
+            (19)6027-4742
+        </Text>
+        </View>
+        <View style={{width:'50%',justifyContent:'center',alignItems:'center'}}>
+            <TouchableNativeFeedback onPress={()=>alert('Change location')}>
+<Image
+source={require('../../images/kkkk.png')}
+style={{height:height*0.097,width:width*0.19,}}
+/>
+</TouchableNativeFeedback>
+        </View>
+       
+    </View>
+</View>
+<View style={{paddingTop:width*0.1}}>
+
+</View>
+         		</View>
+         		</View>
+         		)
+         })}
+         </Animatable.View>
        </SafeAreaView>
     )
   }
