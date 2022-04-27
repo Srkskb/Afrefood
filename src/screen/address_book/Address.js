@@ -92,7 +92,7 @@ export default class Address extends Component {
          		paddingTop:8}}>
                      <Image
                      source={require('../../images/MMMM.png')}
-                     style={{height:height*0.05,width:width*0.09}}
+                     style={{height:height*0.05,width:width*0.095}}
                      />
          		<Text style={{fontSize:18,fontFamily: "Montserrat-SemiBold",
             		color:'#121212',textAlign:'center',fontWeight:'bold',paddingHorizontal:width*0.02}}>
@@ -112,7 +112,7 @@ export default class Address extends Component {
             
           		</View>
 <View style={{paddingTop:width*0.05,paddingHorizontal:width*0.03}}>
-    <View style={{width:'80%',flexDirection:'row'}}>
+    <View style={{width:'70%',flexDirection:'row'}}>
         <View style={{flexDirection:'column',justifyContent:'flex-start',alignItems:'flex-start'}}>
         <Text>
             Avunda Monsenhor Fellx,Rio De Janerio
@@ -124,7 +124,7 @@ export default class Address extends Component {
             (21)2201-7653
         </Text>
         </View>
-        <View style={{width:'50%',justifyContent:'center',alignItems:'center'}}>
+        <View style={{width:'30%',justifyContent:'center',alignItems:'center'}}>
             <TouchableNativeFeedback onPress={()=>alert('Change location')}>
 <Image
 source={require('../../images/kkkk.png')}
@@ -154,7 +154,7 @@ style={{height:height*0.097,width:width*0.19,}}
          		paddingTop:8}}>
                      <Image
                      source={require('../../images/LLLL.png')}
-                     style={{height:height*0.05,width:width*0.09}}
+                     style={{height:height*0.05,width:width*0.095}}
                      />
          		<Text style={{fontSize:18,fontFamily: "Montserrat-SemiBold",
             		color:'#121212',textAlign:'center',fontWeight:'bold',paddingHorizontal:width*0.02}}>
@@ -174,7 +174,7 @@ style={{height:height*0.097,width:width*0.19,}}
             
           		</View>
 <View style={{paddingTop:width*0.05,paddingHorizontal:width*0.03}}>
-    <View style={{width:'80%',flexDirection:'row'}}>
+    <View style={{width:'70%',flexDirection:'row'}}>
         <View style={{flexDirection:'column',justifyContent:'flex-start',alignItems:'flex-start'}}>
         <Text>
             Rua Otto Feradico Burger 1664 Lemeria
@@ -186,7 +186,7 @@ style={{height:height*0.097,width:width*0.19,}}
             (19)6027-4742
         </Text>
         </View>
-        <View style={{width:'50%',justifyContent:'center',alignItems:'center'}}>
+        <View style={{width:'30%',justifyContent:'center',alignItems:'center'}}>
             <TouchableNativeFeedback onPress={()=>alert('Change location')}>
 <Image
 source={require('../../images/kkkk.png')}
