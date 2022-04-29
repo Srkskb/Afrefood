@@ -71,7 +71,7 @@ export default class Address extends Component {
            </View>
          </View>
        </View>
-       <TouchableOpacity onPress={()=>alert('Please add address')}>
+       <TouchableOpacity onPress={()=>this.props.navigation.navigate('ProfileUpdate')}>
        <View style={{paddingTop:width*0.05,justifyContent:'center',alignItems:'center'}}>
        <View style={{borderWidth:1,borderRadius:10,backgroundColor:'#E44227',borderColor:'#E44227',padding:width*0.02,paddingHorizontal:width*0.05}}>
            <Text style={{color:'#fff',fontSize:width*0.05,fontWeight:'bold',fontFamily:'Poppins-Semibold'}}>
@@ -102,7 +102,7 @@ export default class Address extends Component {
           		</View>
               
           		<View style={{width: '26%',paddingTop:width*0.05,justifyContent:'flex-end',alignItems:'flex-end',paddingHorizontal:width*0.05}}>
-                <TouchableOpacity onPress={()=>alert("Are You Sure Want to Edit")}>
+                <TouchableOpacity onPress={()=>this.props.navigation.navigate("ProfileUpdate")}>
           		<Image
                   source={require('../../images/ico.png')}
                   style={{height:height*0.03,width:width*0.06}}
@@ -164,7 +164,7 @@ style={{height:height*0.097,width:width*0.19,}}
           		</View>
               
           		<View style={{width: '26%',paddingTop:width*0.05,justifyContent:'flex-end',alignItems:'flex-end',paddingHorizontal:width*0.05}}>
-                <TouchableOpacity onPress={()=>alert("Are You Sure Want to Edit")}>
+                <TouchableOpacity onPress={()=>this.props.navigation.navigate('ProfileUpdate')}>
           		<Image
                   source={require('../../images/ico.png')}
                   style={{height:height*0.03,width:width*0.06}}
