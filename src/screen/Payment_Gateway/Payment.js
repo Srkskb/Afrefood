@@ -74,7 +74,7 @@ name='chevron-right' size={width*0.09}
   </View>
   <View style={{width:"20%",backgroundColor:"#FFFFFF"}}>
   <View style={{paddingTop:width*0.04,alignItems:'center',justifyContent:'center'}}>
-    <TouchableOpacity onPress={()=>this.props.navigation.navigate("Addcart")}>
+    <TouchableOpacity onPress={()=>{Linking.openURL('https://paytm.com/')}}>
 <MaterialCommunityIcons
 name='chevron-right' size={width*0.09}
 />
@@ -99,7 +99,7 @@ name='chevron-right' size={width*0.09}
   </View>
   <View style={{width:"20%",backgroundColor:"#FFFFFF"}}>
   <View style={{paddingTop:width*0.04,alignItems:'center',justifyContent:'center'}}>
-    <TouchableOpacity onPress={()=>this.props.navigation.navigate("Addcart")}>
+    <TouchableOpacity onPress={()=>{Linking.openURL('https://pay.google.com/')}}>
 <MaterialCommunityIcons
 name='chevron-right' size={width*0.09}
 />
@@ -124,7 +124,7 @@ name='chevron-right' size={width*0.09}
   </View>
   <View style={{width:"20%",backgroundColor:"#FFFFFF"}}>
   <View style={{paddingTop:width*0.04,alignItems:'center',justifyContent:'center'}}>
-    <TouchableOpacity onPress={()=>this.props.navigation.navigate("Addcart")}>
+    <TouchableOpacity onPress={()=>{Linking.openURL('https://www.phonepe.com/')}}>
 <MaterialCommunityIcons
 name='chevron-right' size={width*0.09}
 />
@@ -149,7 +149,7 @@ name='chevron-right' size={width*0.09}
   </View>
   <View style={{width:"20%",backgroundColor:"#FFFFFF"}}>
   <View style={{paddingTop:width*0.04,alignItems:'center',justifyContent:'center'}}>
-    <TouchableOpacity onPress={()=>this.props.navigation.navigate("Addcart")}>
+    <TouchableOpacity onPress={()=>{Linking.openURL('https://www.bhimupi.org.in/')}}>
 <MaterialCommunityIcons
 name='chevron-down' size={width*0.09}
 />
@@ -185,7 +185,7 @@ name='chevron-down' size={width*0.09}
   </View>
   <View style={{width:"20%",backgroundColor:"#FFFFFF"}}>
   <View style={{paddingTop:width*0.04,alignItems:'center',justifyContent:'center'}}>
-    <TouchableOpacity onPress={()=>this.props.navigation.navigate("Addcart")}>
+    <TouchableOpacity onPress={()=>{Linking.openURL('https://www.creditmantri.com/net-banking/')}}>
 <MaterialCommunityIcons
 name='chevron-right' size={width*0.09}
 />
@@ -220,7 +220,7 @@ name='chevron-right' size={width*0.09}
   </View>
   <View style={{width:"20%",backgroundColor:"#FFFFFF"}}>
   <View style={{paddingTop:width*0.04,alignItems:'center',justifyContent:'center'}}>
-    <TouchableOpacity onPress={()=>this.props.navigation.navigate("Addcart")}>
+    <TouchableOpacity onPress={()=>alert("Please pay on the delevery time")}>
 <MaterialCommunityIcons
 name='chevron-right' size={width*0.09}
 />
@@ -255,7 +255,7 @@ name='chevron-right' size={width*0.09}
   </View>
   <View style={{width:"20%",backgroundColor:"#FFFFFF"}}>
   <View style={{paddingTop:width*0.04,alignItems:'center',justifyContent:'center'}}>
-    <TouchableOpacity onPress={()=>this.props.navigation.navigate("Addcart")}>
+    <TouchableOpacity onPress={()=>{Linking.openURL('https://paytm.com/')}}>
 <MaterialCommunityIcons
 name='chevron-down' size={width*0.09}
 />
@@ -280,7 +280,7 @@ name='chevron-down' size={width*0.09}
   </View>
   <View style={{width:"20%",backgroundColor:"#FFFFFF"}}>
   <View style={{paddingTop:width*0.04,alignItems:'center',justifyContent:'center'}}>
-    <TouchableOpacity onPress={()=>this.props.navigation.navigate("Addcart")}>
+    <TouchableOpacity onPress={()=>{Linking.openURL('https://www.freecharge.in/')}}>
 <MaterialCommunityIcons
 name='chevron-down' size={width*0.09}
 />
