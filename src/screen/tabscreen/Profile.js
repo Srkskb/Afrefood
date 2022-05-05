@@ -68,7 +68,7 @@ export default class Profile extends Component {
           </View>
         </View>
         <View style={{ flexDirection: "row", justifyContent: "flex-start", alignItems: "flex-start", paddingHorizontal: width * 0.03 }}>
-          <View style={{width:"80%",backgroundColor:"#FFFFFF"}}>
+          {/* <View style={{width:"80%",backgroundColor:"#FFFFFF"}}>
           <Text style={{ fontSize: width * 0.06, fontWeight: 'bold', color: "#000000", fontFamily: "Poppins-Thin" }}>
             Shaharukh khan
           </Text>
@@ -80,7 +80,7 @@ export default class Profile extends Component {
               Shaharukhskb@gmail.com
             </Text>
           </View>
-          </View>
+          </View> */}
           <View style={{width:"20%",backgroundColor:"#ffffff"}}>
             <View style={{alignItems:'center',justifyContent:"center"}}>
             {/* <Image
@@ -245,6 +245,31 @@ name='chevron-right' size={width*0.09}
   <View style={{width:"20%",backgroundColor:"#FFFFFF"}}>
   <View style={{paddingTop:width*0.04,alignItems:'center',justifyContent:'center'}}>
     <TouchableOpacity onPress={()=>this.props.navigation.navigate('Address')}>
+<MaterialCommunityIcons
+name='chevron-right' size={width*0.09}
+/>
+</TouchableOpacity>
+</View>
+</View>
+</View>
+<View style={{flexDirection:'row',alignItems:'center',justifyContent:'center'}}>
+  <View style={{width:"80%",backgroundColor:"#FFFFFF"}}>
+    <View style={{flexDirection:'row',alignItems:'center',paddingTop:width*0.04,paddingHorizontal:width*0.03}}>
+    <Image
+    source={require('../../images/cas.png')}
+    resizeMode="contain"
+    style={{height:height*0.03,width:width*0.09}}
+    />
+<View style={{paddingHorizontal:width*0.02}}>
+  <Text style={{fontSize:width*0.05,color:"#000011",fontWeight:"500"}}>
+    Payments
+  </Text>
+</View>
+  </View>
+  </View>
+  <View style={{width:"20%",backgroundColor:"#FFFFFF"}}>
+  <View style={{paddingTop:width*0.04,alignItems:'center',justifyContent:'center'}}>
+    <TouchableOpacity onPress={()=>this.props.navigation.navigate('Payment')}>
 <MaterialCommunityIcons
 name='chevron-right' size={width*0.09}
 />

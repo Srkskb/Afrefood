@@ -24,6 +24,7 @@ import Menu from '../screen/Menu_Screen/Menu';
 import Offer from '../Offer_Screen/Offer';
 import History from '../screen/oder_history/History';
 import Address from '../screen/address_book/Address';
+import Payment from '../screen/Payment_Gateway/Payment';
 const Tab = createMaterialTopTabNavigator();
 const CustomTabBarButton = ({ children, onPress }) => (
   <TouchableOpacity style={{ height: 70, width: 70, top: -30, justifyContent: "center", alignItems: "center", ...styles.shadow }} onPress={onPress}>
@@ -143,6 +144,7 @@ function LoginStackNavigator() {
       <Stack.Screen name="Offer" component={Offer} options={{headerShown:false}}/>
       <Stack.Screen name="History" component={History} options={{headerShown:false}}/>
       <Stack.Screen name="Address" component={Address} options={{headerShown:false}}/>
+      <Stack.Screen name="Payment" component={Payment} options={{headerShown:false}}/>
     </Stack.Navigator>
   );
 }
