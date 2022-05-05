@@ -256,7 +256,7 @@ name='chevron-right' size={width*0.09}
   <View style={{width:"80%",backgroundColor:"#FFFFFF"}}>
     <View style={{flexDirection:'row',alignItems:'center',paddingTop:width*0.04,paddingHorizontal:width*0.03}}>
     <Image
-    source={require('../../images/cas.png')}
+    source={require('../../images/caser.png')}
     resizeMode="contain"
     style={{height:height*0.03,width:width*0.09}}
     />
@@ -303,7 +303,7 @@ name='chevron-right' size={width*0.09}
 </View>
 </View>
   </View>
-<View style={{ flexDirection: "row", justifyContent: "flex-start", alignItems: "flex-start", paddingTop: width * 0.05, paddingHorizontal: width * 0.03 }}>
+<View style={{ flexDirection: "row", justifyContent: "flex-start", alignItems: "flex-start", paddingTop: width * 0.07, paddingHorizontal: width * 0.03 }}>
           <View style={{width:"80%",backgroundColor:"#FFFFFF"}}>
           <Text style={{ fontSize: width * 0.05, fontWeight: 'bold', color: "#000000", fontFamily: "Poppins-Thin" }}>
             LOGOUT
