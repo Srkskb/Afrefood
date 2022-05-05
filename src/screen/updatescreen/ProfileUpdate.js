@@ -103,7 +103,7 @@ name='chevron-right' size={width*0.09} color={'#E44227'}
           <Text style={{borderWidth:1,borderRadius:5,fontSize:width*0.06,color:'#ffffff',textAlign:'center',
         paddingVertical:width*0.02,fontWeight:'500',backgroundColor:"#E42217",borderColor:'#E42217'
         }}>
-            Update Address
+            Add Address
           </Text>
        </TouchableOpacity>
        </Animatable.View>     
