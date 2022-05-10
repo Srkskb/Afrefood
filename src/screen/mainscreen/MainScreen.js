@@ -490,11 +490,14 @@ Please Select the language
               showsHorizontalScrollIndicator={false}
               style={styles.listViewHorizontal}
             >
+              
+              <TouchableNativeFeedback onPress={()=>this.props.navigation.navigate('FoodCart')}>
               <Image
                 source={require('../../images/img1.jpg')}
                 resizeMode="contain"
                 style={{ paddingHorizontal: width * 0.05, marginLeft: width * 0.05 }}
               />
+              </TouchableNativeFeedback>
               <Image
                 source={require('../../images/img2.jpg')}
                 resizeMode="contain"

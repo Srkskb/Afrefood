@@ -17,7 +17,7 @@ import {
   BackButtonHeader,
   BackButtonHeader1
 } from '../../components/index';
-const FirstRoute = () => (
+const FirstRoute = ({navigation}) => (
   <View style={[styles.container, { backgroundColor: '#ffffff' }]} >
     <View style={{ alignItems: "center", borderRadius: 5, borderWidth: 1, marginHorizontal: width * 0.05, flexDirection: "row", borderColor: "#E42217", justifyContent: "space-between" }}>
       <FIcon name="search" size={width * 0.06} color="#DCDCDC"
@@ -119,7 +119,7 @@ const FirstRoute = () => (
           style={{ height: height * 0.12, width: width * 0.42 }}
           resizeMode="contain"
         />
-        <TouchableOpacity onPress={() => alert('Adding...')}>
+        <TouchableOpacity onPress={() =>{navigation("FoodCart")}}>
           <View style={{ paddingTop: width * 0.01, paddingHorizontal: width * 0.06 }}>
             <View style={{ borderRadius: 10, borderWidth: 1, width: width * 0.3, backgroundColor: "#FFF6F5", borderColor: "#E75162" }}>
               <Text style={{ textAlign: 'center', fontWeight: "bold", padding: 10, color: "#E75162", fontSize: width * 0.04 }}>
@@ -196,7 +196,7 @@ const FirstRoute = () => (
           style={{ height: height * 0.12, width: width * 0.42 }}
           resizeMode="contain"
         />
-        <TouchableOpacity onPress={() => alert('Adding...')}>
+        <TouchableOpacity onPress={() =>{navigation("FoodCart")}}>
           <View style={{ paddingTop: width * 0.01, paddingHorizontal: width * 0.06 }}>
             <View style={{ borderRadius: 10, borderWidth: 1, width: width * 0.3, backgroundColor: "#FFF6F5", borderColor: "#E75162" }}>
               <Text style={{ textAlign: 'center', fontWeight: "bold", padding: 10, color: "#E75162", fontSize: width * 0.04 }}>
