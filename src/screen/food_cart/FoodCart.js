@@ -11,6 +11,7 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import { Images } from "../../theme/index";
 import { TabView, SceneMap } from 'react-native-tab-view';
 
+
 export default class FoodCart extends Component {
     constructor(props) {
         super(props)
