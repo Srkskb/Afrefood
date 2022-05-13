@@ -16,6 +16,7 @@ export default class FoodCart extends Component {
     constructor(props) {
         super(props)
         this.state = { count: 1 }
+      
     }
   render() {
     return (

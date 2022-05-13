@@ -153,21 +153,27 @@ style={{height:50,width:50}}
   showsHorizontalScrollIndicator={false}
   style={styles.listViewHorizontal}
 >
+<TouchableNativeFeedback onPress={()=>this.props.navigation.navigate('FoodCart')}>
   <Image
     source={require('../../images/9999.png')}
     resizeMode="contain"
     style={{ paddingHorizontal: width * 0.05, marginLeft: width * 0.05 }}
   />
+  </TouchableNativeFeedback>
+  <TouchableNativeFeedback onPress={()=>this.props.navigation.navigate('FoodCart')}>
   <Image
     source={require('../../images/3333.png')}
     resizeMode="contain"
     style={{ paddingHorizontal: width * 0.05, marginLeft: width * 0.05 }}
   />
+  </TouchableNativeFeedback>
+  <TouchableNativeFeedback onPress={()=>this.props.navigation.navigate('FoodCart')}>
   <Image
     source={require('../../images/6666.png')}
     resizeMode="contain"
     style={{ paddingHorizontal: width * 0.05, marginLeft: width * 0.05 }}
   />
+  </TouchableNativeFeedback>
 
 
 </ScrollView>
@@ -180,23 +186,31 @@ style={{height:50,width:50}}
           <View style={{ paddingTop: width * 0.05 }}>
             <View style={{ flexDirection: "row", justifyContent: "space-around",
              alignItems: "center" }}>
+                <TouchableNativeFeedback onPress={()=>this.props.navigation.navigate('FoodCart')}>
               <Image
                 source={require('../../images/802.jpg')}
                 style={{ borderRadius: 35, height:70, width: 70, borderColor: "#F7B614" ,borderWidth:2}}
               />
+              </TouchableNativeFeedback>
+              <TouchableNativeFeedback onPress={()=>this.props.navigation.navigate('FoodCart')}>
               <Image
                 source={require('../../images/801.jpg')}
                 style={{ borderRadius:35, height:70, width: 70, borderColor: "#F7B614" ,borderWidth:2 }}
               />
+              </TouchableNativeFeedback>
+              <TouchableNativeFeedback onPress={()=>this.props.navigation.navigate('FoodCart')}>
               <Image
                 source={require('../../images/800.jpg')}
                style={{ borderRadius: 35, height:70, width: 70, borderColor: "#F7B614",borderWidth:2  }}
               />
+              </TouchableNativeFeedback>
+              <TouchableNativeFeedback onPress={()=>this.props.navigation.navigate('FoodCart')}>
               <Image
                 source={require('../../images/795.jpg')}
       
                 style={{borderRadius: 35, height:70, width: 70, borderColor: "#F7B614",borderWidth:2 }}
               />
+              </TouchableNativeFeedback>
             </View>
           </View>
           <View style={{ paddingTop: width * 0.01 }}>
@@ -269,26 +283,34 @@ style={{height:50,width:50}}
           </View>
           <View style={{ paddingTop: width * 0.05 }}>
             <View style={{ flexDirection: "row", justifyContent: "space-around", alignItems: "center" }}>
+            <TouchableNativeFeedback onPress={()=>this.props.navigation.navigate('FoodCart')}>
               <Image
                 source={require('../../images/logo1.jpg')}
                 
                 style={{ borderWidth: 1, borderRadius: 35, height: 70, width: 70, borderColor: "#F7B614" }}
               />
+              </TouchableNativeFeedback>
+              <TouchableNativeFeedback onPress={()=>this.props.navigation.navigate('FoodCart')}>
               <Image
                 source={require('../../images/logo2.jpg')}
                 
                 style={{ borderWidth: 1, borderRadius: 35, height: 70, width: 70, borderColor: "#F7B614" }}
               />
+              </TouchableNativeFeedback>
+              <TouchableNativeFeedback onPress={()=>this.props.navigation.navigate('FoodCart')}>
               <Image
                 source={require('../../images/log3.jpg')}
               
                 style={{ borderWidth: 1, borderRadius: 35, height: 70, width: 70, borderColor: "#F7B614" }}
               />
+              </TouchableNativeFeedback>
+              <TouchableNativeFeedback onPress={()=>this.props.navigation.navigate('FoodCart')}>
               <Image
                 source={require('../../images/logo4.jpg')}
             
                 style={{ borderWidth: 1, borderRadius: 35, height: 70, width: 70, borderColor: "#F7B614" }}
               />
+              </TouchableNativeFeedback>
             </View>
           </View>
           <View style={{ paddingTop: width * 0.01 }}>
@@ -331,6 +353,7 @@ style={{height:50,width:50}}
           <View style={{paddingTop:width*0.03}} >
 <View style={{borderWidth:1,borderRadius:10,justifyContent:'flex-start',alignItems:'flex-start',
 borderColor:"#F7B614",marginHorizontal:width*0.03,}}>
+   <TouchableNativeFeedback onPress={()=>this.props.navigation.navigate('FoodCart')}>
 <ImageBackground
 source={require('../../images/7777.png')}
 style={{height:height*0.3,width:"100%",borderRadius:20}}
@@ -341,6 +364,7 @@ style={{height:height*0.3,width:"100%",borderRadius:20}}
 </Text>
   </View>
 </ImageBackground>
+</TouchableNativeFeedback>
 <View style={{flexDirection:'row',justifyContent:'flex-start',alignItems:'center'}}>
   <View style={{width:'85%',paddingTop:width*0.02}}>
 <Text style={{fontSize:width*0.06,fontFamily:'Poppins-Medium',paddingHorizontal:width*0.03,color:"#111111",fontWeight:'bold'}}>
@@ -365,6 +389,7 @@ style={{height:height*0.3,width:"100%",borderRadius:20}}
           <View style={{paddingTop:width*0.03}} >
 <View style={{borderWidth:1,borderRadius:10,justifyContent:'flex-start',alignItems:'flex-start',
 borderColor:"#F7B614",marginHorizontal:width*0.03}}>
+   <TouchableNativeFeedback onPress={()=>this.props.navigation.navigate('FoodCart')}>
 <ImageBackground
 source={require('../../images/11111.png')}
 style={{height:height*0.3,width:"100%",borderRadius:20}}
@@ -375,6 +400,7 @@ style={{height:height*0.3,width:"100%",borderRadius:20}}
 </Text>
   </View>
 </ImageBackground>
+</TouchableNativeFeedback>
 <View style={{flexDirection:'row',justifyContent:'flex-start',alignItems:'center'}}>
   <View style={{width:'85%',paddingTop:width*0.02}}>
 <Text style={{fontSize:width*0.05,fontFamily:'Poppins-Medium',paddingHorizontal:width*0.03,color:"#111111",fontWeight:'bold'}}>

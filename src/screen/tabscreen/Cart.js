@@ -119,7 +119,7 @@ const FirstRoute = ({navigation}) => (
           style={{ height: height * 0.12, width: width * 0.42 }}
           resizeMode="contain"
         />
-        <TouchableOpacity onPress={()=>navigation.navigate("FoodCart")}>
+        <TouchableOpacity onPress={()=>alert("Add this food")}>
           <View style={{ paddingTop: width * 0.01, paddingHorizontal: width * 0.06 }}>
             <View style={{ borderRadius: 10, borderWidth: 1, width: width * 0.3, backgroundColor: "#FFF6F5", borderColor: "#E75162" }}>
               <Text style={{ textAlign: 'center', fontWeight: "bold", padding: 10, color: "#E75162", fontSize: width * 0.04 }}>
@@ -196,7 +196,7 @@ const FirstRoute = ({navigation}) => (
           style={{ height: height * 0.12, width: width * 0.42 }}
           resizeMode="contain"
         />
-        <TouchableOpacity onPress={() =>{navigator}}>
+        <TouchableOpacity onPress={() =>alert("Add this food")}>
           <View style={{ paddingTop: width * 0.01, paddingHorizontal: width * 0.06 }}>
             <View style={{ borderRadius: 10, borderWidth: 1, width: width * 0.3, backgroundColor: "#FFF6F5", borderColor: "#E75162" }}>
               <Text style={{ textAlign: 'center', fontWeight: "bold", padding: 10, color: "#E75162", fontSize: width * 0.04 }}>

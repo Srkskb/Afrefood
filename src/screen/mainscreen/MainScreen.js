@@ -261,26 +261,34 @@ Please Select the language
           </View>
           <View style={{ paddingTop: width * 0.05 }}>
             <View style={{ flexDirection: "row", justifyContent: "space-around", alignItems: "center" }}>
+            <TouchableNativeFeedback onPress={()=>this.props.navigation.navigate('FoodCart')}>
               <Image
                 source={require('../../images/logo1.jpg')}
                 
                 style={{ borderWidth: 1, borderRadius: 35, height: 70, width: 70, borderColor: "#F7B614" }}
               />
+              </TouchableNativeFeedback>
+              <TouchableNativeFeedback onPress={()=>this.props.navigation.navigate('FoodCart')}>
               <Image
                 source={require('../../images/logo2.jpg')}
                 
                 style={{ borderWidth: 1, borderRadius: 35, height: 70, width: 70, borderColor: "#F7B614" }}
               />
+              </TouchableNativeFeedback>
+              <TouchableNativeFeedback onPress={()=>this.props.navigation.navigate('FoodCart')}>
               <Image
                 source={require('../../images/log3.jpg')}
               
                 style={{ borderWidth: 1, borderRadius: 35, height: 70, width: 70, borderColor: "#F7B614" }}
               />
+              </TouchableNativeFeedback>
+              <TouchableNativeFeedback onPress={()=>this.props.navigation.navigate('FoodCart')}>
               <Image
                 source={require('../../images/logo4.jpg')}
             
                 style={{ borderWidth: 1, borderRadius: 35, height: 70, width: 70, borderColor: "#F7B614" }}
               />
+              </TouchableNativeFeedback>
             </View>
           </View>
           <View style={{ paddingTop: width * 0.01 }}>
@@ -317,26 +325,34 @@ Please Select the language
           </View>
           <View style={{ paddingTop: width * 0.05 }}>
             <View style={{ flexDirection: "row", justifyContent: "space-around", alignItems: "center" }}>
+            <TouchableNativeFeedback onPress={()=>this.props.navigation.navigate('FoodCart')}>
               <Image
                 source={require('../../images/logo5.jpg')}
                 
                 style={{ borderWidth: 1, borderRadius: 35, height: 70, width: 70, borderColor: "#F7B614" }}
               />
+              </TouchableNativeFeedback>
+              <TouchableNativeFeedback onPress={()=>this.props.navigation.navigate('FoodCart')}>
               <Image
                 source={require('../../images/logo6.jpg')}
                 
                 style={{ borderWidth: 1, borderRadius: 35, height: 70, width: 70, borderColor: "#F7B614" }}
               />
+              </TouchableNativeFeedback>
+              <TouchableNativeFeedback onPress={()=>this.props.navigation.navigate('FoodCart')}>
               <Image
                 source={require('../../images/logo7.jpg')}
               
                 style={{ borderWidth: 1, borderRadius: 35, height: 70, width: 70, borderColor: "#F7B614" }}
               />
+              </TouchableNativeFeedback>
+              <TouchableNativeFeedback onPress={()=>this.props.navigation.navigate('FoodCart')}>
               <Image
                 source={require('../../images/logo8.jpg')}
                 
                 style={{ borderWidth: 1, borderRadius: 35, height: 70, width: 70, borderColor: "#F7B614" }}
               />
+              </TouchableNativeFeedback>
             </View>
           </View>
           <View style={{ paddingTop: width * 0.01 }}>
@@ -380,23 +396,31 @@ Please Select the language
           <View style={{ paddingTop: width * 0.05 }}>
             <View style={{ flexDirection: "row", justifyContent: "space-around",
              alignItems: "center" }}>
+                <TouchableNativeFeedback onPress={()=>this.props.navigation.navigate('FoodCart')}>
               <Image
                 source={require('../../images/802.jpg')}
                 style={{ borderRadius: 35, height:70, width: 70, borderColor: "#F7B614" ,borderWidth:2}}
               />
+              </TouchableNativeFeedback>
+              <TouchableNativeFeedback onPress={()=>this.props.navigation.navigate('FoodCart')}>
               <Image
                 source={require('../../images/801.jpg')}
                 style={{ borderRadius:35, height:70, width: 70, borderColor: "#F7B614" ,borderWidth:2 }}
               />
+              </TouchableNativeFeedback>
+              <TouchableNativeFeedback onPress={()=>this.props.navigation.navigate('FoodCart')}>
               <Image
                 source={require('../../images/800.jpg')}
                style={{ borderRadius: 35, height:70, width: 70, borderColor: "#F7B614",borderWidth:2  }}
               />
+              </TouchableNativeFeedback>
+              <TouchableNativeFeedback onPress={()=>this.props.navigation.navigate('FoodCart')}>
               <Image
                 source={require('../../images/795.jpg')}
       
                 style={{borderRadius: 35, height:70, width: 70, borderColor: "#F7B614",borderWidth:2 }}
               />
+              </TouchableNativeFeedback>
             </View>
           </View>
           <View style={{ paddingTop: width * 0.01 }}>
@@ -418,26 +442,34 @@ Please Select the language
           <View style={{ paddingTop: width * 0.05 }}>
             <View style={{ flexDirection: "row", justifyContent: "space-around", 
             alignItems: "center"}}>
+               <TouchableNativeFeedback onPress={()=>this.props.navigation.navigate('FoodCart')}>
               <Image
                 source={require('../../images/799.jpg')}
                 
                 style={{  borderRadius: 35, height: 70, width: 70, borderColor: "#F7B614",borderWidth:2 }}
               />
+              </TouchableNativeFeedback>
+              <TouchableNativeFeedback onPress={()=>this.props.navigation.navigate('FoodCart')}>
               <Image
                 source={require('../../images/798.jpg')}
                 
                 style={{  borderRadius: 35, height: 70, width: 70, borderColor: "#F7B614",borderWidth:2 }}
               />
+              </TouchableNativeFeedback>
+              <TouchableNativeFeedback onPress={()=>this.props.navigation.navigate('FoodCart')}>
               <Image
                 source={require('../../images/797.jpg')}
                 
                 style={{ borderRadius: 35, height: 70, width: 70, borderColor: "#F7B614",borderWidth:2 }}
               />
+              </TouchableNativeFeedback>
+              <TouchableNativeFeedback onPress={()=>this.props.navigation.navigate('FoodCart')}>
               <Image
                 source={require('../../images/796.jpg')}
               
                 style={{ borderRadius: 35, height: 70, width: 70, borderColor: "#F7B614",borderWidth:2 }}
               />
+              </TouchableNativeFeedback>
             </View>
           </View>
           <View style={{ paddingTop: width * 0.01 }}>
@@ -498,17 +530,20 @@ Please Select the language
                 style={{ paddingHorizontal: width * 0.05, marginLeft: width * 0.05 }}
               />
               </TouchableNativeFeedback>
+              <TouchableNativeFeedback onPress={()=>this.props.navigation.navigate('FoodCart')}>
               <Image
                 source={require('../../images/img2.jpg')}
                 resizeMode="contain"
                 style={{ paddingHorizontal: width * 0.05, marginLeft: width * 0.05 }}
               />
+              </TouchableNativeFeedback>
+              <TouchableNativeFeedback onPress={()=>this.props.navigation.navigate('FoodCart')}>
               <Image
                 source={require('../../images/img3.jpg')}
                 resizeMode="contain"
                 style={{ paddingHorizontal: width * 0.05, marginLeft: width * 0.05 }}
               />
-
+</TouchableNativeFeedback>
             </ScrollView>
           </View>
           <View style={{ paddingTop: width * 0.05 }}>
@@ -546,22 +581,27 @@ Please Select the language
               showsHorizontalScrollIndicator={false}
               style={styles.listViewHorizontal}
             >
+               <TouchableNativeFeedback onPress={()=>this.props.navigation.navigate('FoodCart')}>
               <Image
                 source={require('../../images/vag1.jpg')}
                 resizeMode="contain"
                 style={{ paddingHorizontal: width * 0.05, marginLeft: width * 0.05 }}
               />
+            </TouchableNativeFeedback>
+            <TouchableNativeFeedback onPress={()=>this.props.navigation.navigate('FoodCart')}>
               <Image
                 source={require('../../images/vag2.jpg')}
                 resizeMode="contain"
                 style={{ paddingHorizontal: width * 0.05, marginLeft: width * 0.05 }}
               />
+              </TouchableNativeFeedback>
+              <TouchableNativeFeedback onPress={()=>this.props.navigation.navigate('FoodCart')}>
               <Image
                 source={require('../../images/vag3.jpg')}
                 resizeMode="contain"
                 style={{ paddingHorizontal: width * 0.05, marginLeft: width * 0.05 }}
               />
-
+</TouchableNativeFeedback>
 
             </ScrollView>
             <View style={{ paddingTop: width * 0.05, paddingHorizontal: width * 0.05 }}>
@@ -592,22 +632,27 @@ Please Select the language
                 showsHorizontalScrollIndicator={false}
                 style={styles.listViewHorizontal}
               >
+                 <TouchableNativeFeedback onPress={()=>this.props.navigation.navigate('FoodCart')}>
                 <Image
                   source={require('../../images/vag2.jpg')}
                   resizeMode="contain"
                   style={{ paddingHorizontal: width * 0.05, marginLeft: width * 0.05 }}
                 />
+                </TouchableNativeFeedback>
+                <TouchableNativeFeedback onPress={()=>this.props.navigation.navigate('FoodCart')}>
                 <Image
                   source={require('../../images/vag3.jpg')}
                   resizeMode="contain"
                   style={{ paddingHorizontal: width * 0.05, marginLeft: width * 0.05 }}
                 />
+                </TouchableNativeFeedback>
+                <TouchableNativeFeedback onPress={()=>this.props.navigation.navigate('FoodCart')}>
                 <Image
                   source={require('../../images/vag1.jpg')}
                   resizeMode="contain"
                   style={{ paddingHorizontal: width * 0.05, marginLeft: width * 0.05 }}
                 />
-
+</TouchableNativeFeedback>
 
               </ScrollView>
             </View>
