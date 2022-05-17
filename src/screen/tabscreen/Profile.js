@@ -127,7 +127,7 @@ name='chevron-down' size={width*0.09}
         <View style={{borderBottomWidth:2,marginHorizontal:width*0.03,paddingTop:width*0.04,borderBottomColor:"#DCDCDC"}}>
 
 </View>
-<View style={{flexDirection:'row',alignItems:'center',justifyContent:'center'}}>
+{/* <View style={{flexDirection:'row',alignItems:'center',justifyContent:'center'}}>
   <View style={{width:"80%",backgroundColor:"#FFFFFF"}}>
     <View style={{flexDirection:'row',alignItems:'center',paddingTop:width*0.04,paddingHorizontal:width*0.03}}>
     <Image
@@ -151,7 +151,7 @@ name='chevron-right' size={width*0.09}
 </TouchableOpacity>
 </View>
 </View>
-</View>
+</View> */}
 <View style={{flexDirection:'row',alignItems:'center',justifyContent:'center'}}>
   <View style={{width:"80%",backgroundColor:"#FFFFFF"}}>
     <View style={{flexDirection:'row',alignItems:'center',paddingTop:width*0.04,paddingHorizontal:width*0.03}}>

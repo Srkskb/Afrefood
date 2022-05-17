@@ -15,7 +15,7 @@ import { TabView, SceneMap } from 'react-native-tab-view';
 export default class Fooddetails extends Component {
     constructor(props) {
         super(props)
-        this.state = { count: 1 }
+        this.state = { count: 1,count1:1 }
       
     }
   render() {
@@ -136,15 +136,15 @@ name='squared-cross' size={width*0.05} color={"#DCDCDC"}
           <View style={{flexDirection:'row',justifyContent:'space-between'}}>
               <View style={{paddingTop:width*0.013,paddingHorizontal:width*0.03}}>
 <View style={{flexDirection:'column',alignItems:'center',justifyContent:'space-between',borderWidth:1,padding:10,borderRadius:10}}>
-  <TouchableOpacity onPress={()=>this.setState({count:this.state.count+1})}>
+  <TouchableOpacity onPress={()=>this.setState({count1:this.state.count1+1})}>
 <Text style={{fontSize:width*0.04,fontWeight:'bold'}}>
     +
 </Text>
 </TouchableOpacity>
 <Text style={{fontSize:width*0.04,fontWeight:'bold'}}>
- {this.state.count}
+ {this.state.count1}
 </Text>
-<TouchableOpacity onPress={()=>{this.state.count>1? this.setState({count:this.state.count-1}):this.state.count}}>
+<TouchableOpacity onPress={()=>{this.state.count1>1? this.setState({count1:this.state.count1-1}):this.state.count1}}>
 <Text style={{fontSize:width*0.04,fontWeight:'bold'}}>
     -
 </Text>
