@@ -138,7 +138,7 @@ name='chevron-down' size={width*0.09}
 <View style={{paddingHorizontal:width*0.02}}>
   <Text style={{fontSize:width*0.05,color:"#000011",fontWeight:"500"}}>
     Favourites
-  </Text>
+  </Text> 
 </View>
   </View>
   </View>
