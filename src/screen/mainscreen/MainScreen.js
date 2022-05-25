@@ -261,28 +261,28 @@ Please Select the language
           </View>
           <View style={{ paddingTop: width * 0.05 }}>
             <View style={{ flexDirection: "row", justifyContent: "space-around", alignItems: "center" }}>
-            <TouchableNativeFeedback onPress={()=>this.props.navigation.navigate('Fooddetails')}>
+            <TouchableNativeFeedback onPress={()=>this.props.navigation.navigate('Brand')}>
               <Image
                 source={require('../../images/logo1.jpg')}
                 
                 style={{ borderWidth: 1, borderRadius: 35, height: 70, width: 70, borderColor: "#F7B614" }}
               />
               </TouchableNativeFeedback>
-              <TouchableNativeFeedback onPress={()=>this.props.navigation.navigate('Fooddetails')}>
+              <TouchableNativeFeedback onPress={()=>this.props.navigation.navigate('Menu')}>
               <Image
                 source={require('../../images/logo2.jpg')}
                 
                 style={{ borderWidth: 1, borderRadius: 35, height: 70, width: 70, borderColor: "#F7B614" }}
               />
               </TouchableNativeFeedback>
-              <TouchableNativeFeedback onPress={()=>this.props.navigation.navigate('Fooddetails')}>
+              <TouchableNativeFeedback onPress={()=>this.props.navigation.navigate('Brand')}>
               <Image
                 source={require('../../images/log3.jpg')}
               
                 style={{ borderWidth: 1, borderRadius: 35, height: 70, width: 70, borderColor: "#F7B614" }}
               />
               </TouchableNativeFeedback>
-              <TouchableNativeFeedback onPress={()=>this.props.navigation.navigate('Fooddetails')}>
+              <TouchableNativeFeedback onPress={()=>this.props.navigation.navigate('Menu')}>
               <Image
                 source={require('../../images/logo4.jpg')}
             
@@ -325,28 +325,28 @@ Please Select the language
           </View>
           <View style={{ paddingTop: width * 0.05 }}>
             <View style={{ flexDirection: "row", justifyContent: "space-around", alignItems: "center" }}>
-            <TouchableNativeFeedback onPress={()=>this.props.navigation.navigate('Fooddetails')}>
+            <TouchableNativeFeedback onPress={()=>this.props.navigation.navigate('Brand')}>
               <Image
                 source={require('../../images/logo5.jpg')}
                 
                 style={{ borderWidth: 1, borderRadius: 35, height: 70, width: 70, borderColor: "#F7B614" }}
               />
               </TouchableNativeFeedback>
-              <TouchableNativeFeedback onPress={()=>this.props.navigation.navigate('Fooddetails')}>
+              <TouchableNativeFeedback onPress={()=>this.props.navigation.navigate('Brand')}>
               <Image
                 source={require('../../images/logo6.jpg')}
                 
                 style={{ borderWidth: 1, borderRadius: 35, height: 70, width: 70, borderColor: "#F7B614" }}
               />
               </TouchableNativeFeedback>
-              <TouchableNativeFeedback onPress={()=>this.props.navigation.navigate('Fooddetails')}>
+              <TouchableNativeFeedback onPress={()=>this.props.navigation.navigate('Menu')}>
               <Image
                 source={require('../../images/logo7.jpg')}
               
                 style={{ borderWidth: 1, borderRadius: 35, height: 70, width: 70, borderColor: "#F7B614" }}
               />
               </TouchableNativeFeedback>
-              <TouchableNativeFeedback onPress={()=>this.props.navigation.navigate('Fooddetails')}>
+              <TouchableNativeFeedback onPress={()=>this.props.navigation.navigate('Brand')}>
               <Image
                 source={require('../../images/logo8.jpg')}
                 
