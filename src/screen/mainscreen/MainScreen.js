@@ -85,6 +85,15 @@ export default class MainScreen extends Component {
             <Modal visible={this.state.show} transparent={true}>
 <View style={{backgroundColor:"#000000aa",flex:1}}>
   <View style={{margin:50,backgroundColor:"#ffffff",flex:1,borderRadius:10,padding:50}}>
+    
+    <View style={{justifyContent:"center",alignItems:'center'}}>
+      <TouchableOpacity onPress={()=>{this.setState({show:false})}}>
+      <Entypo
+      name='squared-cross' size={30} color={"#000"}
+      
+      />
+      </TouchableOpacity>
+    </View>
     <Text style={{textAlign:"center",fontSize:width*0.06,color:'#000',fontFamily:"Poppins-Semibold"}}>
 Please Select the language
     </Text>
