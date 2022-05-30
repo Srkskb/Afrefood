@@ -68,13 +68,56 @@ export default class AddPlace extends Component {
           </View>
         </View>
         <View style={{paddingHorizontal:width*0.03,paddingTop:width*0.05}}>
-<Text style={{fontSize:width*0.05,color:'#000',fontFamily:"Poppins-SemiBold"}}>
-    Settings
+<Text style={{fontSize:width*0.05,color:'#000',fontFamily:"Poppins-SemiBold",fontWeight:'500'}}>
+    Add a Place
 </Text>
         </View>
-        <View style={{paddingTop:width*0.03,borderBottomWidth:1,borderColor:"#dcdcdc",marginHorizontal:width*0.03}}>
-
+        <View style={{paddingHorizontal:width*0.03,paddingTop:width*0.05}}>
+          <Text style={{fontSize:width*0.05,color:'#000000aa',fontFamily:"Poppins-SemiBold"}}>
+            Enter Restaurant Details
+          </Text>
         </View>
+
+       
+        <View style={{paddingTop:width*0.03,borderBottomWidth:1,borderColor:"#dcdcdc",marginHorizontal:width*0.03}}>
+        <TextInput
+        placeholder='Restaurant Name*'
+        style={{fontSize:width*0.04}}
+        />
+        </View>
+        <View style={{paddingTop:width*0.03,borderBottomWidth:1,borderColor:"#dcdcdc",marginHorizontal:width*0.03}}>
+        <TextInput
+        placeholder='Restaurant Phone number*'
+        style={{fontSize:width*0.04}}
+        />
+        </View>
+        <View style={{paddingTop:width*0.03,borderBottomWidth:1,borderColor:"#dcdcdc",marginHorizontal:width*0.03}}>
+        <TextInput
+        placeholder='Location*'
+        style={{fontSize:width*0.04}}
+        />
+        </View>
+        <View style={{paddingTop:width*0.2,paddingHorizontal:width*0.03}}>
+          <Text style={{fontSize:width*0.05,color:'#000000aa',fontFamily:"Poppins-SemiBold"}}>
+            Additional Requests
+          </Text>
+        </View>
+        <View style={{paddingTop:width*0.03,borderBottomWidth:1,borderColor:"#dcdcdc",marginHorizontal:width*0.03}}>
+        <TextInput
+        placeholder='Please add here your request*'
+        style={{fontSize:width*0.04}}
+        />
+        </View>
+        <TouchableOpacity onPress={()=>alert("Add successfully")}>
+            <View style={{paddingTop:width*0.1,marginHorizontal:width*0.06}}>
+              <View style={{borderWidth:1,borderRadius:10,backgroundColor:"#1599B0",borderColor:'#1599B0',justifyContent:'center',alignItems:'center',padding:10}}>
+<Text style={{color:'#fff',fontSize:width*0.04}}>
+  Submit
+</Text>
+              </View>
+
+            </View>
+            </TouchableOpacity>
         </SafeAreaView>
     )
   }
