@@ -29,6 +29,7 @@ import Addcart from '../screen/Add-Cart/Addcart';
 import FoodCart from '../screen/food_cart/FoodCart';
 import Fooddetalis from '../screen/Food _details/Fooddetalis';
 import Brand from '../screen/Brand_Screen/Brand';
+import Setting from '../screen/Settings/Setting';
 const Tab = createMaterialTopTabNavigator();
 const CustomTabBarButton = ({ children, onPress }) => (
   <TouchableOpacity style={{ height: 70, width: 70, top: -30, justifyContent: "center", alignItems: "center", ...styles.shadow }} onPress={onPress}>
@@ -153,6 +154,7 @@ function LoginStackNavigator() {
       <Stack.Screen name="FoodCart" component={FoodCart} options={{headerShown:false}}/>
       <Stack.Screen name="Fooddetails" component={Fooddetalis} options={{headerShown:false}}/>
       <Stack.Screen name="Brand" component={Brand} options={{headerShown:false}}/>
+      <Stack.Screen name="Setting" component={Setting} options={{headerShown:false}}/>
     </Stack.Navigator>
   );
 }
