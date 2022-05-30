@@ -30,6 +30,11 @@ import FoodCart from '../screen/food_cart/FoodCart';
 import Fooddetalis from '../screen/Food _details/Fooddetalis';
 import Brand from '../screen/Brand_Screen/Brand';
 import Setting from '../screen/Settings/Setting';
+import AddPlace from '../screen/Addplace/AddPlace';
+import Places from '../screen/Places/Places';
+import Account from '../screen/Account/Account';
+import Notification from '../screen/Notifiaction/Notification';
+import EditProfile from '../screen/Edit-Profile/EditProfile';
 const Tab = createMaterialTopTabNavigator();
 const CustomTabBarButton = ({ children, onPress }) => (
   <TouchableOpacity style={{ height: 70, width: 70, top: -30, justifyContent: "center", alignItems: "center", ...styles.shadow }} onPress={onPress}>
@@ -155,6 +160,12 @@ function LoginStackNavigator() {
       <Stack.Screen name="Fooddetails" component={Fooddetalis} options={{headerShown:false}}/>
       <Stack.Screen name="Brand" component={Brand} options={{headerShown:false}}/>
       <Stack.Screen name="Setting" component={Setting} options={{headerShown:false}}/>
+      <Stack.Screen name="AddPlace" component={AddPlace} options={{headerShown:false}}/>
+      <Stack.Screen name="Places" component={Places} options={{headerShown:false}}/>
+      <Stack.Screen name="Account" component={Account} options={{headerShown:false}}/>
+      <Stack.Screen name="EditProfile" component={EditProfile} options={{headerShown:false}}/>
+      <Stack.Screen name="Notification" component={Notification} options={{headerShown:false}}/>
+
     </Stack.Navigator>
   );
 }

@@ -95,7 +95,7 @@ export default class Setting extends Component {
   </View>
   <View style={{width:"20%",backgroundColor:"#FFFFFF"}}>
   <View style={{paddingTop:width*0.04,alignItems:'center',justifyContent:'center'}}>
-    <TouchableOpacity onPress={()=>this.props.navigation.navigate("Offer")}> 
+    <TouchableOpacity onPress={()=>this.props.navigation.navigate("AddPlace")}> 
 <MaterialCommunityIcons
 name='chevron-right' size={width*0.09}
 />
@@ -126,7 +126,7 @@ name='chevron-right' size={width*0.09}
   </View>
   <View style={{width:"20%",backgroundColor:"#FFFFFF"}}>
   <View style={{paddingTop:width*0.04,alignItems:'center',justifyContent:'center'}}>
-    <TouchableOpacity onPress={()=>this.props.navigation.navigate("Offer")}> 
+    <TouchableOpacity onPress={()=>this.props.navigation.navigate("Places")}> 
 <MaterialCommunityIcons
 name='chevron-right' size={width*0.09}
 />
@@ -157,7 +157,7 @@ name='chevron-right' size={width*0.09}
   </View>
   <View style={{width:"20%",backgroundColor:"#FFFFFF"}}>
   <View style={{paddingTop:width*0.04,alignItems:'center',justifyContent:'center'}}>
-    <TouchableOpacity onPress={()=>this.props.navigation.navigate("Offer")}> 
+    <TouchableOpacity onPress={()=>this.props.navigation.navigate("EditProfile")}> 
 <MaterialCommunityIcons
 name='chevron-right' size={width*0.09}
 />
@@ -188,7 +188,7 @@ name='chevron-right' size={width*0.09}
   </View>
   <View style={{width:"20%",backgroundColor:"#FFFFFF"}}>
   <View style={{paddingTop:width*0.04,alignItems:'center',justifyContent:'center'}}>
-    <TouchableOpacity onPress={()=>this.props.navigation.navigate("Offer")}> 
+    <TouchableOpacity onPress={()=>this.props.navigation.navigate("Notification")}> 
 <MaterialCommunityIcons
 name='chevron-right' size={width*0.09}
 />
@@ -219,7 +219,7 @@ name='chevron-right' size={width*0.09}
   </View>
   <View style={{width:"20%",backgroundColor:"#FFFFFF"}}>
   <View style={{paddingTop:width*0.04,alignItems:'center',justifyContent:'center'}}>
-    <TouchableOpacity onPress={()=>this.props.navigation.navigate("Offer")}> 
+    <TouchableOpacity onPress={()=>this.props.navigation.navigate("Account")}> 
 <MaterialCommunityIcons
 name='chevron-right' size={width*0.09}
 />
