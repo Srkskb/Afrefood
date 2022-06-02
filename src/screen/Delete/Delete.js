@@ -4,7 +4,7 @@ const { width, height } = Dimensions.get("window");
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
 import FIcon from 'react-native-vector-icons/Feather'
 import Entypo from 'react-native-vector-icons/Entypo'
-export default class Account extends Component {
+export default class Delete extends Component {
   render() {
     return (
       <SafeAreaView style={{ flex: 1, width: width, height: height, backgroundColor: "#FFFFFF" }}>
@@ -69,70 +69,26 @@ export default class Account extends Component {
         </View>
         <View style={{paddingHorizontal:width*0.03,paddingTop:width*0.05}}>
 <Text style={{fontSize:width*0.05,color:'#000',fontFamily:"Poppins-SemiBold"}}>
-    Account Settings
+    Change Email
 </Text>
         </View>
-        <View style={{paddingTop:width*0.03,borderBottomWidth:1,borderColor:"#dcdcdc",marginHorizontal:width*0.03}}>
-
+        <View style={{paddingTop:width*0.08,paddingHorizontal:width*0.04}}>
+        <View style={{justifyContent:'center',alignItems:'center',flexDirection:'row'}}>
+            <Text>
+To changes your emails, please login through our websites and go to the settings section. in case you face any difficulties feel free to contact us at.
+            </Text>
+    
         </View>
-        <View style={{flexDirection:'row',alignItems:'center',justifyContent:'center'}}>
-  <View style={{width:"80%",backgroundColor:"#FFFFFF"}}>
-    <View style={{flexDirection:'row',alignItems:'center',paddingTop:width*0.04,paddingHorizontal:width*0.03}}>
-    {/* <Image
-    source={require('../../images/9.png')}
-    resizeMode="contain"
-    style={{height:height*0.03,width:width*0.09}}
-    /> */}
-<View style={{paddingHorizontal:width*0.02}}>
-  <Text style={{fontSize:width*0.05,color:"#000011",fontWeight:"500"}}>
-    Change email
-  </Text> 
-
-</View>
-  </View>
-  </View>
-  <View style={{width:"20%",backgroundColor:"#FFFFFF"}}>
-  <View style={{paddingTop:width*0.04,alignItems:'center',justifyContent:'center'}}>
-    <TouchableOpacity onPress={()=>this.props.navigation.navigate("Delete")}> 
-<MaterialCommunityIcons
-name='chevron-right' size={width*0.09}
-/>
-</TouchableOpacity>
-</View>
-</View>
-</View>
-<View style={{paddingTop:width*0.03,borderBottomWidth:1,borderColor:"#dcdcdc",marginHorizontal:width*0.03}}>
-
-</View>
-<View style={{flexDirection:'row',alignItems:'center',justifyContent:'center'}}>
-  <View style={{width:"80%",backgroundColor:"#FFFFFF"}}>
-    <View style={{flexDirection:'row',alignItems:'center',paddingTop:width*0.04,paddingHorizontal:width*0.03}}>
-    {/* <Image
-    source={require('../../images/9.png')}
-    resizeMode="contain"
-    style={{height:height*0.03,width:width*0.09}}
-    /> */}
-<View style={{paddingHorizontal:width*0.02}}>
-  <Text style={{fontSize:width*0.05,color:"#000011",fontWeight:"500"}}>
-    Delete Account
-  </Text> 
-  
-</View>
-  </View>
-  </View>
-  <View style={{width:"20%",backgroundColor:"#FFFFFF"}}>
-  <View style={{paddingTop:width*0.04,alignItems:'center',justifyContent:'center'}}>
-    <TouchableOpacity onPress={()=>this.props.navigation.navigate("Email")}> 
-<MaterialCommunityIcons
-name='chevron-right' size={width*0.09}
-/>
-</TouchableOpacity>
-</View>
-</View>
-</View>
-<View style={{paddingTop:width*0.03,borderBottomWidth:1,borderColor:"#dcdcdc",marginHorizontal:width*0.03}}>
-
-</View>
+        </View>
+        <View style={{paddingTop:width*0.04,paddingHorizontal:width*0.04}}>
+        <View style={{justifyContent:'center',alignItems:'center'}}>
+            <TouchableOpacity onPress={()=>alert("Please wait for")}>
+            <Text style={{color:'#E44226',fontSize:width*0.05,fontWeight:'bold'}}>
+                help@AfreeFood.com 
+            </Text>
+            </TouchableOpacity>
+        </View>
+        </View>
         </SafeAreaView>
     )
   }

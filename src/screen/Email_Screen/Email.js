@@ -1,16 +1,10 @@
-import { Text, View, SafeAreaView, Dimensions,Image,TouchableOpacity,TouchableNativeFeedback,TextInput,Switch,ScrollView } from 'react-native'
+import { Text, View, SafeAreaView, Dimensions,Image,TouchableOpacity,TouchableNativeFeedback,TextInput } from 'react-native'
 import React, { Component } from 'react'
 const { width, height } = Dimensions.get("window");
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
 import FIcon from 'react-native-vector-icons/Feather'
 import Entypo from 'react-native-vector-icons/Entypo'
-export default class Notifiaction extends Component {
-  state = {  
-    switchValue: false , 
-    damn: false,
-    sure:false,
-    simple:false
-}; 
+export default class Email extends Component {
   render() {
     return (
       <SafeAreaView style={{ flex: 1, width: width, height: height, backgroundColor: "#FFFFFF" }}>
@@ -73,13 +67,14 @@ export default class Notifiaction extends Component {
             </View>
           </View>
         </View>
-        <ScrollView showsVerticalScrollIndicator={false} style={{ width: width, height:'90%' }}>
         <View style={{paddingHorizontal:width*0.03,paddingTop:width*0.05}}>
 <Text style={{fontSize:width*0.05,color:'#000',fontFamily:"Poppins-SemiBold"}}>
-    Notifiaction
+    Delete Account
+</Text>
+<Text>
+    Why would you like to delete your account?
 </Text>
         </View>
-  
         <View style={{flexDirection:'row',alignItems:'center',justifyContent:'center'}}>
   <View style={{width:"80%",backgroundColor:"#FFFFFF"}}>
     <View style={{flexDirection:'row',alignItems:'center',paddingTop:width*0.08,paddingHorizontal:width*0.03}}>
@@ -89,20 +84,20 @@ export default class Notifiaction extends Component {
     style={{height:height*0.03,width:width*0.09}}
     /> */}
 <View style={{paddingHorizontal:width*0.02}}>
-  <Text style={{fontSize:width*0.05,color:"#000011",fontWeight:"500"}}>
-    Enable all
+  <Text style={{fontSize:width*0.04,color:"#000011",fontWeight:"500"}}>
+    I don't want to use Afreefood anymore
   </Text> 
-  <Text style={{fontSize:width*0.03,color:"#000011",fontWeight:"500"}}>
-    Active all notifiactions
-  </Text> 
+ 
 </View>
   </View>
   </View>
   <View style={{width:"20%",backgroundColor:"#FFFFFF"}}>
-  <View style={{paddingTop:width*0.04,alignItems:'center',justifyContent:'center'}}>
-  <Switch  
-                    value={this.state.switchValue}  
-                    onValueChange ={(switchValue)=>this.setState({switchValue})}/> 
+  <View style={{paddingTop:width*0.09,alignItems:'center',justifyContent:'center'}}>
+    <TouchableOpacity > 
+<MaterialCommunityIcons
+name='chevron-right' size={width*0.09}
+/>
+</TouchableOpacity>
 </View>
 </View>
 </View>
@@ -118,20 +113,20 @@ export default class Notifiaction extends Component {
     style={{height:height*0.03,width:width*0.09}}
     /> */}
 <View style={{paddingHorizontal:width*0.02}}>
-  <Text style={{fontSize:width*0.05,color:"#000011",fontWeight:"500"}}>
-    Promos and offers
+  <Text style={{fontSize:width*0.04,color:"#000011",fontWeight:"500"}}>
+    I am using a differnt account
   </Text> 
-  <Text style={{fontSize:width*0.03,color:"#000011",fontWeight:"500"}}>
-    Receive updates about coupons,promotions
-  </Text> 
+ 
 </View>
   </View>
   </View>
   <View style={{width:"20%",backgroundColor:"#FFFFFF"}}>
   <View style={{paddingTop:width*0.04,alignItems:'center',justifyContent:'center'}}>
-  <Switch  
-                    value={this.state.damn}  
-                    onValueChange ={(damn)=>this.setState({damn})}/> 
+    <TouchableOpacity > 
+<MaterialCommunityIcons
+name='chevron-right' size={width*0.09}
+/>
+</TouchableOpacity>
 </View>
 </View>
 </View>
@@ -147,20 +142,19 @@ export default class Notifiaction extends Component {
     style={{height:height*0.03,width:width*0.09}}
     /> */}
 <View style={{paddingHorizontal:width*0.02}}>
-  <Text style={{fontSize:width*0.05,color:"#000011",fontWeight:"500"}}>
-    Social notifiactions
-  </Text> 
-  <Text style={{fontSize:width*0.03,color:"#000011",fontWeight:"500"}}>
-    Get notified when someone follows your profile
+  <Text style={{fontSize:width*0.04,color:"#000011",fontWeight:"500"}}>
+    I am worried about my privacy
   </Text> 
 </View>
   </View>
   </View>
   <View style={{width:"20%",backgroundColor:"#FFFFFF"}}>
   <View style={{paddingTop:width*0.04,alignItems:'center',justifyContent:'center'}}>
-  <Switch  
-                    value={this.state.sure}  
-                    onValueChange ={(sure)=>this.setState({sure})}/> 
+    <TouchableOpacity > 
+<MaterialCommunityIcons
+name='chevron-right' size={width*0.09}
+/>
+</TouchableOpacity>
 </View>
 </View>
 </View>
@@ -176,44 +170,81 @@ export default class Notifiaction extends Component {
     style={{height:height*0.03,width:width*0.09}}
     /> */}
 <View style={{paddingHorizontal:width*0.02}}>
-  <Text style={{fontSize:width*0.05,color:"#000011",fontWeight:"500"}}>
-    Order and purchases
+  <Text style={{fontSize:width*0.04,color:"#000011",fontWeight:"500"}}>
+    You are sending me too many emails/notifiaction
   </Text> 
-  <Text style={{fontSize:width*0.03,color:"#000011",fontWeight:"500"}}>
-    Receive updates related to your Order status
-  </Text> 
+
 </View>
   </View>
   </View>
   <View style={{width:"20%",backgroundColor:"#FFFFFF"}}>
   <View style={{paddingTop:width*0.04,alignItems:'center',justifyContent:'center'}}>
-  <Switch  
-                    value={this.state.simple}  
-                    onValueChange ={(simple)=>this.setState({simple})}/> 
+    <TouchableOpacity > 
+<MaterialCommunityIcons
+name='chevron-right' size={width*0.09}
+/>
+</TouchableOpacity>
 </View>
 </View>
 </View>
-<View style={{paddingTop:width*0.06,borderBottomWidth:8,borderColor:"#dcdcdc",marginHorizontal:width*0.03}}>
+<View style={{paddingTop:width*0.03,borderBottomWidth:1,borderColor:"#dcdcdc",marginHorizontal:width*0.03}}>
 
 </View>
-<View style={{paddingTop:width*0.1}}>
-<View style={{justifyContent:'center',alignItems:'center'}}>
-  <Text style={{fontSize:width*0.06,fontFamily:"Poppins-SemiBold",color:'#dcdcdcaa'}}>
-    AfreeFood
-  </Text>
+<View style={{flexDirection:'row',alignItems:'center',justifyContent:'center'}}>
+  <View style={{width:"80%",backgroundColor:"#FFFFFF"}}>
+    <View style={{flexDirection:'row',alignItems:'center',paddingTop:width*0.04,paddingHorizontal:width*0.03}}>
+    {/* <Image
+    source={require('../../images/9.png')}
+    resizeMode="contain"
+    style={{height:height*0.03,width:width*0.09}}
+    /> */}
+<View style={{paddingHorizontal:width*0.02}}>
+  <Text style={{fontSize:width*0.04,color:"#000011",fontWeight:"500"}}>
+    This app is not working properly
+  </Text> 
+ 
+</View>
+  </View>
+  </View>
+  <View style={{width:"20%",backgroundColor:"#FFFFFF"}}>
+  <View style={{paddingTop:width*0.04,alignItems:'center',justifyContent:'center'}}>
+    <TouchableOpacity > 
+<MaterialCommunityIcons
+name='chevron-right' size={width*0.09}
+/>
+</TouchableOpacity>
 </View>
 </View>
-<TouchableOpacity onPress={()=>alert("Add successfully")}>
-            <View style={{paddingTop:width*0.1,marginHorizontal:width*0.06}}>
-              <View style={{borderWidth:1,borderRadius:10,backgroundColor:"#1599B0",borderColor:'#1599B0',justifyContent:'center',alignItems:'center',padding:10}}>
-<Text style={{color:'#fff',fontSize:width*0.04}}>
-  Save Changes
-</Text>
-              </View>
+</View>
+<View style={{paddingTop:width*0.03,borderBottomWidth:1,borderColor:"#dcdcdc",marginHorizontal:width*0.03}}>
 
-            </View>
-            </TouchableOpacity>
-</ScrollView>
+</View>
+<View style={{flexDirection:'row',alignItems:'center',justifyContent:'center'}}>
+  <View style={{width:"80%",backgroundColor:"#FFFFFF"}}>
+    <View style={{flexDirection:'row',alignItems:'center',paddingTop:width*0.04,paddingHorizontal:width*0.03}}>
+    {/* <Image
+    source={require('../../images/9.png')}
+    resizeMode="contain"
+    style={{height:height*0.03,width:width*0.09}}
+    /> */}
+<View style={{paddingHorizontal:width*0.02}}>
+  <Text style={{fontSize:width*0.04,color:"#000011",fontWeight:"500"}}>
+    Others  
+  </Text> 
+ 
+</View>
+  </View>
+  </View>
+  <View style={{width:"20%",backgroundColor:"#FFFFFF"}}>
+  <View style={{paddingTop:width*0.04,alignItems:'center',justifyContent:'center'}}>
+    <TouchableOpacity > 
+<MaterialCommunityIcons
+name='chevron-right' size={width*0.09}
+/>
+</TouchableOpacity>
+</View>
+</View>
+</View>
         </SafeAreaView>
     )
   }

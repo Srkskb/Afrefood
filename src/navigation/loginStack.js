@@ -35,6 +35,8 @@ import Places from '../screen/Places/Places';
 import Account from '../screen/Account/Account';
 import Notification from '../screen/Notifiaction/Notification';
 import EditProfile from '../screen/Edit-Profile/EditProfile';
+import Delete from '../screen/Delete/Delete';
+import Email from '../screen/Email_Screen/Email';
 const Tab = createMaterialTopTabNavigator();
 const CustomTabBarButton = ({ children, onPress }) => (
   <TouchableOpacity style={{ height: 70, width: 70, top: -30, justifyContent: "center", alignItems: "center", ...styles.shadow }} onPress={onPress}>
@@ -165,7 +167,8 @@ function LoginStackNavigator() {
       <Stack.Screen name="Account" component={Account} options={{headerShown:false}}/>
       <Stack.Screen name="EditProfile" component={EditProfile} options={{headerShown:false}}/>
       <Stack.Screen name="Notification" component={Notification} options={{headerShown:false}}/>
-
+      <Stack.Screen name="Delete" component={Delete} options={{headerShown:false}}/>
+      <Stack.Screen name="Email" component={Email} options={{headerShown:false}}/>
     </Stack.Navigator>
   );
 }
