@@ -250,11 +250,11 @@ name='squared-cross' size={width*0.05} color={"#DCDCDC"}
               </View>
 
             </View>
-            <TouchableOpacity onPress={()=>this.props.navigation.navigate("Payment")}>
+            <TouchableOpacity onPress={()=>this.props.navigation.navigate("DAddress")}>
             <View style={{paddingTop:width*0.05,marginHorizontal:width*0.06}}>
               <View style={{borderWidth:1,borderRadius:10,backgroundColor:"#1599B0",borderColor:'#1599B0',justifyContent:'center',alignItems:'center',padding:10}}>
 <Text style={{color:'#fff',fontSize:width*0.04}}>
-  Procced to checkout
+  Procced to delivery address
 </Text>
               </View>
 
