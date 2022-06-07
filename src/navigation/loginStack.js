@@ -39,6 +39,7 @@ import Delete from '../screen/Delete/Delete';
 import Email from '../screen/Email_Screen/Email';
 import DAddress from '../screen/delevery_Address/DAddress';
 import Add from '../screen/ADD_Screen/Add';
+import Sucess from '../screen/Order_Sucess/Sucess';
 const Tab = createMaterialTopTabNavigator();
 const CustomTabBarButton = ({ children, onPress }) => (
   <TouchableOpacity style={{ height: 70, width: 70, top: -30, justifyContent: "center", alignItems: "center", ...styles.shadow }} onPress={onPress}>
@@ -173,6 +174,7 @@ function LoginStackNavigator() {
       <Stack.Screen name="Email" component={Email} options={{headerShown:false}}/>
       <Stack.Screen name="DAddress" component={DAddress} options={{headerShown:false}}/>
       <Stack.Screen name="Add" component={Add} options={{headerShown:false}}/>
+      <Stack.Screen name="Sucess" component={Sucess} options={{headerShown:false}}/>
     </Stack.Navigator>
   );
 }

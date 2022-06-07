@@ -220,7 +220,8 @@ name='chevron-right' size={width*0.09}
   </View>
   <View style={{width:"20%",backgroundColor:"#FFFFFF"}}>
   <View style={{paddingTop:width*0.04,alignItems:'center',justifyContent:'center'}}>
-    <TouchableOpacity onPress={()=>alert("Please pay on the delevery time")}>
+    <TouchableOpacity onPress={()=>this.props.navigation.navigate
+    ("Sucess")}>
 <MaterialCommunityIcons
 name='chevron-right' size={width*0.09}
 />
