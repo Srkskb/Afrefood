@@ -5,7 +5,8 @@ const { width, height } = Dimensions.get("window");
 export default class Sucess extends Component {
   render() {
     return (
-      <View style={{justifyContent:'center',alignItems:'center',backgroundColor:'#FFFFFFF',paddingTop:width*0.1}}>
+      
+      <View style={{justifyContent:'center',alignItems:'center',backgroundColor:'#FFFFFFF',paddingTop:width*0.2}}>
         <Image
         source={require("../../images/sham.jpeg")}
         />
@@ -13,7 +14,7 @@ export default class Sucess extends Component {
         <Text style={{fontSize:width*0.05,fontWeight:'bold',color:'#000'}}>Order sucessfully</Text>
     </View>
       <View style={{justifyContent:'center',alignItems:'center',paddingTop:width*0.05}}>
-  <Text style={{fontSize:width*0.05,fontWeight:'bold',color:'#000'}}>
+  <Text style={{fontSize:width*0.05,fontWeight:'bold',color:'#000000aa'}}>
     Please track your Order Now
   </Text>
       </View>
