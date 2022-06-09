@@ -49,7 +49,7 @@ export default class Addcart extends Component {
  </View>
  </View>
  <View style={{paddingTop:width*0.09}}>
-   <TouchableOpacity onPress={()=>alert('Added Sucessfully')}>
+   <TouchableOpacity onPress={()=>this.props.navigation.navigate("Sucess")}>
  <View style={{borderWidth:1,borderRadius:5,paddingVertical:width*0.05,marginHorizontal:width*0.06,backgroundColor:"#5A429B",borderColor:"#5A429B"}}>
    <Text style={{textAlign:'center',fontSize:width*0.05,color:"#FFFFFF"}}>
      ADD CARDS

@@ -100,7 +100,16 @@ export default class Track extends Component {
 </View>
                     </View>
                     </View>
-                  
+                    <TouchableOpacity onPress={()=>this.props.navigation.navigate("MainScreen")}>
+            <View style={{paddingTop:width*0.05,marginHorizontal:width*0.06}}>
+              <View style={{borderWidth:1,borderRadius:10,backgroundColor:"#1599B0",borderColor:'#1599B0',justifyContent:'center',alignItems:'center',padding:10,paddingHorizontal:width*0.06}}>
+<Text style={{color:'#fff',fontSize:width*0.04}}>
+  Go To Home Menu
+</Text>
+              </View>
+
+            </View>
+            </TouchableOpacity>
                 </View>
         )
     }
