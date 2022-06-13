@@ -76,7 +76,7 @@ export default class Track extends Component {
     We have recevied your order.
 </Text>
 </View>
-<View style={{paddingTop:width*0.1}}>
+<View style={{paddingTop:width*0.12}}>
 <Text style={{fontSize:width*0.05,fontWeight:'bold',color:'#000',paddingTop:width*0.07}}>
     Order Confirmed
 </Text>
@@ -84,7 +84,7 @@ export default class Track extends Component {
     Your order have deen Confirmed.
 </Text>
 </View>
-<View style={{paddingTop:width*0.09}}>
+<View style={{paddingTop:width*0.13}}>
 <Text style={{fontSize:width*0.05,fontWeight:'bold',color:'#02527C',paddingTop:width*0.07}}>
     Order Processed
 </Text>
@@ -92,7 +92,7 @@ export default class Track extends Component {
     We are preparing your Order.
 </Text>
 </View>
-<View style={{paddingTop:width*0.1}}>
+<View style={{paddingTop:width*0.13}}>
 <Text style={{fontSize:width*0.05,fontWeight:'bold',color:'#DCDCDC',paddingTop:width*0.07}}>
     Ready to Pickup
 </Text>
