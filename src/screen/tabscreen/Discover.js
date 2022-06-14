@@ -181,26 +181,34 @@ export default class Discover extends Component {
           </View>
           <View style={{ paddingTop: width * 0.05 }}>
             <View style={{ flexDirection: "row", justifyContent: "space-around", alignItems: "center" }}>
+              <TouchableNativeFeedback onPress={()=>this.props.navigation.navigate("BrandList")}>
               <Image
                 source={require('../../images/outd.png')}
                 
                 style={{ borderWidth: 1, borderRadius: 10, height: 70, width: 70, borderColor: "#F7B614" }}
               />
+              </TouchableNativeFeedback>
+              <TouchableNativeFeedback onPress={()=>this.props.navigation.navigate("BrandList")}>
               <Image
                 source={require('../../images/prm.png')}
                 
                 style={{ borderWidth: 1, borderRadius:10, height: 70, width: 70, borderColor: "#F7B614" }}
               />
+              </TouchableNativeFeedback>
+              <TouchableNativeFeedback onPress={()=>this.props.navigation.navigate("BrandList")}>
               <Image
                 source={require('../../images/evnt.png')}
               
                 style={{ borderWidth: 1, borderRadius: 10, height: 70, width: 70, borderColor: "#F7B614" }}
               />
+              </TouchableNativeFeedback>
+              <TouchableNativeFeedback onPress={()=>this.props.navigation.navigate("BrandList")}>
               <Image
                 source={require('../../images/pro.png')}
             
                 style={{ borderWidth: 1, borderRadius: 10, height: 70, width: 70, borderColor: "#F7B614" }}
               />
+              </TouchableNativeFeedback>
             </View>
           </View>
           <View style={{ paddingTop: width * 0.01 }}>
@@ -221,26 +229,34 @@ export default class Discover extends Component {
           </View>
           <View style={{ paddingTop: width * 0.03 }}>
             <View style={{ flexDirection: "row", justifyContent: "space-around", alignItems: "center" }}>
+            <TouchableNativeFeedback onPress={()=>this.props.navigation.navigate("BrandList")}>
               <Image
                 source={require('../../images/icon5.png')}
                 
                 style={{ borderWidth: 1, borderRadius: 10, height: 70, width: 70, borderColor: "#F7B614" }}
               />
+              </TouchableNativeFeedback>
+              <TouchableNativeFeedback onPress={()=>this.props.navigation.navigate("BrandList")}>
               <Image
                 source={require('../../images/icon6.png')}
                 
                 style={{ borderWidth: 1, borderRadius: 10, height: 70, width: 70, borderColor: "#F7B614" }}
               />
+              </TouchableNativeFeedback>
+              <TouchableNativeFeedback onPress={()=>this.props.navigation.navigate("BrandList")}>
               <Image
                 source={require('../../images/icon7.png')}
               
                 style={{ borderWidth: 1, borderRadius: 10, height: 70, width: 70, borderColor: "#F7B614" }}
               />
+              </TouchableNativeFeedback>
+              <TouchableNativeFeedback onPress={()=>this.props.navigation.navigate("BrandList")}>
               <Image
                 source={require('../../images/icon8.png')}
                 
                 style={{ borderWidth: 1, borderRadius: 10, height: 70, width: 70, borderColor: "#F7B614" }}
               />
+              </TouchableNativeFeedback>
             </View>
           </View>
           <View style={{ paddingTop: width * 0.01 }}>
@@ -261,26 +277,34 @@ export default class Discover extends Component {
           </View>
           <View style={{ paddingTop: width * 0.05 }}>
             <View style={{ flexDirection: "row", justifyContent: "space-around", alignItems: "center" }}>
+            <TouchableNativeFeedback onPress={()=>this.props.navigation.navigate("BrandList")}>
               <Image
                 source={require('../../images/icon9.png')}
                 
                 style={{ borderWidth: 1, borderRadius: 10, height: 70, width: 70, borderColor: "#F7B614" }}
               />
+              </TouchableNativeFeedback>
+              <TouchableNativeFeedback onPress={()=>this.props.navigation.navigate("BrandList")}>
               <Image
                 source={require('../../images/icon10.png')}
                 
                 style={{ borderWidth: 1, borderRadius:10, height: 70, width: 70, borderColor: "#F7B614" }}
               />
+              </TouchableNativeFeedback>
+              <TouchableNativeFeedback onPress={()=>this.props.navigation.navigate("BrandList")}>
               <Image
                 source={require('../../images/icon11.png')}
               
                 style={{ borderWidth: 1, borderRadius: 10, height: 70, width: 70, borderColor: "#F7B614" }}
               />
+              </TouchableNativeFeedback>
+              <TouchableNativeFeedback onPress={()=>this.props.navigation.navigate("BrandList")}>
               <Image
                 source={require('../../images/icon12.png')}
             
                 style={{ borderWidth: 1, borderRadius: 10, height: 70, width: 70, borderColor: "#F7B614" }}
               />
+              </TouchableNativeFeedback>
             </View>
           </View>
           <View style={{ paddingTop: width * 0.01 }}>
@@ -301,26 +325,34 @@ export default class Discover extends Component {
           </View>
           <View style={{ paddingTop: width * 0.03 }}>
             <View style={{ flexDirection: "row", justifyContent: "space-around", alignItems: "center" }}>
+            <TouchableNativeFeedback onPress={()=>this.props.navigation.navigate("BrandList")}>
               <Image
                 source={require('../../images/icon13.png')}
                 
                 style={{ borderWidth: 1, borderRadius: 10, height: 70, width: 70, borderColor: "#F7B614" }}
               />
+              </TouchableNativeFeedback>
+              <TouchableNativeFeedback onPress={()=>this.props.navigation.navigate("BrandList")}>
               <Image
                 source={require('../../images/icon14.png')}
                 
                 style={{ borderWidth: 1, borderRadius: 10, height: 70, width: 70, borderColor: "#F7B614" }}
               />
+              </TouchableNativeFeedback>
+              <TouchableNativeFeedback onPress={()=>this.props.navigation.navigate("BrandList")}>
               <Image
                 source={require('../../images/icon15.png')}
               
                 style={{ borderWidth: 1, borderRadius: 10, height: 70, width: 70, borderColor: "#F7B614" }}
               />
+              </TouchableNativeFeedback>
+              <TouchableNativeFeedback onPress={()=>this.props.navigation.navigate("BrandList")}>
               <Image
                 source={require('../../images/icon16.png')}
                 
                 style={{ borderWidth: 1, borderRadius: 10, height: 70, width: 70, borderColor: "#F7B614" }}
               />
+              </TouchableNativeFeedback>
             </View>
           </View>
           <View style={{ paddingTop: width * 0.01 }}>

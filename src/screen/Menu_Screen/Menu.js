@@ -26,7 +26,11 @@ export default class Menu extends Component {
  this.state = {
     data: [{ "id": "1" }, { "id": "2" }, { "id": "3" }, { "id": "4" }, { "id": "5" }, { "id": "6" }],
     activeSlide: 0,
-    show:false
+    show:false,
+    count:0,
+    count1:0,
+    count2:0,
+    count3:0,
   }
 }
   renderItem = ({ item, index }) => {
@@ -145,6 +149,25 @@ name='arrow-back-sharp' color={"#FFF"} size={width*0.08}
           style={{ height: height * 0.12, width: width * 0.42 }}
           resizeMode="contain"
         />
+         <View style={{justifyContent:'center',alignItems:"center",marginTop:-width*0.03,paddingLeft:width*0.1}}>
+            <View style={{flexDirection:"row",borderWidth:1,justifyContent:"space-around",width:80,borderColor:"#ECA927",borderRadius:5,backgroundColor:"#E9F4FA"}}>
+         
+            <TouchableOpacity onPress={()=>{this.state.count>1? this.setState({count:this.state.count-1}):this.state.count}}>
+            <Text style={{fontSize:width*0.04,fontWeight:'bold',color:"#0CB577"}}>
+                -   
+            </Text>
+            </TouchableOpacity>
+            <Text style={{fontSize:width*0.04,fontWeight:'bold',color:"#0CB577"}}>
+            {this.state.count} 
+            </Text>
+            <TouchableOpacity onPress={()=>this.setState({count:this.state.count+1})}>
+            <Text style={{fontSize:width*0.04,fontWeight:'bold',color:"#0CB577"}}>
+                +   
+            </Text>
+            </TouchableOpacity>
+            
+            </View>
+        </View>
       </View>
       <View style={{ width: '70%', backgroundColor: '#FFFFFF' }}>
           <View style={{justifyContent:'flex-start',alignItems:'flex-start',paddingHorizontal:width*0.05}}>
@@ -177,6 +200,24 @@ name='arrow-back-sharp' color={"#FFF"} size={width*0.08}
           style={{ height: height * 0.12, width: width * 0.42 }}
           resizeMode="contain"
         />
+          <View style={{justifyContent:'center',alignItems:"center",marginTop:-width*0.03,paddingLeft:width*0.1}}>
+            <View style={{flexDirection:"row",borderWidth:1,justifyContent:"space-around",width:80,borderColor:"#ECA927",borderRadius:5,backgroundColor:"#E9F4FA"}}>
+            <TouchableOpacity onPress={()=>{this.state.count3>1? this.setState({count3:this.state.count3-1}):this.state.count3}}>
+            <Text style={{fontSize:width*0.04,fontWeight:'bold',color:"#0CB577"}}>
+                -   
+            </Text>
+            </TouchableOpacity>
+           
+            <Text style={{fontSize:width*0.04,fontWeight:'bold',color:"#0CB577"}}>
+            {this.state.count3} 
+            </Text>
+            <TouchableOpacity onPress={()=>this.setState({count3:this.state.count3+1})}>
+            <Text style={{fontSize:width*0.04,fontWeight:'bold',color:"#0CB577"}}>
+                +   
+            </Text>
+            </TouchableOpacity>
+            </View>
+        </View>
       </View>
       <View style={{ width: '70%', backgroundColor: '#FFFFFF' }}>
       <View style={{justifyContent:'flex-start',alignItems:'flex-start',paddingHorizontal:width*0.05}}>
@@ -209,6 +250,24 @@ name='arrow-back-sharp' color={"#FFF"} size={width*0.08}
           style={{ height: height * 0.12, width: width * 0.42 }}
           resizeMode="contain"
         />
+         <View style={{justifyContent:'center',alignItems:"center",marginTop:-width*0.03,paddingLeft:width*0.1}}>
+            <View style={{flexDirection:"row",borderWidth:1,justifyContent:"space-around",width:80,borderColor:"#ECA927",borderRadius:5,backgroundColor:"#E9F4FA"}}>
+            <TouchableOpacity onPress={()=>{this.state.count1>1? this.setState({count1:this.state.count1-1}):this.state.count1}}>
+            <Text style={{fontSize:width*0.04,fontWeight:'bold',color:"#0CB577"}}>
+                -   
+            </Text>
+            </TouchableOpacity>
+          
+            <Text style={{fontSize:width*0.04,fontWeight:'bold',color:"#0CB577"}}>
+            {this.state.count1} 
+            </Text>
+            <TouchableOpacity onPress={()=>this.setState({count1:this.state.count1+1})}>
+            <Text style={{fontSize:width*0.04,fontWeight:'bold',color:"#0CB577"}}>
+                +   
+            </Text>
+            </TouchableOpacity>
+            </View>
+        </View>
       </View>
       <View style={{ width: '70%', backgroundColor: '#FFFFFF' }}>
       <View style={{justifyContent:'flex-start',alignItems:'flex-start',paddingHorizontal:width*0.05}}>
@@ -241,6 +300,24 @@ name='arrow-back-sharp' color={"#FFF"} size={width*0.08}
           style={{ height: height * 0.12, width: width * 0.42 }}
           resizeMode="contain"
         />
+         <View style={{justifyContent:'center',alignItems:"center",marginTop:-width*0.03,paddingLeft:width*0.1}}>
+            <View style={{flexDirection:"row",borderWidth:1,justifyContent:"space-around",width:80,borderColor:"#ECA927",borderRadius:5,backgroundColor:"#E9F4FA"}}>
+            <TouchableOpacity onPress={()=>{this.state.count2>1? this.setState({count2:this.state.count2-1}):this.state.count2}}>
+            <Text style={{fontSize:width*0.04,fontWeight:'bold',color:"#0CB577"}}>
+                -   
+            </Text>
+            </TouchableOpacity>
+    
+            <Text style={{fontSize:width*0.04,fontWeight:'bold',color:"#0CB577"}}>
+            {this.state.count2} 
+            </Text>
+            <TouchableOpacity onPress={()=>this.setState({count2:this.state.count2+1})}>
+            <Text style={{fontSize:width*0.04,fontWeight:'bold',color:"#0CB577"}}>
+                +   
+            </Text>
+            </TouchableOpacity>
+            </View>
+        </View>
       </View>
       <View style={{ width: '70%', backgroundColor: '#FFFFFF' }}>
       <View style={{justifyContent:'flex-start',alignItems:'flex-start',paddingHorizontal:width*0.05}}>
@@ -266,9 +343,19 @@ name='arrow-back-sharp' color={"#FFF"} size={width*0.08}
     <View style={{ borderBottomWidth: 1, paddingTop: width * 0.02, borderBottomColor: "#DCDCDC" }}>
 
     </View>
-    <View style={{paddingBottom:width*0.1}}>
+    <TouchableOpacity onPress={()=>this.props.navigation.navigate("FoodCart")}>
+            <View style={{paddingTop:width*0.05,marginHorizontal:width*0.06}}>
+              <View style={{borderWidth:1,borderRadius:10,backgroundColor:"#1599B0",borderColor:'#1599B0',justifyContent:'center',alignItems:'center',padding:10}}>
+<Text style={{color:'#fff',fontSize:width*0.04}}>
+  Procced to Next
+</Text>
+              </View>
 
-    </View>
+            </View>
+            </TouchableOpacity>
+            <View style={{paddingBottom:width*0.1}}>
+
+            </View>
         </ScrollView>
       </SafeAreaView>
     )

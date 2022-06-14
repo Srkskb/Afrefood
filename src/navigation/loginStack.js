@@ -41,6 +41,7 @@ import DAddress from '../screen/delevery_Address/DAddress';
 import Add from '../screen/ADD_Screen/Add';
 import Sucess from '../screen/Order_Sucess/Sucess';
 import Track from '../screen/Track-Screen/Track';
+import BrandList from '../screen/Brand_List/BrandList';
 const Tab = createMaterialTopTabNavigator();
 const CustomTabBarButton = ({ children, onPress }) => (
   <TouchableOpacity style={{ height: 70, width: 70, top: -30, justifyContent: "center", alignItems: "center", ...styles.shadow }} onPress={onPress}>
@@ -177,6 +178,7 @@ function LoginStackNavigator() {
       <Stack.Screen name="Add" component={Add} options={{headerShown:false}}/>
       <Stack.Screen name="Sucess" component={Sucess} options={{headerShown:false}}/>
       <Stack.Screen name="Track" component={Track} options={{headerShown:false}}/>
+      <Stack.Screen name="BrandList" component={BrandList} options={{headerShown:false}}/>
     </Stack.Navigator>
   );
 }
