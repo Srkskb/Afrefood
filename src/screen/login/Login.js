@@ -212,11 +212,8 @@ export default class Login extends Component {
             paddingTop: height * 0.02, width: '100%',
             alignSelf: 'center'
           }}>
-            <TextInput
-              style={{
-                fontSize: 16, borderBottomWidth: StyleSheet.hairlineWidth, paddingHorizontal: 12
-                , borderBottomColor: '#E42217', fontFamily: "Montserrat-Medium"
-              }}
+            <TextInput style={{fontSize: 16, borderBottomWidth: StyleSheet.hairlineWidth,
+              paddingHorizontal: 12, borderBottomColor: '#E42217', fontFamily: "Montserrat-Medium"}}
               placeholder={'Password'}
               placeholderTextColor={"#ccc"}
             />
